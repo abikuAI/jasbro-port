@@ -261,9 +261,10 @@ modelled, and inventing its shape from guesswork would be worse than waiting.
 - **Whether the `IsValid` predicates are even reachable for every requirement type.** `child-care`
   requirements live in a separate map consulted by `isChildCareActivityValid`, so whether a
   `<child-activity>` gate is ever evaluated depends on a caller that has not been traced.
-- **The exact serialisation of System 1's requirement/effect graph.** The `class` attribute gives
-  the type, but the field set per class has not been enumerated, and `reference` (41 occurrences)
-  implies shared sub-objects that must preserve identity.
+- **The field-level shape of System 1.** Largely settled: [`SYSTEM1-CONTENT.md`](SYSTEM1-CONTENT.md)
+  inventories all 53 polymorphic classes, their fields, their transient fields, and the reference
+  graph. What remains is the **declared type of each polymorphic slot**, which decides the legal set
+  of concrete classes in each position.
 - **Whether `events/` content is reached at all without the editors.** The loader recurses to depth
   5 and is CWD-relative, so the shipped layout matters.
 - **The generated-vs-authored question** for the 3 editor jars in the game folder — if the editors

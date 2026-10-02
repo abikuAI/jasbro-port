@@ -1,0 +1,2226 @@
+{
+  "scannedFiles": 62,
+  "distinctClasses": 53,
+  "classOccurrences": 1591,
+  "distinctReferences": 3,
+  "referenceOccurrences": 41,
+  "missingSource": [],
+  "classes": [
+    {
+      "fqcn": "jasbro.gui.pictures.ImageTag",
+      "count": 356,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestBartenderContest.xml",
+        "original\\events\\contestQuest\\contestQuestBartenderContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContest.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContest.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestSexContest.xml",
+        "original\\events\\contestQuest\\contestQuestSexContestGeneration.xml",
+        "original\\events\\controlLowEvent.xml",
+        "original\\events\\controlLowSearchCharacter.xml",
+        "original\\events\\controlLowcharacterAwayTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeonCaptureMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedRescue.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeonEncounterMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonNothingHappens.xml",
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTraining1.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTraining2.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTrainingAllow.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdWakeUp.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdWounded.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingBrawl.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingDuel.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterFighter.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterStrong.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterWeak.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingRetrieveSword.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingSecondEncounter.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingThirdEncounter.xml",
+        "original\\events\\freeStuffEvents\\freeBunnysuit.xml",
+        "original\\events\\freeStuffEvents\\freeLaceDress.xml",
+        "original\\events\\freeStuffEvents\\freeMaidUniform.xml",
+        "original\\events\\garrisonUnlockEvent.xml",
+        "original\\events\\nhQuest\\nhQuestFightNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestFirstEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestFourthEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestHiring.xml",
+        "original\\events\\nhQuest\\nhQuestMeetNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestRumors.xml",
+        "original\\events\\nhQuest\\nhQuestSecondEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestSilence.xml",
+        "original\\events\\nhQuest\\nhQuestThirdEncounter.xml",
+        "original\\events\\travellingMerchantEvent.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\gui\\pictures\\ImageTag.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "replacementTag",
+          "type": "ImageTag",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "includedTag",
+          "type": "ImageTag",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "excludeTag",
+          "type": "boolean",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "imageTagGroup",
+          "type": "ImageTagGroup",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "arguments",
+          "type": "Object[]",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "tags",
+          "type": "List<ImageTag>",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "imageTags",
+          "type": "List<ImageTag>",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "people",
+          "type": "List<Person>",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "amounts",
+          "type": "Util.GenderAmounts",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "amount",
+          "type": "int",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "people",
+          "type": "List<Person>",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "amounts",
+          "type": "Util.GenderAmounts",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "malePresent",
+          "type": "boolean",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "femalePresent",
+          "type": "boolean",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "futaPresent",
+          "type": "boolean",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "changed",
+          "type": "boolean",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.ImageSelection",
+      "count": 179,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestBartenderContest.xml",
+        "original\\events\\contestQuest\\contestQuestBartenderContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContest.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContest.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestSexContest.xml",
+        "original\\events\\contestQuest\\contestQuestSexContestGeneration.xml",
+        "original\\events\\controlLowEvent.xml",
+        "original\\events\\controlLowSearchCharacter.xml",
+        "original\\events\\dungeonEvents\\dungeonCaptureMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedRescue.xml",
+        "original\\events\\dungeonEvents\\dungeonEncounterMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonNothingHappens.xml",
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTraining1.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTraining2.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdWakeUp.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdWounded.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingBrawl.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingDuel.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterFighter.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterStrong.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterWeak.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingRetrieveSword.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingSecondEncounter.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingThirdEncounter.xml",
+        "original\\events\\garrisonUnlockEvent.xml",
+        "original\\events\\nhQuest\\nhQuestFightNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestFirstEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestFourthEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestHiring.xml",
+        "original\\events\\nhQuest\\nhQuestMeetNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestRumors.xml",
+        "original\\events\\nhQuest\\nhQuestSecondEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestThirdEncounter.xml",
+        "original\\events\\travellingMerchantEvent.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\ImageSelection.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "image",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "imageLocation",
+          "type": "ImageSelection.ImageLocation",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "imageTags",
+          "type": "List<ImageTag>",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "background",
+          "type": "boolean",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "target",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "relativePath",
+          "type": "String",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "folder",
+          "type": "TFile",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "character",
+          "type": "HasImagesInterface",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "relativePath",
+          "type": "String",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "folder",
+          "type": "TFile",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "GLOBAL",
+          "type": "LOCAL,",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventSimpleMessage",
+      "count": 177,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestBartenderContest.xml",
+        "original\\events\\contestQuest\\contestQuestBartenderContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContest.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContest.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestSexContest.xml",
+        "original\\events\\contestQuest\\contestQuestSexContestGeneration.xml",
+        "original\\events\\controlLowEvent.xml",
+        "original\\events\\controlLowSearchCharacter.xml",
+        "original\\events\\controlLowcharacterAwayTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeonCaptureMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedRescue.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeonEncounterMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonNothingHappens.xml",
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTraining1.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTraining2.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTrainingAllow.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdWakeUp.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdWounded.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingBrawl.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingDuel.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterFighter.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterStrong.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterWeak.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingRetrieveSword.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingSecondEncounter.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingThirdEncounter.xml",
+        "original\\events\\freeStuffEvents\\freeBunnysuit.xml",
+        "original\\events\\freeStuffEvents\\freeLaceDress.xml",
+        "original\\events\\freeStuffEvents\\freeMaidUniform.xml",
+        "original\\events\\garrisonUnlockEvent.xml",
+        "original\\events\\nhQuest\\nhQuestFightNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestFirstEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestFourthEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestHiring.xml",
+        "original\\events\\nhQuest\\nhQuestMeetNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestRumors.xml",
+        "original\\events\\nhQuest\\nhQuestSecondEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestSilence.xml",
+        "original\\events\\nhQuest\\nhQuestThirdEncounter.xml",
+        "original\\events\\travellingMerchantEvent.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventSimpleMessage.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "log",
+          "type": "Logger",
+          "visibility": "private",
+          "modifiers": "final"
+        },
+        {
+          "name": "message",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "images",
+          "type": "List<ImageSelection>",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "background",
+          "type": "ImageSelection",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "importantMessage",
+          "type": "boolean",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "messageData",
+          "type": "MessageData",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "modifications",
+          "type": "List<AttributeModification>",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventEffectContainer",
+      "count": 97,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestBartenderContest.xml",
+        "original\\events\\contestQuest\\contestQuestBartenderContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestContestOver.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContest.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContest.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestSexContest.xml",
+        "original\\events\\contestQuest\\contestQuestSexContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestTriggerEvent.xml",
+        "original\\events\\controlLowEvent.xml",
+        "original\\events\\controlLowSearchCharacter.xml",
+        "original\\events\\controlLowcharacterAwayTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeon1UnlockEvent.xml",
+        "original\\events\\dungeonEvents\\dungeonCaptureMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCaptured.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedRescue.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeonEncounterMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonHealthFountain.xml",
+        "original\\events\\dungeonEvents\\dungeonNothingHappens.xml",
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTraining1.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTraining2.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTrainingAllow.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdWakeUp.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdWounded.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingBrawl.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingDuel.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterFighter.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterStrong.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterWeak.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingRetrieveSword.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingSecondEncounter.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingThirdEncounter.xml",
+        "original\\events\\freeStuffEvents\\freeBunnysuit.xml",
+        "original\\events\\freeStuffEvents\\freeLaceDress.xml",
+        "original\\events\\freeStuffEvents\\freeMaidUniform.xml",
+        "original\\events\\garrisonUnlockEvent.xml",
+        "original\\events\\nhQuest\\nhQuestFightNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestFirstEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestFourthEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestHiring.xml",
+        "original\\events\\nhQuest\\nhQuestMeetNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestReturn.xml",
+        "original\\events\\nhQuest\\nhQuestRumors.xml",
+        "original\\events\\nhQuest\\nhQuestSecondEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestSilence.xml",
+        "original\\events\\nhQuest\\nhQuestThirdEncounter.xml",
+        "original\\events\\preventCharacterSpawn.xml",
+        "original\\events\\travellingMerchantEvent.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventEffectContainer.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "subEffects",
+          "type": "List<WorldEventEffect>",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.CodeRequirement",
+      "count": 87,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestBartenderContest.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContest.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContest.xml",
+        "original\\events\\contestQuest\\contestQuestSexContest.xml",
+        "original\\events\\controlLowEvent.xml",
+        "original\\events\\controlLowcharacterAwayTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeonCaptureMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeonEncounterMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonNothingHappens.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTrainingAllow.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingBrawl.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingRetrieveSword.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingThirdEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestFightNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestMeetNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestRumors.xml",
+        "original\\events\\nhQuest\\nhQuestSilence.xml",
+        "original\\quests\\contestQuest\\bartenderContestQuest.xml",
+        "original\\quests\\contestQuest\\dancerContestQuest.xml",
+        "original\\quests\\contestQuest\\maidContestQuest.xml",
+        "original\\quests\\contestQuest\\sexContestQuest.xml",
+        "original\\quests\\nhQuest.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\CodeRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "log",
+          "type": "Logger",
+          "visibility": "private",
+          "modifiers": "final"
+        },
+        {
+          "name": "code",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventCondition",
+      "count": 86,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestBartenderContest.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContest.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContest.xml",
+        "original\\events\\contestQuest\\contestQuestSexContest.xml",
+        "original\\events\\controlLowSearchCharacter.xml",
+        "original\\events\\controlLowcharacterAwayTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeonCaptureMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeonEncounterMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonNothingHappens.xml",
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTraining2.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTrainingAllow.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingBrawl.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingRetrieveSword.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingThirdEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestFightNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestFirstEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestMeetNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestRumors.xml",
+        "original\\events\\nhQuest\\nhQuestSecondEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestSilence.xml",
+        "original\\events\\nhQuest\\nhQuestThirdEncounter.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventCondition.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "requirement",
+          "type": "TriggerRequirement",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventCode",
+      "count": 79,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestBartenderContest.xml",
+        "original\\events\\contestQuest\\contestQuestBartenderContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContest.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContest.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestSexContest.xml",
+        "original\\events\\contestQuest\\contestQuestSexContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestTriggerEvent.xml",
+        "original\\events\\controlLowEvent.xml",
+        "original\\events\\controlLowSearchCharacter.xml",
+        "original\\events\\controlLowcharacterAwayTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeonCaptureMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCaptured.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedRescue.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeonEncounterMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonNothingHappens.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTrainingAllow.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdWakeUp.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdWounded.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingBrawl.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingDuel.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterStrong.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingRetrieveSword.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingSecondEncounter.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingThirdEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestFightNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestHiring.xml",
+        "original\\events\\nhQuest\\nhQuestMeetNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestReturn.xml",
+        "original\\events\\nhQuest\\nhQuestRumors.xml",
+        "original\\events\\preventCharacterSpawn.xml",
+        "original\\events\\travellingMerchantEvent.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventCode.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "log",
+          "type": "Logger",
+          "visibility": "private",
+          "modifiers": "final"
+        },
+        {
+          "name": "code",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "displayHeight",
+          "type": "int",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.WorldEvent",
+      "count": 51,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestBartenderContest.xml",
+        "original\\events\\contestQuest\\contestQuestBartenderContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestContestOver.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContest.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContest.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestSexContest.xml",
+        "original\\events\\contestQuest\\contestQuestSexContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestTriggerEvent.xml",
+        "original\\events\\controlLowEvent.xml",
+        "original\\events\\controlLowSearchCharacter.xml",
+        "original\\events\\controlLowcharacterAwayTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeon1UnlockEvent.xml",
+        "original\\events\\dungeonEvents\\dungeonCaptureMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCaptured.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedRescue.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeonEncounterMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonHealthFountain.xml",
+        "original\\events\\dungeonEvents\\dungeonNothingHappens.xml",
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTraining1.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTraining2.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTrainingAllow.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdWakeUp.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdWounded.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingBrawl.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingDuel.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterFighter.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterStrong.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterWeak.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingRetrieveSword.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingSecondEncounter.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingThirdEncounter.xml",
+        "original\\events\\freeStuffEvents\\freeBunnysuit.xml",
+        "original\\events\\freeStuffEvents\\freeLaceDress.xml",
+        "original\\events\\freeStuffEvents\\freeMaidUniform.xml",
+        "original\\events\\garrisonUnlockEvent.xml",
+        "original\\events\\nhQuest\\nhQuestFightNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestFirstEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestFourthEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestHiring.xml",
+        "original\\events\\nhQuest\\nhQuestMeetNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestReturn.xml",
+        "original\\events\\nhQuest\\nhQuestRumors.xml",
+        "original\\events\\nhQuest\\nhQuestSecondEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestSilence.xml",
+        "original\\events\\nhQuest\\nhQuestThirdEncounter.xml",
+        "original\\events\\preventCharacterSpawn.xml",
+        "original\\events\\travellingMerchantEvent.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\WorldEvent.java",
+      "sawTransient": true,
+      "fields": [
+        {
+          "name": "log",
+          "type": "Logger",
+          "visibility": "private",
+          "modifiers": "final"
+        },
+        {
+          "name": "id",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "triggers",
+          "type": "List<Trigger>",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "effects",
+          "type": "List<WorldEventEffect>",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "interpreter",
+          "type": "Interpreter",
+          "visibility": "private",
+          "modifiers": "transient"
+        },
+        {
+          "name": "attributeMap",
+          "type": "Map<String, Object>",
+          "visibility": "private",
+          "modifiers": "transient"
+        },
+        {
+          "name": "file",
+          "type": "TFile",
+          "visibility": "private",
+          "modifiers": "transient"
+        },
+        {
+          "name": "triggeredEvents",
+          "type": "Set<WorldEvent>",
+          "visibility": "private",
+          "modifiers": "transient"
+        },
+        {
+          "name": "protectedCharacters",
+          "type": "Set<Charakter>",
+          "visibility": "private",
+          "modifiers": "transient"
+        },
+        {
+          "name": "inProgress",
+          "type": "boolean",
+          "visibility": "private",
+          "modifiers": "transient"
+        },
+        {
+          "name": "activity",
+          "type": "RunningActivity",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "activityDetail",
+          "type": "ActivityDetails",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "prime",
+          "type": "int",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "result",
+          "type": "int",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "other",
+          "type": "WorldEvent",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "people",
+          "type": "List<Person>",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "characters",
+          "type": "List<Charakter>",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "characters",
+          "type": "List<Charakter>",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "typeAmounts",
+          "type": "Util.TypeAmounts",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "locationType",
+          "type": "LocationTypeInterface",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "activity",
+          "type": "RunningActivity",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "attributeMap",
+          "type": "Map<String, Object>",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "worldEventInstance",
+          "type": "data,\n      activity,\n      questInstance,\n      event,\n      character,\n      characters,\n      people,\n      typeamounts,\n      activitytype,\n      attributemodifications,\n      location,",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.Trigger",
+      "count": 50,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestTriggerEvent.xml",
+        "original\\events\\controlLowEvent.xml",
+        "original\\events\\dungeonEvents\\dungeonCaptureMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonEncounterMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonHealthFountain.xml",
+        "original\\events\\dungeonEvents\\dungeonNothingHappens.xml",
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\events\\garrisonUnlockEvent.xml",
+        "original\\events\\travellingMerchantEvent.xml",
+        "original\\quests\\characterCapturedQuest.xml",
+        "original\\quests\\contestQuest\\bartenderContestQuest.xml",
+        "original\\quests\\contestQuest\\dancerContestQuest.xml",
+        "original\\quests\\contestQuest\\maidContestQuest.xml",
+        "original\\quests\\contestQuest\\sexContestQuest.xml",
+        "original\\quests\\controlLowCharacterRanAwayQuest.xml",
+        "original\\quests\\fighterSpecUnlock.xml",
+        "original\\quests\\freeStuffQuests\\FreeBunnySuitQuest.xml",
+        "original\\quests\\freeStuffQuests\\FreeLaceDressQuest.xml",
+        "original\\quests\\freeStuffQuests\\FreeMaidUniformQuest.xml",
+        "original\\quests\\nhQuest.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\Trigger.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "requirement",
+          "type": "TriggerRequirement",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "triggerType",
+          "type": "Trigger.TriggerType",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "activityLabel",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "activityDescription",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "eventType",
+          "type": "EventType",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.AndRequirement",
+      "count": 37,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestTriggerEvent.xml",
+        "original\\events\\controlLowEvent.xml",
+        "original\\events\\controlLowSearchCharacter.xml",
+        "original\\events\\dungeonEvents\\dungeonCaptureMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonEncounterMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonHealthFountain.xml",
+        "original\\events\\dungeonEvents\\dungeonNothingHappens.xml",
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingBrawl.xml",
+        "original\\events\\garrisonUnlockEvent.xml",
+        "original\\events\\travellingMerchantEvent.xml",
+        "original\\quests\\characterCapturedQuest.xml",
+        "original\\quests\\contestQuest\\bartenderContestQuest.xml",
+        "original\\quests\\contestQuest\\dancerContestQuest.xml",
+        "original\\quests\\contestQuest\\maidContestQuest.xml",
+        "original\\quests\\contestQuest\\sexContestQuest.xml",
+        "original\\quests\\controlLowCharacterRanAwayQuest.xml",
+        "original\\quests\\fighterSpecUnlock.xml",
+        "original\\quests\\freeStuffQuests\\FreeBunnySuitQuest.xml",
+        "original\\quests\\freeStuffQuests\\FreeLaceDressQuest.xml",
+        "original\\quests\\freeStuffQuests\\FreeMaidUniformQuest.xml",
+        "original\\quests\\nhQuest.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\AndRequirement.java",
+      "sawTransient": false,
+      "fields": []
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.CustomQuestStage",
+      "count": 36,
+      "files": [
+        "original\\quests\\characterCapturedQuest.xml",
+        "original\\quests\\contestQuest\\bartenderContestQuest.xml",
+        "original\\quests\\contestQuest\\dancerContestQuest.xml",
+        "original\\quests\\contestQuest\\maidContestQuest.xml",
+        "original\\quests\\contestQuest\\sexContestQuest.xml",
+        "original\\quests\\controlLowCharacterRanAwayQuest.xml",
+        "original\\quests\\fighterSpecUnlock.xml",
+        "original\\quests\\freeStuffQuests\\FreeBunnySuitQuest.xml",
+        "original\\quests\\freeStuffQuests\\FreeLaceDressQuest.xml",
+        "original\\quests\\freeStuffQuests\\FreeMaidUniformQuest.xml",
+        "original\\quests\\nhQuest.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\CustomQuestStage.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "log",
+          "type": "Logger",
+          "visibility": "private",
+          "modifiers": "final"
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "showInQuestLog",
+          "type": "boolean",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "triggers",
+          "type": "List<Trigger>",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "triggerToWorldEventMap",
+          "type": "Map<Trigger, String>",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "quest",
+          "type": "CustomQuest",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "activity",
+          "type": "RunningActivity",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "worldEvent",
+          "type": "WorldEvent",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "quest",
+          "type": "CustomQuest",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "worldEvent",
+          "type": "WorldEvent",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "activityDetail",
+          "type": "ActivityDetails",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "people",
+          "type": "List<? extends Person>",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventSetQuestStage",
+      "count": 32,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestBartenderContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestSexContestGeneration.xml",
+        "original\\events\\controlLowEvent.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCaptured.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTrainingAllow.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdWakeUp.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdWounded.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingBrawl.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingDuel.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterFighter.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterStrong.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterWeak.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingRetrieveSword.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingSecondEncounter.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingThirdEncounter.xml",
+        "original\\events\\freeStuffEvents\\freeBunnysuit.xml",
+        "original\\events\\freeStuffEvents\\freeLaceDress.xml",
+        "original\\events\\freeStuffEvents\\freeMaidUniform.xml",
+        "original\\events\\nhQuest\\nhQuestFightNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestFirstEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestFourthEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestHiring.xml",
+        "original\\events\\nhQuest\\nhQuestMeetNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestRumors.xml",
+        "original\\events\\nhQuest\\nhQuestSecondEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestSilence.xml",
+        "original\\events\\nhQuest\\nhQuestThirdEncounter.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventSetQuestStage.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "questStage",
+          "type": "int",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "quest",
+          "type": "CustomQuest",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventSaveVariable",
+      "count": 28,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestBartenderContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestSexContestGeneration.xml",
+        "original\\events\\controlLowEvent.xml",
+        "original\\events\\controlLowcharacterAwayTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCaptured.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedTimePassed.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingBrawl.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterStrong.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingSecondEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestFirstEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestHiring.xml",
+        "original\\events\\nhQuest\\nhQuestMeetNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestReturn.xml",
+        "original\\events\\nhQuest\\nhQuestRumors.xml",
+        "original\\events\\nhQuest\\nhQuestSilence.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventSaveVariable.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "source",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "target",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventSetQuestStatus",
+      "count": 26,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestBartenderContest.xml",
+        "original\\events\\contestQuest\\contestQuestBartenderContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestContestOver.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContest.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContest.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestSexContest.xml",
+        "original\\events\\contestQuest\\contestQuestSexContestGeneration.xml",
+        "original\\events\\controlLowEvent.xml",
+        "original\\events\\controlLowSearchCharacter.xml",
+        "original\\events\\controlLowcharacterAwayTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeon1UnlockEvent.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCaptured.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedTimePassed.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTrainingAllow.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterFighter.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterStrong.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingFirstEncounterWeak.xml",
+        "original\\events\\freeStuffEvents\\freeBunnysuit.xml",
+        "original\\events\\freeStuffEvents\\freeLaceDress.xml",
+        "original\\events\\freeStuffEvents\\freeMaidUniform.xml",
+        "original\\events\\nhQuest\\nhQuestFightNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestFirstEncounter.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventSetQuestStatus.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "questStatus",
+          "type": "WorldEventSetQuestStatus.QuestStatus",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "quest",
+          "type": "CustomQuest",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "questManager",
+          "type": "QuestManager",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "ACTIVATABLE",
+          "type": "ACTIVE,\n      SOLVED,\n      INACTIVE,\n      SOLVEDFORGOOD,",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.AttributeRequirement",
+      "count": 21,
+      "files": [
+        "original\\events\\dungeonEvents\\dungeonCaptureMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTraining2.xml",
+        "original\\events\\nhQuest\\nhQuestFirstEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestSecondEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestThirdEncounter.xml",
+        "original\\quests\\fighterSpecUnlock.xml",
+        "original\\quests\\freeStuffQuests\\FreeBunnySuitQuest.xml",
+        "original\\quests\\freeStuffQuests\\FreeLaceDressQuest.xml",
+        "original\\quests\\freeStuffQuests\\FreeMaidUniformQuest.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\AttributeRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "attributeType",
+          "type": "AttributeType",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "amount",
+          "type": "int",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "comparison",
+          "type": "TriggerRequirement.Comparison",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "attributeValue",
+          "type": "double",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.character.attributes.EssentialAttributes",
+      "count": 19,
+      "files": [
+        "original\\events\\controlLowSearchCharacter.xml",
+        "original\\events\\dungeonEvents\\dungeonCaptureMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedRescue.xml",
+        "original\\events\\dungeonEvents\\dungeonHealthFountain.xml",
+        "original\\events\\dungeonEvents\\dungeonNothingHappens.xml",
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\events\\nhQuest\\nhQuestFirstEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestSecondEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestThirdEncounter.xml",
+        "original\\quests\\fighterSpecUnlock.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\character\\attributes\\EssentialAttributes.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "MOTIVATION",
+          "type": "HEALTH,\n   ENERGY,",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "startValue",
+          "type": "int",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.ChanceRequirement",
+      "count": 19,
+      "files": [
+        "original\\events\\controlLowSearchCharacter.xml",
+        "original\\events\\dungeonEvents\\dungeonHealthFountain.xml",
+        "original\\events\\dungeonEvents\\dungeonNothingHappens.xml",
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingBrawl.xml",
+        "original\\events\\travellingMerchantEvent.xml",
+        "original\\quests\\fighterSpecUnlock.xml",
+        "original\\quests\\freeStuffQuests\\FreeBunnySuitQuest.xml",
+        "original\\quests\\freeStuffQuests\\FreeLaceDressQuest.xml",
+        "original\\quests\\freeStuffQuests\\FreeMaidUniformQuest.xml",
+        "original\\quests\\nhQuest.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\ChanceRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "chance",
+          "type": "int",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventLoadVariable",
+      "count": 19,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestBartenderContest.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContest.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContest.xml",
+        "original\\events\\contestQuest\\contestQuestSexContest.xml",
+        "original\\events\\controlLowSearchCharacter.xml",
+        "original\\events\\controlLowcharacterAwayTimePassed.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedRescue.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedTimePassed.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingBrawl.xml",
+        "original\\events\\nhQuest\\nhQuestHiring.xml",
+        "original\\events\\nhQuest\\nhQuestMeetNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestRumors.xml",
+        "original\\events\\nhQuest\\nhQuestSilence.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventLoadVariable.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "source",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "target",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.MainCharacterRequirement",
+      "count": 16,
+      "files": [
+        "original\\events\\fighterUnlock\\fighterTrainingArdTraining2.xml",
+        "original\\quests\\fighterSpecUnlock.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\MainCharacterRequirement.java",
+      "sawTransient": false,
+      "fields": []
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.ActivityRequirement",
+      "count": 16,
+      "files": [
+        "original\\events\\dungeonEvents\\dungeonCaptureMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonEncounterMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonHealthFountain.xml",
+        "original\\events\\dungeonEvents\\dungeonNothingHappens.xml",
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\quests\\fighterSpecUnlock.xml",
+        "original\\quests\\freeStuffQuests\\FreeBunnySuitQuest.xml",
+        "original\\quests\\freeStuffQuests\\FreeLaceDressQuest.xml",
+        "original\\quests\\freeStuffQuests\\FreeMaidUniformQuest.xml",
+        "original\\quests\\nhQuest.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\ActivityRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "activityType",
+          "type": "ActivityType",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventChangeAttribute",
+      "count": 15,
+      "files": [
+        "original\\events\\controlLowSearchCharacter.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCapturedRescue.xml",
+        "original\\events\\dungeonEvents\\dungeonEncounterMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonHealthFountain.xml",
+        "original\\events\\dungeonEvents\\dungeonNothingHappens.xml",
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\events\\nhQuest\\nhQuestFirstEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestSecondEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestThirdEncounter.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventChangeAttribute.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "attributeType",
+          "type": "AttributeType",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "value",
+          "type": "float",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "target",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "addToActivity",
+          "type": "boolean",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "character",
+          "type": "Charakter",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "modification",
+          "type": "AttributeModification",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "modifications",
+          "type": "List<AttributeModification>",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventGainItem",
+      "count": 14,
+      "files": [
+        "original\\events\\dungeonEvents\\dungeon1UnlockEvent.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdWakeUp.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingDuel.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingRetrieveSword.xml",
+        "original\\events\\freeStuffEvents\\freeBunnysuit.xml",
+        "original\\events\\freeStuffEvents\\freeLaceDress.xml",
+        "original\\events\\freeStuffEvents\\freeMaidUniform.xml",
+        "original\\events\\garrisonUnlockEvent.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventGainItem.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "itemId",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "item",
+          "type": "Item",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.CustomQuestTemplate",
+      "count": 11,
+      "files": [
+        "original\\quests\\characterCapturedQuest.xml",
+        "original\\quests\\contestQuest\\bartenderContestQuest.xml",
+        "original\\quests\\contestQuest\\dancerContestQuest.xml",
+        "original\\quests\\contestQuest\\maidContestQuest.xml",
+        "original\\quests\\contestQuest\\sexContestQuest.xml",
+        "original\\quests\\controlLowCharacterRanAwayQuest.xml",
+        "original\\quests\\fighterSpecUnlock.xml",
+        "original\\quests\\freeStuffQuests\\FreeBunnySuitQuest.xml",
+        "original\\quests\\freeStuffQuests\\FreeLaceDressQuest.xml",
+        "original\\quests\\freeStuffQuests\\FreeMaidUniformQuest.xml",
+        "original\\quests\\nhQuest.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\CustomQuestTemplate.java",
+      "sawTransient": true,
+      "fields": [
+        {
+          "name": "id",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "questStages",
+          "type": "List<CustomQuestStage>",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "file",
+          "type": "TFile",
+          "visibility": "private",
+          "modifiers": "transient"
+        },
+        {
+          "name": "prime",
+          "type": "int",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "result",
+          "type": "int",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "other",
+          "type": "CustomQuestTemplate",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.character.specialization.SpecializationAttribute",
+      "count": 9,
+      "files": [
+        "original\\events\\dungeonEvents\\dungeonEncounterMonster.xml",
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingArdTraining2.xml",
+        "original\\quests\\freeStuffQuests\\FreeBunnySuitQuest.xml",
+        "original\\quests\\freeStuffQuests\\FreeLaceDressQuest.xml",
+        "original\\quests\\freeStuffQuests\\FreeMaidUniformQuest.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\character\\specialization\\SpecializationAttribute.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "GENETICADAPTABILITY",
+          "type": "COOKING,\n   CLEANING,\n   SEDUCTION,\n   EXPERIENCE,\n   VETERAN,\n   BARTENDING,\n   PICKPOCKETING,\n   CATGIRL,\n   AGILITY,\n   MEDICALKNOWLEDGE,\n   MAGIC,\n   STRIP,\n   DOMINATE,\n   PLANTKNOWLEDGE,\n   ADVERTISING,\n   TRANSFORMATION,",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.locations.LocationType",
+      "count": 8,
+      "files": [
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\quests\\characterCapturedQuest.xml",
+        "original\\quests\\contestQuest\\bartenderContestQuest.xml",
+        "original\\quests\\contestQuest\\dancerContestQuest.xml",
+        "original\\quests\\contestQuest\\maidContestQuest.xml",
+        "original\\quests\\contestQuest\\sexContestQuest.xml",
+        "original\\quests\\controlLowCharacterRanAwayQuest.xml",
+        "original\\quests\\fighterSpecUnlock.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\locations\\LocationType.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "log",
+          "type": "Logger",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "locationClass",
+          "type": "Class<? extends CharacterLocation>",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "locked",
+          "type": "boolean",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "location",
+          "type": "CharacterLocation",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.character.attributes.BaseAttributeTypes",
+      "count": 8,
+      "files": [
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\quests\\fighterSpecUnlock.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\character\\attributes\\BaseAttributeTypes.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "STRENGTH",
+          "type": "CHARISMA,\n   OBEDIENCE,\n   COMMAND,\n   STAMINA,\n   INTELLIGENCE,",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.LocationTypeRequirement",
+      "count": 8,
+      "files": [
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\quests\\characterCapturedQuest.xml",
+        "original\\quests\\contestQuest\\bartenderContestQuest.xml",
+        "original\\quests\\contestQuest\\dancerContestQuest.xml",
+        "original\\quests\\contestQuest\\maidContestQuest.xml",
+        "original\\quests\\contestQuest\\sexContestQuest.xml",
+        "original\\quests\\controlLowCharacterRanAwayQuest.xml",
+        "original\\quests\\fighterSpecUnlock.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\LocationTypeRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "locationType",
+          "type": "LocationTypeInterface",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "locationTypeInterface",
+          "type": "LocationTypeInterface",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.NotRequirement",
+      "count": 8,
+      "files": [
+        "original\\events\\garrisonUnlockEvent.xml",
+        "original\\events\\travellingMerchantEvent.xml",
+        "original\\quests\\fighterSpecUnlock.xml",
+        "original\\quests\\nhQuest.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\NotRequirement.java",
+      "sawTransient": false,
+      "fields": []
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.MaximumCharacterAmountRequirement",
+      "count": 7,
+      "files": [
+        "original\\quests\\contestQuest\\bartenderContestQuest.xml",
+        "original\\quests\\contestQuest\\dancerContestQuest.xml",
+        "original\\quests\\contestQuest\\maidContestQuest.xml",
+        "original\\quests\\contestQuest\\sexContestQuest.xml",
+        "original\\quests\\fighterSpecUnlock.xml",
+        "original\\quests\\nhQuest.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\MaximumCharacterAmountRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "maximum",
+          "type": "int",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventCreateQuest",
+      "count": 6,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestBartenderContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestDancerContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestMaidContestGeneration.xml",
+        "original\\events\\contestQuest\\contestQuestSexContestGeneration.xml",
+        "original\\events\\controlLowEvent.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCaptured.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventCreateQuest.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "questId",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "quest",
+          "type": "CustomQuest",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventChangeMoney",
+      "count": 6,
+      "files": [
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\events\\nhQuest\\nhQuestFightNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestFirstEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestMeetNaruto.xml",
+        "original\\events\\nhQuest\\nhQuestSecondEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestThirdEncounter.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventChangeMoney.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "moneyModifier",
+          "type": "long",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventAbortActivity",
+      "count": 5,
+      "files": [
+        "original\\events\\dungeonEvents\\dungeonNothingHappens.xml",
+        "original\\events\\nhQuest\\nhQuestFirstEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestFourthEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestSecondEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestThirdEncounter.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventAbortActivity.java",
+      "sawTransient": false,
+      "fields": []
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.MinimumCharacterAmountRequirement",
+      "count": 5,
+      "files": [
+        "original\\quests\\contestQuest\\bartenderContestQuest.xml",
+        "original\\quests\\contestQuest\\dancerContestQuest.xml",
+        "original\\quests\\contestQuest\\maidContestQuest.xml",
+        "original\\quests\\contestQuest\\sexContestQuest.xml",
+        "original\\quests\\fighterSpecUnlock.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\MinimumCharacterAmountRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "minimum",
+          "type": "int",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.SameCharacterRequirement",
+      "count": 4,
+      "files": [
+        "original\\quests\\nhQuest.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\SameCharacterRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "quest",
+          "type": "CustomQuest",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.SpecializationRequirement",
+      "count": 4,
+      "files": [
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\quests\\fighterSpecUnlock.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\SpecializationRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "specialization",
+          "type": "SpecializationType",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.UnlockRequirement",
+      "count": 4,
+      "files": [
+        "original\\events\\garrisonUnlockEvent.xml",
+        "original\\quests\\fighterSpecUnlock.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\UnlockRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "unlockObject",
+          "type": "UnlockObject",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.NoChildPresentRequirement",
+      "count": 4,
+      "files": [
+        "original\\quests\\contestQuest\\bartenderContestQuest.xml",
+        "original\\quests\\contestQuest\\dancerContestQuest.xml",
+        "original\\quests\\contestQuest\\maidContestQuest.xml",
+        "original\\quests\\contestQuest\\sexContestQuest.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\NoChildPresentRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "characters",
+          "type": "List<Charakter>",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.OrRequirement",
+      "count": 3,
+      "files": [
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingBrawl.xml",
+        "original\\events\\travellingMerchantEvent.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\OrRequirement.java",
+      "sawTransient": false,
+      "fields": []
+    },
+    {
+      "fqcn": "jasbro.game.character.specialization.SpecializationType",
+      "count": 3,
+      "files": [
+        "original\\quests\\fighterSpecUnlock.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\character\\specialization\\SpecializationType.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "log",
+          "type": "Logger",
+          "visibility": "private",
+          "modifiers": "final"
+        },
+        {
+          "name": "locked",
+          "type": "boolean",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "teachable",
+          "type": "boolean",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "eventListener",
+          "type": "MyCharacterEventListener",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "attributes",
+          "type": "List<AttributeType>",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "sumMaxChange",
+          "type": "int",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "f",
+          "type": "float",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "i",
+          "type": "int",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.RecurringDayRequirement",
+      "count": 3,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestTriggerEvent.xml",
+        "original\\events\\travellingMerchantEvent.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\RecurringDayRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "everyXDays",
+          "type": "int",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "offset",
+          "type": "int",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "currentDay",
+          "type": "int",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventRemoveCharacter",
+      "count": 3,
+      "files": [
+        "original\\events\\controlLowEvent.xml",
+        "original\\events\\dungeonEvents\\dungeonCharacterCaptured.xml",
+        "original\\events\\nhQuest\\nhQuestMeetNaruto.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventRemoveCharacter.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "target",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "character",
+          "type": "Charakter",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "data",
+          "type": "GameData",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventCallAnotherEvent",
+      "count": 3,
+      "files": [
+        "original\\events\\dungeonEvents\\dungeonCaptureMonster.xml",
+        "original\\events\\fighterUnlock\\fighterTrainingThirdEncounter.xml",
+        "original\\events\\nhQuest\\nhQuestMeetNaruto.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventCallAnotherEvent.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "eventId",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "worldEvent2",
+          "type": "WorldEvent",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.AnyOfOwnedCharactersRequirement",
+      "count": 3,
+      "files": [
+        "original\\events\\garrisonUnlockEvent.xml",
+        "original\\events\\travellingMerchantEvent.xml",
+        "original\\quests\\nhQuest.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\AnyOfOwnedCharactersRequirement.java",
+      "sawTransient": false,
+      "fields": []
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.DayRequirement",
+      "count": 2,
+      "files": [
+        "original\\events\\contestQuest\\contestQuestTriggerEvent.xml",
+        "original\\events\\travellingMerchantEvent.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\DayRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "day",
+          "type": "int",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "dayComparison",
+          "type": "TriggerRequirement.Comparison",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "currentDay",
+          "type": "int",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventChangeFame",
+      "count": 2,
+      "files": [
+        "original\\events\\controlLowEvent.xml",
+        "original\\events\\nhQuest\\nhQuestFightNaruto.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventChangeFame.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "value",
+          "type": "int",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "target",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "character",
+          "type": "Charakter",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventAddToMessage",
+      "count": 2,
+      "files": [
+        "original\\events\\dungeonEvents\\dungeonHealthFountain.xml",
+        "original\\events\\dungeonEvents\\dungeonSimpleTrap.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventAddToMessage.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "text",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "changeToPriorityMessage",
+          "type": "boolean",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "activity",
+          "type": "RunningActivity",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "messageData",
+          "type": "MessageData",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventComment",
+      "count": 2,
+      "files": [
+        "original\\events\\nhQuest\\nhQuestFirstEncounter.xml",
+        "original\\events\\travellingMerchantEvent.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventComment.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "comment",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.MinimumCharactersMatchRequirement",
+      "count": 2,
+      "files": [
+        "original\\quests\\fighterSpecUnlock.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\MinimumCharactersMatchRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "minimum",
+          "type": "int",
+          "visibility": "private",
+          "modifiers": ""
+        },
+        {
+          "name": "count",
+          "type": "int",
+          "visibility": "package",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.CharacterIdRequirement",
+      "count": 2,
+      "files": [
+        "original\\quests\\nhQuest.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\CharacterIdRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "characterId",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.housing.HouseType",
+      "count": 1,
+      "files": [
+        "original\\events\\garrisonUnlockEvent.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\housing\\HouseType.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "GIANTCASTLE",
+          "type": "HUT,\n   HOUSE,\n   SCHOOL,\n   SHRINE,\n   MANSION,\n   GARRISON,\n   MONASTRY,\n   PALACE,",
+          "visibility": "package",
+          "modifiers": ""
+        },
+        {
+          "name": "locked",
+          "type": "boolean",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.effects.WorldEventProtectCharacter",
+      "count": 1,
+      "files": [
+        "original\\events\\dungeonEvents\\dungeonCaptureMonster.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\effects\\WorldEventProtectCharacter.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "target",
+          "type": "String",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.FameRequirement",
+      "count": 1,
+      "files": [
+        "original\\events\\garrisonUnlockEvent.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\FameRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "fameRequired",
+          "type": "long",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    },
+    {
+      "fqcn": "jasbro.game.world.customContent.requirements.TraitRequirement",
+      "count": 1,
+      "files": [
+        "original\\events\\travellingMerchantEvent.xml"
+      ],
+      "sourceFound": true,
+      "sourcePath": "decompiled\\source\\jasbro\\game\\world\\customContent\\requirements\\TraitRequirement.java",
+      "sawTransient": false,
+      "fields": [
+        {
+          "name": "trait",
+          "type": "Trait",
+          "visibility": "private",
+          "modifiers": ""
+        }
+      ]
+    }
+  ],
+  "references": {
+    "../../../triggers/jasbro.game.world.customContent.Trigger": 26,
+    "../../../triggers/jasbro.game.world.customContent.Trigger[2]": 14,
+    "../../../triggers/jasbro.game.world.customContent.Trigger[3]": 1
+  }
+}
