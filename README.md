@@ -80,6 +80,7 @@ repository records.
 | Why Godot, and how solid is that? | `analysis/ENGINE-CHOICE.md` |
 | Is the Godot layer actually building and running? | `analysis/GODOT-PORT.md` — includes three machine-specific build traps |
 | How does the BeanShell content work? | `analysis/BSH-MIGRATION.md` |
+| **How is content structured?** | **`analysis/CONTENT-MODEL.md`** — **there are TWO unrelated content systems**; a port that implements one silently fails on the other half |
 | A specific class | `game-source/jasbro/...` |
 | How the port was verified | `analysis/CONTENT-PARITY.md`, `analysis/verify-save.ps1` |
 
