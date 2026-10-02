@@ -1,0 +1,47 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  bsh.EvalError
+ */
+package jasbro.game.world.customContent.effects;
+
+import bsh.EvalError;
+import jasbro.game.world.customContent.WorldEvent;
+import jasbro.game.world.customContent.WorldEventEffect;
+import jasbro.game.world.customContent.WorldEventEffectType;
+
+public class WorldEventLoadVariable
+extends WorldEventEffect {
+    private String source = "character";
+    private String target = "character";
+
+    @Override
+    public void perform(WorldEvent worldEvent) throws EvalError {
+        if (this.source != null && this.target != null) {
+            worldEvent.putAttribute(this.target, worldEvent.getQuest().getVariable(this.source));
+        }
+    }
+
+    @Override
+    public WorldEventEffectType getType() {
+        return WorldEventEffectType.LOADVARIABLE;
+    }
+
+    public String getSource() {
+        return this.source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public String getTarget() {
+        return this.target;
+    }
+
+    public void setTarget(String target) {
+        this.target = target;
+    }
+}
+

@@ -1,0 +1,20 @@
+; Engine configuration file.
+; Generated for the JaSBro port. Godot 4.7.2.
+
+config_version=5
+
+[application]
+
+config/name="Simbro"
+config/description="JaSBro port — Godot presentation layer over the Simbro.Core domain assembly."
+run/main_scene="res://src/Main.tscn"
+config/features=PackedStringArray("4.7", "C#", "Forward Plus")
+
+[dotnet]
+
+project/assembly_name="Simbro.Godot"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720

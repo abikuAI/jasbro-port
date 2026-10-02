@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Minimal log4j2 config for the fixture harnesses.
+
+  The game ships a log4j2.xml with a File appender writing "jasbro.log" into the working
+  directory. When the harness runs with the working directory set to the game folder, that
+  write is denied (and on a read-only install it would fail anyway). This config keeps the
+  same logger wiring but sends everything to the console, so the harness can run anywhere.
+
+  Usage: -Dlog4j.configurationFile=<this file>
+-->
+<Configuration status="OFF">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_ERR">
+      <PatternLayout pattern="%-5level %logger{1} - %msg%n"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Root level="warn">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>

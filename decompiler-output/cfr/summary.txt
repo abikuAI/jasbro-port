@@ -1,0 +1,16 @@
+Summary for C:\Users\Computer\Documents\deepseek-harness\default-workspace\JaSBro-work\original\JaSBro-reference.jar
+Decompiled with CFR 0.152
+
+
+jasbro.game.character.activities.sub.business.Attend
+----------------------------
+
+perform()
+  Unable to fully structure code
+
+
+jasbro.game.character.activities.sub.business.Strip
+----------------------------
+
+perform()
+  Unable to fully structure code

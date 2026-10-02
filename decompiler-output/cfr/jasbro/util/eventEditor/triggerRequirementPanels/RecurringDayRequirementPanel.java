@@ -1,0 +1,47 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package jasbro.util.eventEditor.triggerRequirementPanels;
+
+import jasbro.game.world.customContent.requirements.RecurringDayRequirement;
+import jasbro.game.world.customContent.requirements.TriggerRequirement;
+import jasbro.texts.TextUtil;
+import javax.swing.BoxLayout;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSpinner;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+public class RecurringDayRequirementPanel
+extends JPanel {
+    private RecurringDayRequirement triggerRequirement;
+
+    public RecurringDayRequirementPanel(TriggerRequirement triggerRequirementTmp) {
+        this.triggerRequirement = (RecurringDayRequirement)triggerRequirementTmp;
+        this.setLayout(new BoxLayout(this, 0));
+        this.add(new JLabel(TextUtil.t("eventEditor.each")));
+        final JSpinner spinner = new JSpinner();
+        spinner.setValue(this.triggerRequirement.getEveryXDays());
+        this.add(spinner);
+        spinner.addChangeListener(new ChangeListener(){
+
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                RecurringDayRequirementPanel.this.triggerRequirement.setEveryXDays((Integer)spinner.getValue());
+            }
+        });
+        this.add(new JLabel(TextUtil.t("eventEditor.daysOffset")));
+        final JSpinner spinner2 = new JSpinner();
+        spinner2.setValue(this.triggerRequirement.getOffset());
+        this.add(spinner2);
+        spinner2.addChangeListener(new ChangeListener(){
+
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                RecurringDayRequirementPanel.this.triggerRequirement.setOffset((Integer)spinner2.getValue());
+            }
+        });
+    }
+}
+

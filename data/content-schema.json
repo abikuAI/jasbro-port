@@ -1,0 +1,677 @@
+{
+ "filesByFolder": {
+  "characters": 11,
+  "items": 155,
+  "npcs": 5,
+  "events": 51,
+  "quests": 11,
+  "config": 2
+ },
+ "distinctClasses": 71,
+ "totalClassRefs": 2259,
+ "topClasses": [
+  [
+   "jasbro.gui.pictures.ImageTag",
+   356
+  ],
+  [
+   "jasbro.game.items.ItemSpawnData",
+   181
+  ],
+  [
+   "jasbro.game.world.customContent.ImageSelection",
+   179
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventSimpleMessage",
+   177
+  ],
+  [
+   "jasbro.game.items.equipmentEffect.EquipmentChangeAttribute",
+   119
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventEffectContainer",
+   97
+  ],
+  [
+   "jasbro.game.items.equipmentEffect.EquipmentChangeAttributeGain",
+   95
+  ],
+  [
+   "jasbro.game.world.customContent.Trigger",
+   91
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventCondition",
+   86
+  ],
+  [
+   "jasbro.game.items.Equipment",
+   79
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventCode",
+   79
+  ],
+  [
+   "jasbro.game.items.usableItemEffects.UsableItemChangeAttribute",
+   75
+  ],
+  [
+   "jasbro.game.world.customContent.WorldEvent",
+   51
+  ],
+  [
+   "jasbro.game.items.UsableItem",
+   50
+  ],
+  [
+   "jasbro.game.items.equipmentEffect.EquipmentChangeCalculatedAttributeFixed",
+   49
+  ],
+  [
+   "jasbro.game.character.attributes.CalculatedAttribute",
+   42
+  ],
+  [
+   "jasbro.game.world.customContent.CustomQuestStage",
+   36
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventSetQuestStage",
+   32
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventSaveVariable",
+   28
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventSetQuestStatus",
+   26
+  ],
+  [
+   "jasbro.game.items.equipmentEffect.EquipmentChangeAttack",
+   25
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventLoadVariable",
+   19
+  ],
+  [
+   "jasbro.game.items.UnlockItem",
+   18
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.ChanceRequirement",
+   18
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.AttributeRequirement",
+   17
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.ActivityRequirement",
+   16
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventChangeAttribute",
+   15
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventGainItem",
+   14
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.MainCharacterRequirement",
+   13
+  ],
+  [
+   "jasbro.game.items.equipmentEffect.EquipmentRemoveTrait",
+   12
+  ],
+  [
+   "jasbro.game.world.customContent.CustomQuestTemplate",
+   11
+  ],
+  [
+   "jasbro.game.items.usableItemEffects.UsableItemChooseOneEffectContainer",
+   10
+  ],
+  [
+   "jasbro.game.items.LootItem",
+   8
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.NotRequirement",
+   8
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.LocationTypeRequirement",
+   8
+  ],
+  [
+   "jasbro.game.items.equipmentEffect.EquipmentAttributeRequirement",
+   7
+  ],
+  [
+   "jasbro.game.items.equipmentEffect.EquipmentChangeArmor",
+   7
+  ],
+  [
+   "jasbro.gui.pictures.ImageData",
+   7
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.MaximumCharacterAmountRequirement",
+   7
+  ],
+  [
+   "jasbro.game.world.customContent.npc.EnemySpawnData",
+   6
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.CodeRequirement",
+   6
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventCreateQuest",
+   6
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventChangeMoney",
+   6
+  ],
+  [
+   "jasbro.game.world.customContent.npc.ComplexEnemyTemplate",
+   5
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventAbortActivity",
+   5
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.MinimumCharacterAmountRequirement",
+   5
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.UnlockRequirement",
+   4
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.SpecializationRequirement",
+   4
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.NoChildPresentRequirement",
+   4
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventRemoveCharacter",
+   3
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.AnyOfOwnedCharactersRequirement",
+   3
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.RecurringDayRequirement",
+   3
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventCallAnotherEvent",
+   3
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.SameCharacterRequirement",
+   3
+  ],
+  [
+   "jasbro.game.items.usableItemEffects.UsableItemCooldown",
+   2
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventChangeFame",
+   2
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.AndRequirement",
+   2
+  ],
+  [
+   "jasbro.game.world.customContent.requirements.DayRequirement",
+   2
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventComment",
+   2
+  ],
+  [
+   "jasbro.game.world.customContent.effects.WorldEventAddToMessage",
+   2
+  ]
+ ],
+ "classesByFolder": {
+  "items": {
+   "jasbro.game.items.ItemSpawnData": 181,
+   "jasbro.game.items.equipmentEffect.EquipmentChangeAttribute": 119,
+   "jasbro.game.items.equipmentEffect.EquipmentChangeAttributeGain": 95,
+   "jasbro.game.items.Equipment": 79,
+   "jasbro.game.items.usableItemEffects.UsableItemChangeAttribute": 75,
+   "jasbro.game.items.UsableItem": 50,
+   "jasbro.game.items.equipmentEffect.EquipmentChangeCalculatedAttributeFixed": 49,
+   "jasbro.game.items.equipmentEffect.EquipmentChangeAttack": 25,
+   "jasbro.game.items.UnlockItem": 18,
+   "jasbro.game.items.equipmentEffect.EquipmentRemoveTrait": 12,
+   "jasbro.game.items.usableItemEffects.UsableItemChooseOneEffectContainer": 10,
+   "jasbro.game.items.LootItem": 8,
+   "jasbro.game.items.equipmentEffect.EquipmentAttributeRequirement": 7,
+   "jasbro.game.items.equipmentEffect.EquipmentChangeArmor": 7,
+   "jasbro.game.items.usableItemEffects.UsableItemCooldown": 2,
+   "jasbro.game.items.equipmentEffect.EquipmentAddTrait": 1,
+   "jasbro.game.items.equipmentEffect.EquipmentDailyAttributeChange": 1,
+   "jasbro.game.items.usableItemEffects.UsableItemSpeedUpPregnancy": 1,
+   "jasbro.game.items.equipmentEffect.EquipmentAddImageTag": 1,
+   "jasbro.game.items.usableItemEffects.UsableItemAdvanceAge": 1
+  },
+  "npcs": {
+   "jasbro.game.character.attributes.CalculatedAttribute": 42,
+   "jasbro.gui.pictures.ImageData": 7,
+   "jasbro.game.world.customContent.npc.EnemySpawnData": 6,
+   "jasbro.game.world.customContent.npc.ComplexEnemyTemplate": 5
+  },
+  "events": {
+   "jasbro.gui.pictures.ImageTag": 356,
+   "jasbro.game.world.customContent.ImageSelection": 179,
+   "jasbro.game.world.customContent.effects.WorldEventSimpleMessage": 177,
+   "jasbro.game.world.customContent.effects.WorldEventEffectContainer": 97,
+   "jasbro.game.world.customContent.effects.WorldEventCondition": 86,
+   "jasbro.game.world.customContent.effects.WorldEventCode": 79,
+   "jasbro.game.world.customContent.WorldEvent": 51,
+   "jasbro.game.world.customContent.effects.WorldEventSetQuestStage": 32,
+   "jasbro.game.world.customContent.effects.WorldEventSaveVariable": 28,
+   "jasbro.game.world.customContent.effects.WorldEventSetQuestStatus": 26,
+   "jasbro.game.world.customContent.effects.WorldEventLoadVariable": 19,
+   "jasbro.game.world.customContent.effects.WorldEventChangeAttribute": 15,
+   "jasbro.game.world.customContent.effects.WorldEventGainItem": 14,
+   "jasbro.game.world.customContent.Trigger": 9,
+   "jasbro.game.world.customContent.effects.WorldEventCreateQuest": 6,
+   "jasbro.game.world.customContent.requirements.ChanceRequirement": 6,
+   "jasbro.game.world.customContent.requirements.AttributeRequirement": 6,
+   "jasbro.game.world.customContent.effects.WorldEventChangeMoney": 6,
+   "jasbro.game.world.customContent.requirements.ActivityRequirement": 5,
+   "jasbro.game.world.customContent.effects.WorldEventAbortActivity": 5,
+   "jasbro.game.world.customContent.effects.WorldEventRemoveCharacter": 3,
+   "jasbro.game.world.customContent.requirements.RecurringDayRequirement": 3,
+   "jasbro.game.world.customContent.effects.WorldEventCallAnotherEvent": 3,
+   "jasbro.game.world.customContent.requirements.CodeRequirement": 2,
+   "jasbro.game.world.customContent.effects.WorldEventChangeFame": 2,
+   "jasbro.game.world.customContent.requirements.AnyOfOwnedCharactersRequirement": 2,
+   "jasbro.game.world.customContent.requirements.NotRequirement": 2,
+   "jasbro.game.world.customContent.requirements.AndRequirement": 2,
+   "jasbro.game.world.customContent.requirements.DayRequirement": 2,
+   "jasbro.game.world.customContent.effects.WorldEventComment": 2,
+   "jasbro.game.world.customContent.effects.WorldEventAddToMessage": 2,
+   "jasbro.game.world.customContent.requirements.FameRequirement": 1,
+   "jasbro.game.world.customContent.requirements.UnlockRequirement": 1,
+   "jasbro.game.world.customContent.requirements.OrRequirement": 1,
+   "jasbro.game.world.customContent.requirements.TraitRequirement": 1,
+   "jasbro.game.world.customContent.effects.WorldEventProtectCharacter": 1,
+   "jasbro.game.world.customContent.requirements.LocationTypeRequirement": 1,
+   "jasbro.game.world.customContent.requirements.SpecializationRequirement": 1
+  },
+  "quests": {
+   "jasbro.game.world.customContent.Trigger": 82,
+   "jasbro.game.world.customContent.CustomQuestStage": 36,
+   "jasbro.game.world.customContent.requirements.MainCharacterRequirement": 13,
+   "jasbro.game.world.customContent.requirements.ChanceRequirement": 12,
+   "jasbro.game.world.customContent.CustomQuestTemplate": 11,
+   "jasbro.game.world.customContent.requirements.ActivityRequirement": 11,
+   "jasbro.game.world.customContent.requirements.AttributeRequirement": 11,
+   "jasbro.game.world.customContent.requirements.LocationTypeRequirement": 7,
+   "jasbro.game.world.customContent.requirements.MaximumCharacterAmountRequirement": 7,
+   "jasbro.game.world.customContent.requirements.NotRequirement": 6,
+   "jasbro.game.world.customContent.requirements.MinimumCharacterAmountRequirement": 5,
+   "jasbro.game.world.customContent.requirements.CodeRequirement": 4,
+   "jasbro.game.world.customContent.requirements.NoChildPresentRequirement": 4,
+   "jasbro.game.world.customContent.requirements.UnlockRequirement": 3,
+   "jasbro.game.world.customContent.requirements.SpecializationRequirement": 3,
+   "jasbro.game.world.customContent.requirements.SameCharacterRequirement": 3,
+   "jasbro.game.world.customContent.requirements.MinimumCharactersMatchRequirement": 2,
+   "jasbro.game.world.customContent.requirements.CharacterIdRequirement": 2,
+   "jasbro.game.world.customContent.requirements.AnyOfOwnedCharactersRequirement": 1
+  }
+ },
+ "elementsByFolder": {
+  "characters": {
+   "tag": 636,
+   "image": 506,
+   "trait": 64,
+   "character": 11,
+   "name": 11,
+   "gender": 10,
+   "CHARISMA": 10,
+   "OBEDIENCE": 10,
+   "STAMINA": 10,
+   "INTELLIGENCE": 10,
+   "STRENGTH": 10,
+   "type": 6,
+   "initialSpecialization": 2,
+   "description": 2
+  },
+  "items": {
+   "attributeType": 271,
+   "amount": 208,
+   "itemLocation": 181,
+   "chance": 181,
+   "minAmount": 181,
+   "maxAmount": 181,
+   "value": 155,
+   "name": 155,
+   "type": 155,
+   "spawnData": 155,
+   "imageSelection": 153,
+   "image": 153,
+   "imageLocation": 153,
+   "background": 153,
+   "target": 153,
+   "description": 152,
+   "amountPercent": 95,
+   "attribute": 83,
+   "minChange": 83,
+   "maxChange": 83,
+   "equipmentEffects": 79,
+   "equipmentType": 79,
+   "itemEffect": 50,
+   "subEffects": 49,
+   "accessoryType": 42,
+   "unlockObject": 18,
+   "unlockMessage": 18,
+   "roomInfoId": 15,
+   "trait": 13,
+   "conditionType": 3,
+   "time": 2,
+   "authorDescription": 1,
+   "days": 1,
+   "imageTag": 1
+  },
+  "npcs": {
+   "entry": 42,
+   "double": 42,
+   "tags": 7,
+   "key": 7,
+   "filename": 7,
+   "enemySpawnLocation": 6,
+   "encounterChanceModifier": 6,
+   "conditions": 5,
+   "attributeMap": 5,
+   "hitpoints": 5,
+   "maxHitpoints": 5,
+   "combatInitialized": 5,
+   "gender": 5,
+   "dick": 5,
+   "name": 5,
+   "images": 5,
+   "spawnDataList": 5,
+   "femRape": 3,
+   "maleRape": 3,
+   "rape": 2,
+   "damageType": 2,
+   "femSubmit": 2,
+   "maleSubmit": 2,
+   "summoning": 2,
+   "customerMonster": 2,
+   "itemBaseId": 1,
+   "encounter": 1,
+   "characterBaseId": 1
+  },
+  "events": {
+   "background": 533,
+   "target": 424,
+   "imageLocation": 356,
+   "imageTags": 356,
+   "image": 186,
+   "subEffects": 183,
+   "message": 177,
+   "images": 177,
+   "importantMessage": 177,
+   "code": 156,
+   "requirement": 95,
+   "displayHeight": 73,
+   "id": 51,
+   "triggers": 51,
+   "effects": 51,
+   "source": 47,
+   "questStage": 32,
+   "questStatus": 26,
+   "attributeType": 25,
+   "requirements": 23,
+   "value": 17,
+   "itemId": 14,
+   "amount": 10,
+   "comparison": 10,
+   "triggerType": 9,
+   "addToActivity": 9,
+   "questId": 6,
+   "chance": 6,
+   "moneyModifier": 6,
+   "activityType": 5,
+   "everyXDays": 3,
+   "offset": 3,
+   "eventId": 3,
+   "day": 2,
+   "dayComparison": 2,
+   "comment": 2,
+   "text": 2,
+   "changeToPriorityMessage": 2,
+   "fameRequired": 1,
+   "unlockObject": 1
+  },
+  "quests": {
+   "requirements": 46,
+   "triggerType": 41,
+   "entry": 41,
+   "string": 41,
+   "showInQuestLog": 36,
+   "triggers": 36,
+   "triggerToWorldEventMap": 36,
+   "description": 32,
+   "requirement": 32,
+   "title": 27,
+   "chance": 13,
+   "id": 11,
+   "questStages": 11,
+   "activityType": 11,
+   "attributeType": 11,
+   "amount": 11,
+   "comparison": 11,
+   "code": 10,
+   "locationType": 7,
+   "activityLabel": 7,
+   "activityDescription": 7,
+   "maximum": 7,
+   "minimum": 7,
+   "unlockObject": 3,
+   "specialization": 3,
+   "characterId": 2
+  },
+  "config": {
+   "requirement": 396,
+   "activity": 183,
+   "char-requirement": 107,
+   "slot": 37,
+   "room": 29,
+   "slots": 29,
+   "activities": 29,
+   "child-activity": 21,
+   "unlock": 17,
+   "type": 17,
+   "name": 17,
+   "fame": 17,
+   "rooms": 1,
+   "unlocks": 1
+  }
+ },
+ "samples": {
+  "jasbro.game.items.Equipment": [
+   "items\\CommandCrown.xml",
+   "<jasbro.game.items.Equipment><value>1</value><name>Scepter of Command</name><type>EQUIPMENT</type><spawnData><jasbro.game.items.ItemSpawnData><itemLocation>SHOP</itemLocation><chance>1</chance><minAmount>1</minAmount><maxAmount>2</maxAmount></jasbro.game.items"
+  ],
+  "jasbro.game.items.ItemSpawnData": [
+   "items\\CommandCrown.xml",
+   "<jasbro.game.items.ItemSpawnData><itemLocation>SHOP</itemLocation><chance>1</chance><minAmount>1</minAmount><maxAmount>2</maxAmount></jasbro.game.items.ItemSpawnData></spawnData><equipmentEffects><jasbro.game.items.equipmentEffect.EquipmentAddTrait><trait>ONEO"
+  ],
+  "jasbro.game.items.equipmentEffect.EquipmentAddTrait": [
+   "items\\CommandCrown.xml",
+   "<jasbro.game.items.equipmentEffect.EquipmentAddTrait><trait>ONEOFUS</trait></jasbro.game.items.equipmentEffect.EquipmentAddTrait><jasbro.game.items.equipmentEffect.EquipmentChangeAttributeGain><attributeType class=\"jasbro.game.character.attributes.BaseAttribut"
+  ],
+  "jasbro.game.items.equipmentEffect.EquipmentChangeAttributeGain": [
+   "items\\CommandCrown.xml",
+   "<jasbro.game.items.equipmentEffect.EquipmentChangeAttributeGain><attributeType class=\"jasbro.game.character.attributes.BaseAttributeTypes\">COMMAND</attributeType><amountPercent>400</amountPercent></jasbro.game.items.equipmentEffect.EquipmentChangeAttributeGain"
+  ],
+  "jasbro.game.items.equipmentEffect.EquipmentChangeAttribute": [
+   "items\\XX_JSbro\\Accessories\\Neck\\XX_JSbro_Accesory Amulet Alchemist.xml",
+   "<jasbro.game.items.equipmentEffect.EquipmentChangeAttribute><attributeType class=\"jasbro.game.character.specialization.SpecializationAttribute\">MAGIC</attributeType><amount>15</amount></jasbro.game.items.equipmentEffect.EquipmentChangeAttribute><jasbro.game.it"
+  ],
+  "jasbro.game.items.equipmentEffect.EquipmentRemoveTrait": [
+   "items\\XX_JSbro\\Accessories\\Sexual\\XX_JSbro_Accessory Dildo Plug L.xml",
+   "<jasbro.game.items.equipmentEffect.EquipmentRemoveTrait><trait>FRIGID</trait></jasbro.game.items.equipmentEffect.EquipmentRemoveTrait><jasbro.game.items.equipmentEffect.EquipmentRemoveTrait><trait>NUMB</trait></jasbro.game.items.equipmentEffect.EquipmentRemove"
+  ],
+  "jasbro.game.items.equipmentEffect.EquipmentAttributeRequirement": [
+   "items\\XX_JSbro\\Accessories\\Sexual\\XX_JSbro_Accessory Dildo Plug L.xml",
+   "<jasbro.game.items.equipmentEffect.EquipmentAttributeRequirement><attributeType class=\"jasbro.game.character.attributes.Sextype\">ANAL</attributeType><amount>35</amount></jasbro.game.items.equipmentEffect.EquipmentAttributeRequirement><jasbro.game.items.equipme"
+  ],
+  "jasbro.game.items.equipmentEffect.EquipmentChangeAttack": [
+   "items\\XX_JSbro\\Combat\\G_WolfsFang.xml",
+   "<jasbro.game.items.equipmentEffect.EquipmentChangeAttack><amount>5.0</amount></jasbro.game.items.equipmentEffect.EquipmentChangeAttack><jasbro.game.items.equipmentEffect.EquipmentChangeCalculatedAttributeFixed><attributeType>CRITDAMAGEAMOUNT</attributeType><am"
+  ],
+  "jasbro.game.items.equipmentEffect.EquipmentChangeCalculatedAttributeFixed": [
+   "items\\XX_JSbro\\Combat\\G_WolfsFang.xml",
+   "<jasbro.game.items.equipmentEffect.EquipmentChangeCalculatedAttributeFixed><attributeType>CRITDAMAGEAMOUNT</attributeType><amount>30.0</amount></jasbro.game.items.equipmentEffect.EquipmentChangeCalculatedAttributeFixed><jasbro.game.items.equipmentEffect.Equipm"
+  ],
+  "jasbro.game.items.equipmentEffect.EquipmentChangeArmor": [
+   "items\\XX_JSbro\\Combat\\Shield\\XX_JSbro_Weapon Shield 1.xml",
+   "<jasbro.game.items.equipmentEffect.EquipmentChangeArmor><amount>1</amount></jasbro.game.items.equipmentEffect.EquipmentChangeArmor><jasbro.game.items.equipmentEffect.EquipmentChangeCalculatedAttributeFixed><attributeType>DODGE</attributeType><amount>-5.0</amou"
+  ],
+  "jasbro.game.items.equipmentEffect.EquipmentDailyAttributeChange": [
+   "items\\XX_JSbro\\Combat\\Wizard\\Weapon\\XX_JSbro_Weapon Wiz staff 3.xml",
+   "<jasbro.game.items.equipmentEffect.EquipmentDailyAttributeChange><attributeType class=\"jasbro.game.character.attributes.EssentialAttributes\">HEALTH</attributeType><amount>-2</amount></jasbro.game.items.equipmentEffect.EquipmentDailyAttributeChange><jasbro.game"
+  ],
+  "jasbro.game.items.UsableItem": [
+   "items\\XX_JSbro\\Consumable\\Fish\\FISH_Bigger_Fish.xml",
+   "<jasbro.game.items.UsableItem><value>500</value><name>Bigger Fish</name><description>A bigger fish.\n\nEffect:\n    increase Health by 2-6\n    increase Motivation by 2-4</description><type>USABLE</type><spawnData><jasbro.game.items.ItemSpawnData><itemLocation>SHO"
+  ],
+  "jasbro.game.items.usableItemEffects.UsableItemChangeAttribute": [
+   "items\\XX_JSbro\\Consumable\\Fish\\FISH_Bigger_Fish.xml",
+   "<jasbro.game.items.usableItemEffects.UsableItemChangeAttribute><attribute class=\"jasbro.game.character.attributes.EssentialAttributes\">HEALTH</attribute><minChange>2</minChange><maxChange>6</maxChange></jasbro.game.items.usableItemEffects.UsableItemChangeAttri"
+  ],
+  "jasbro.game.items.LootItem": [
+   "items\\XX_JSbro\\Loot\\Stolen\\XX_JSbro_loot_Bum.xml",
+   "<jasbro.game.items.LootItem><value>50</value><name>Old coin</name><description>An old coin, probably worth a bit of gold.</description><type>LOOT</type><spawnData><jasbro.game.items.ItemSpawnData><itemLocation>BUM</itemLocation><chance>100</chance><minAmount>1"
+  ],
+  "jasbro.game.items.usableItemEffects.UsableItemChooseOneEffectContainer": [
+   "items\\XX_JSbro\\MandatoryItems\\AnnoyingOrange.xml",
+   "<jasbro.game.items.usableItemEffects.UsableItemChooseOneEffectContainer><subEffects><jasbro.game.items.usableItemEffects.UsableItemChangeAttribute><attribute class=\"jasbro.game.character.attributes.EssentialAttributes\">ENERGY</attribute><minChange>-10</minChan"
+  ],
+  "jasbro.game.items.UnlockItem": [
+   "items\\XX_JSbro\\MandatoryItems\\BlueprintArena.xml",
+   "<jasbro.game.items.UnlockItem><value>10000</value><name>Arena Blueprint</name><description>The blueprint for building an arena.</description><type>UNLOCK</type><spawnData><jasbro.game.items.ItemSpawnData><itemLocation>ARCHITECT</itemLocation><chance>100</chanc"
+  ],
+  "jasbro.game.items.usableItemEffects.UsableItemSpeedUpPregnancy": [
+   "items\\XX_JSbro\\MandatoryItems\\Elixir_of_growth.xml",
+   "<jasbro.game.items.usableItemEffects.UsableItemSpeedUpPregnancy><days>90</days></jasbro.game.items.usableItemEffects.UsableItemSpeedUpPregnancy><jasbro.game.items.usableItemEffects.UsableItemCooldown><time>7</time></jasbro.game.items.usableItemEffects.UsableIt"
+  ],
+  "jasbro.game.items.usableItemEffects.UsableItemCooldown": [
+   "items\\XX_JSbro\\MandatoryItems\\Elixir_of_growth.xml",
+   "<jasbro.game.items.usableItemEffects.UsableItemCooldown><time>7</time></jasbro.game.items.usableItemEffects.UsableItemCooldown></subEffects></itemEffect></jasbro.game.items.UsableItem>"
+  ],
+  "jasbro.game.items.equipmentEffect.EquipmentAddImageTag": [
+   "items\\XX_JSbro\\MandatoryItems\\RegularClothes.xml",
+   "<jasbro.game.items.equipmentEffect.EquipmentAddImageTag><imageTag>REGULARCLOTHES</imageTag></jasbro.game.items.equipmentEffect.EquipmentAddImageTag></equipmentEffects><equipmentType>DRESS</equipmentType></jasbro.game.items.Equipment>"
+  ],
+  "jasbro.game.items.usableItemEffects.UsableItemAdvanceAge": [
+   "items\\XX_JSbro\\MandatoryItems\\Tome_of_time.xml",
+   "<jasbro.game.items.usableItemEffects.UsableItemAdvanceAge></jasbro.game.items.usableItemEffects.UsableItemAdvanceAge><jasbro.game.items.usableItemEffects.UsableItemCooldown><time>30</time></jasbro.game.items.usableItemEffects.UsableItemCooldown></subEffects></"
+  ],
+  "jasbro.game.world.customContent.npc.ComplexEnemyTemplate": [
+   "npcs\\enemies\\centaur\\properties.xml",
+   "<jasbro.game.world.customContent.npc.ComplexEnemyTemplate><conditions></conditions><attributeMap><entry><jasbro.game.character.attributes.CalculatedAttribute>CRITCHANCE</jasbro.game.character.attributes.CalculatedAttribute><double>10.0</double></entry><entry><"
+  ],
+  "jasbro.game.character.attributes.CalculatedAttribute": [
+   "npcs\\enemies\\centaur\\properties.xml",
+   "<jasbro.game.character.attributes.CalculatedAttribute>CRITCHANCE</jasbro.game.character.attributes.CalculatedAttribute><double>10.0</double></entry><entry><jasbro.game.character.attributes.CalculatedAttribute>DODGE</jasbro.game.character.attributes.CalculatedA"
+  ],
+  "jasbro.gui.pictures.ImageData": [
+   "npcs\\enemies\\centaur\\properties.xml",
+   "<jasbro.gui.pictures.ImageData><tags></tags><key>npcs\\enemies\\centaur\\01001800.png</key><filename>01001800.png</filename></jasbro.gui.pictures.ImageData></images><rape></rape><femRape></femRape><maleRape></maleRape><spawnDataList><jasbro.game.world.customConte"
+  ],
+  "jasbro.game.world.customContent.npc.EnemySpawnData": [
+   "npcs\\enemies\\centaur\\properties.xml",
+   "<jasbro.game.world.customContent.npc.EnemySpawnData><enemySpawnLocation>ARENA</enemySpawnLocation><encounterChanceModifier>100</encounterChanceModifier></jasbro.game.world.customContent.npc.EnemySpawnData><jasbro.game.world.customContent.npc.EnemySpawnData><en"
+  ],
+  "jasbro.game.world.customContent.WorldEvent": [
+   "events\\controlLowcharacterAwayTimePassed.xml",
+   "<jasbro.game.world.customContent.WorldEvent><id>controlLowcharacterAwayTimePassed</id><triggers></triggers><effects><jasbro.game.world.customContent.effects.WorldEventEffectContainer><subEffects><jasbro.game.world.customContent.effects.WorldEventLoadVariable><"
+  ],
+  "jasbro.game.world.customContent.effects.WorldEventEffectContainer": [
+   "events\\controlLowcharacterAwayTimePassed.xml",
+   "<jasbro.game.world.customContent.effects.WorldEventEffectContainer><subEffects><jasbro.game.world.customContent.effects.WorldEventLoadVariable><source>time</source><target>time</target></jasbro.game.world.customContent.effects.WorldEventLoadVariable><jasbro.ga"
+  ],
+  "jasbro.game.world.customContent.effects.WorldEventLoadVariable": [
+   "events\\controlLowcharacterAwayTimePassed.xml",
+   "<jasbro.game.world.customContent.effects.WorldEventLoadVariable><source>time</source><target>time</target></jasbro.game.world.customContent.effects.WorldEventLoadVariable><jasbro.game.world.customContent.effects.WorldEventCode><code>time--;</code><displayHeigh"
+  ],
+  "jasbro.game.world.customContent.effects.WorldEventCode": [
+   "events\\controlLowcharacterAwayTimePassed.xml",
+   "<jasbro.game.world.customContent.effects.WorldEventCode><code>time--;</code><displayHeight>1</displayHeight></jasbro.game.world.customContent.effects.WorldEventCode><jasbro.game.world.customContent.effects.WorldEventSaveVariable><source>time</source><target>ti"
+  ],
+  "jasbro.game.world.customContent.effects.WorldEventSaveVariable": [
+   "events\\controlLowcharacterAwayTimePassed.xml",
+   "<jasbro.game.world.customContent.effects.WorldEventSaveVariable><source>time</source><target>time</target></jasbro.game.world.customContent.effects.WorldEventSaveVariable><jasbro.game.world.customContent.effects.WorldEventCondition><subEffects><jasbro.game.wor"
+  ],
+  "jasbro.game.world.customContent.effects.WorldEventCondition": [
+   "events\\controlLowcharacterAwayTimePassed.xml",
+   "<jasbro.game.world.customContent.effects.WorldEventCondition><subEffects><jasbro.game.world.customContent.effects.WorldEventEffectContainer><subEffects><jasbro.game.world.customContent.effects.WorldEventCondition><subEffects><jasbro.game.world.customContent.ef"
+  ],
+  "jasbro.game.world.customContent.effects.WorldEventSimpleMessage": [
+   "events\\controlLowcharacterAwayTimePassed.xml",
+   "<jasbro.game.world.customContent.effects.WorldEventSimpleMessage><message>You have to hurry if you want to find &lt;c.name&gt;, before &lt;c.heshe&gt; manages to escape for good.</message><images></images><background><image>backgrounds/streets_morning.jpg</ima"
+  ],
+  "jasbro.gui.pictures.ImageTag": [
+   "events\\controlLowcharacterAwayTimePassed.xml",
+   "<jasbro.gui.pictures.ImageTag>STANDARD</jasbro.gui.pictures.ImageTag></imageTags><background>false</background><target>character</target></background><importantMessage>true</importantMessage></jasbro.game.world.customContent.effects.WorldEventSimpleMessage></s"
+  ],
+  "jasbro.game.world.customContent.effects.WorldEventSetQuestStatus": [
+   "events\\controlLowcharacterAwayTimePassed.xml",
+   "<jasbro.game.world.customContent.effects.WorldEventSetQuestStatus><questStatus>SOLVED</questStatus></jasbro.game.world.customContent.effects.WorldEventSetQuestStatus></subEffects></jasbro.game.world.customContent.effects.WorldEventEffectContainer></subEffects>"
+  ],
+  "jasbro.game.world.customContent.Trigger": [
+   "events\\controlLowEvent.xml",
+   "<jasbro.game.world.customContent.Trigger><requirement class=\"jasbro.game.world.customContent.requirements.AndRequirement\"><requirements><jasbro.game.world.customContent.requirements.CodeRequirement><code>return data.calculateControl().diff &lt; 0;</code></jasb"
+  ],
+  "jasbro.game.world.customContent.requirements.CodeRequirement": [
+   "events\\controlLowEvent.xml",
+   "<jasbro.game.world.customContent.requirements.CodeRequirement><code>return data.calculateControl().diff &lt; 0;</code></jasbro.game.world.customContent.requirements.CodeRequirement></requirements></requirement><triggerType>NEXTSHIFT</triggerType></jasbro.game."
+  ],
+  "jasbro.game.world.customContent.effects.WorldEventCreateQuest": [
+   "events\\controlLowEvent.xml",
+   "<jasbro.game.world.customContent.effects.WorldEventCreateQuest><questId>controlLowCharacterRanAwayQuest</questId></jasbro.game.world.customContent.effects.WorldEventCreateQuest><jasbro.game.world.customContent.effects.WorldEventSetQuestStage><questStage>1</que"
+  ],
+  "jasbro.game.world.customContent.effects.WorldEventSetQuestStage": [
+   "events\\controlLowEvent.xml",
+   "<jasbro.game.world.customContent.effects.WorldEventSetQuestStage><questStage>1</questStage></jasbro.game.world.customContent.effects.WorldEventSetQuestStage><jasbro.game.world.customContent.effects.WorldEventSetQuestStatus><questStatus>ACTIVE</questStatus></ja"
+  ],
+  "jasbro.game.world.customContent.effects.WorldEventRemoveCharacter": [
+   "events\\controlLowEvent.xml",
+   "<jasbro.game.world.customContent.effects.WorldEventRemoveCharacter><target>character</target></jasbro.game.world.customContent.effects.WorldEventRemoveCharacter><jasbro.game.world.customContent.effects.WorldEventSaveVariable><source>character</source><target>c"
+  ],
+  "jasbro.game.world.customContent.ImageSelection": [
+   "events\\controlLowEvent.xml",
+   "<jasbro.game.world.customContent.ImageSelection><imageLocation>LOCAL</imageLocation><imageTags><jasbro.gui.pictures.ImageTag>STANDARD</jasbro.gui.pictures.ImageTag></imageTags><background>false</background><target>character</target></jasbro.game.world.customCo"
+  ],
+  "jasbro.game.world.customContent.effects.WorldEventChangeFame": [
+   "events\\controlLowEvent.xml",
+   "<jasbro.game.world.customContent.effects.WorldEventChangeFame><value>-500</value><target>protagonist</target></jasbro.game.world.customContent.effects.WorldEventChangeFame></subEffects></jasbro.game.world.customContent.effects.WorldEventEffectContainer></effec"
+  ]
+ }
+}

@@ -1,0 +1,1330 @@
+[
+ {
+  "file": "events\\controlLowcharacterAwayTimePassed.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 7,
+  "code": "time--;"
+ },
+ {
+  "file": "events\\controlLowcharacterAwayTimePassed.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 17,
+  "code": "return time == 1;"
+ },
+ {
+  "file": "events\\controlLowcharacterAwayTimePassed.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 16,
+  "code": "return time > 0;"
+ },
+ {
+  "file": "events\\controlLowEvent.xml",
+  "parent": "jasbro.game.world.customContent.requirements.CodeRequirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 40,
+  "code": "return data.calculateControl().diff < 0;"
+ },
+ {
+  "file": "events\\controlLowEvent.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 8,
+  "chars": 226,
+  "code": "int lowestControl = 9999;\ncharacter = null;\nfor (Charakter curCharacter : data.characters.toArray()) {\n  if (curCharacter.control < lowestControl) {\n    character = curCharacter;\n    lowestControl = curCharacter.control;\n  }\n}"
+ },
+ {
+  "file": "events\\controlLowEvent.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "simple",
+  "lines": 4,
+  "chars": 95,
+  "code": "int time = 7;\nprotagonist = data.protagonist;\n\npeople = new ArrayList();\npeople.add(character);"
+ },
+ {
+  "file": "events\\controlLowSearchCharacter.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 34,
+  "code": "data.characters.add(capturedChar);"
+ },
+ {
+  "file": "events\\preventCharacterSpawn.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 5,
+  "chars": 144,
+  "code": "if (characterIds != null) {\n    for (int i = 0; i < characterIds.length; i++) {\n        characterIds[i] = characterIds[i].toLowerCase();\n    }\n}"
+ },
+ {
+  "file": "events\\preventCharacterSpawn.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 17,
+  "chars": 656,
+  "code": "if (characterIds != null) {\n    for (int i = 0; i < characterIds.length; i++) {\n        String characterId = characterIds[i];\n        for (int j = 0; j < data.auctionHouse.slaves.size(); j++) {\n            if (characterId.equals(data.auctionHouse.slaves.get(j).base.id.toLowerCase())) {\n                data.auctionHouse.slaves.remove(j);\n                 j--;\n            }\n        }\n        for (int j = 0; j < data.auctionHouse.trainers.size(); j++) {\n            if (characterId.equals(data.auctionHouse.trainers.get(j).base.id.toLowerCase())) {\n                data.auctionHouse.trainers.remove(j);\n                j--;\n            }\n        }\n    }\n}"
+ },
+ {
+  "file": "events\\travellingMerchantEvent.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 73,
+  "code": "Jasbro.getInstance().getGui().addMessage(new TravellingMerchantScreen());"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestBartenderContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 14,
+  "chars": 235,
+  "code": "//calculate max-prices\nint priceMoney = 0;\nint skillPoints = 0;\nif (difficulty == 1) {\n  priceMoney =  10000;\n}\nelse if (difficulty == 2) {\n  priceMoney = 100000;\n  skillPoints = 1;\n}\nelse {\n  priceMoney = 1000000;\n  skillPoints = 3;\n}"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestBartenderContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 46,
+  "chars": 1309,
+  "code": "int score = 0;\nscore += character.getFinalValue(BaseAttributeTypes.CHARISMA) / 4;\nscore += character.getFinalValue(BaseAttributeTypes.INTELLIGENCE) / 4;\nscore += character.getFinalValue(SpecializationAttribute.BARTENDING);\n\nif (bonusPointsVersion == 1) {\n  score += character.getFinalValue(BaseAttributeTypes.INTELLIGENCE) * 4;\n}\nelse {\n  score += character.getFinalValue(SpecializationAttribute.COOKING);\n}\n\nint targetScore = difficulty * difficulty * 10;\n\nint place;\nif (score > targetScore) {\n  place = 1;\n}\nelse {\n  skillPoints = 0;\n  if (score > targetScore * 19 / 20) {\n    place = 2;\n    priceMoney = priceMoney / (place * place * difficulty);\n  }\n  else if (score > targetScore * 18 / 20) {\n    place = 3;\n    priceMoney = priceMoney  / (place * place * difficulty);\n  }\n  else if (score > targetScore * 16 / 20) {\n    place = 4;\n    priceMoney = priceMoney / (place * place * difficulty);\n  }\n  else if (score > targetScore * 13 / 20) {\n    place = 5;\n    priceMoney = priceMoney / (place * place * difficulty);\n  }\n  else {\n    place = 6;\n    priceMoney = 0;\n    if (difficulty >= 3) {\n      place += Util.getInt(0, 10);\n    }\n  }\n}\n\nfor (int i = 0; i < skillPoints; i++) {\n  character.addBonusPerk();\n}\ncharacter.fame.modifyFame(priceMoney / 20);\ndata.protagonist.fame.modifyFame(priceMoney / 100);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestBartenderContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 23,
+  "code": "return difficulty == 2;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestBartenderContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 23,
+  "code": "return difficulty <= 1;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestBartenderContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 89,
+  "code": "return character.getFinalValue(SpecializationAttribute.BARTENDING) > targetScore * 2 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestBartenderContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 89,
+  "code": "return character.getFinalValue(SpecializationAttribute.BARTENDING) > targetScore * 3 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestBartenderContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 90,
+  "code": "return character.getFinalValue(BaseAttributeTypes.INTELLIGENCE) * 4 > targetScore * 2 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestBartenderContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 90,
+  "code": "return character.getFinalValue(BaseAttributeTypes.INTELLIGENCE) * 4 > targetScore * 3 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestBartenderContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 86,
+  "code": "return character.getFinalValue(SpecializationAttribute.COOKING) > targetScore * 2 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestBartenderContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 86,
+  "code": "return character.getFinalValue(SpecializationAttribute.COOKING) > targetScore * 3 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestBartenderContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 31,
+  "code": "return bonusPointsVersion == 1;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestBartenderContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 9,
+  "chars": 558,
+  "code": "String message = \"Under standing ovations <c.name> gets handed the trophy for first place.\";\nif (skillPoints > 0) {\n  message += TextUtil.getInstance().insertObjects(\" <c.heShe> won {0} gold and her overall skill improved (+{1} perks).\", new Object[] {priceMoney, skillPoints});\n}\nelse {\n  message += TextUtil.getInstance().insertObjects(\" <c.heShe> won {0} gold.\", new Object[] {priceMoney});\n}\nmessage += \" In addition to that many people will talk about you and <c.name> for a while.\";\nmessage = TextUtil.getInstance().applyTemplates(message, characters);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestBartenderContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 8,
+  "chars": 364,
+  "code": "String message = null;\nif (priceMoney > 0) {\n  message = TextUtil.getInstance().insertObjects(\" <c.heShe> made {0}. place and won {1} gold.\", new Object[] {place, priceMoney});\n}\nelse {\n  message = TextUtil.getInstance().insertObjects(\" <c.name> only got {0}th place.\", new Object[] {place});\n}\nmessage = TextUtil.getInstance().applyTemplates(message, characters);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestBartenderContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 18,
+  "code": "return place == 1;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestBartenderContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 4,
+  "chars": 285,
+  "code": "//Make sure character can't be used during next competitions\ncooldown = new CoolDown(45, \"contest\", \"Contest participation\", \"Participated in a contest and won't be able to do so for a little while.\");\ncharacter.addCondition(cooldown);\n\ndata.earnMoney(priceMoney, \"Bartender contest\");"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestBartenderContestGeneration.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 18,
+  "chars": 654,
+  "code": "if (difficulty == 1) {\n    message = \"There is a beginner level bartending contest going on. \";\n}\nelse if (difficulty == 2) {\n    message = \"There is a medium level bartending contest going on. \";\n}\nelse {\n    message = \"There is a local championship for bartenders happening today. \";\n}\nif (Util.getRnd().nextBoolean()) {\n  bonusPointsVersion = 1;\n  message  += \"Bonus points will be awarded for being able to talk well with customers.\";\n}\nelse {\n  bonusPointsVersion = 2;\n  message  += \"Bonus points will be awarded for preparing snacks.\";\n}\n\nmessage += \"\\n\\nAny of your characters can participate by visiting the streets during any time of  the day.\";"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestDancerContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 14,
+  "chars": 235,
+  "code": "//calculate max-prices\nint priceMoney = 0;\nint skillPoints = 0;\nif (difficulty == 1) {\n  priceMoney =  10000;\n}\nelse if (difficulty == 2) {\n  priceMoney = 100000;\n  skillPoints = 1;\n}\nelse {\n  priceMoney = 1000000;\n  skillPoints = 3;\n}"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestDancerContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 45,
+  "chars": 1232,
+  "code": "int score = 0;\nscore += character.getFinalValue(BaseAttributeTypes.CHARISMA) * 2;\nscore += character.getFinalValue(SpecializationAttribute.STRIP);\n\nif (bonusPointsVersion == 1) {\n  score += character.getFinalValue(Sextype.FOREPLAY) * 3 / 4;\n}\nelse {\n  score += character.getFinalValue(SpecializationAttribute.SEDUCTION) * 3 / 4;\n}\n\nint targetScore = difficulty * difficulty * 10;\n\nint place;\nif (score > targetScore) {\n  place = 1;\n}\nelse {\n  skillPoints = 0;\n  if (score > targetScore * 19 / 20) {\n    place = 2;\n    priceMoney = priceMoney / (place * place * difficulty);\n  }\n  else if (score > targetScore * 18 / 20) {\n    place = 3;\n    priceMoney = priceMoney  / (place * place * difficulty);\n  }\n  else if (score > targetScore * 16 / 20) {\n    place = 4;\n    priceMoney = priceMoney / (place * place * difficulty);\n  }\n  else if (score > targetScore * 13 / 20) {\n    place = 5;\n    priceMoney = priceMoney / (place * place * difficulty);\n  }\n  else {\n    place = 6;\n    priceMoney = 0;\n    if (difficulty >= 3) {\n      place += Util.getInt(0, 10);\n    }\n  }\n}\n\nfor (int i = 0; i < skillPoints; i++) {\n  character.addBonusPerk();\n}\ncharacter.fame.modifyFame(priceMoney / 20);\ndata.protagonist.fame.modifyFame(priceMoney / 100);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestDancerContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 23,
+  "code": "return difficulty == 2;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestDancerContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 23,
+  "code": "return difficulty <= 1;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestDancerContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 84,
+  "code": "return character.getFinalValue(SpecializationAttribute.STRIP) > targetScore * 2 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestDancerContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 84,
+  "code": "return character.getFinalValue(SpecializationAttribute.STRIP) > targetScore * 3 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestDancerContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 71,
+  "code": "return character.getFinalValue(Sextype.FOREPLAY) > targetScore * 2 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestDancerContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 72,
+  "code": "return character.getFinalValue(Sextype.FOREPLAY)  > targetScore * 3 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestDancerContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 88,
+  "code": "return character.getFinalValue(SpecializationAttribute.SEDUCTION) > targetScore * 2 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestDancerContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 88,
+  "code": "return character.getFinalValue(SpecializationAttribute.SEDUCTION) > targetScore * 3 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestDancerContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 31,
+  "code": "return bonusPointsVersion == 1;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestDancerContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 9,
+  "chars": 558,
+  "code": "String message = \"Under standing ovations <c.name> gets handed the trophy for first place.\";\nif (skillPoints > 0) {\n  message += TextUtil.getInstance().insertObjects(\" <c.heShe> won {0} gold and her overall skill improved (+{1} perks).\", new Object[] {priceMoney, skillPoints});\n}\nelse {\n  message += TextUtil.getInstance().insertObjects(\" <c.heShe> won {0} gold.\", new Object[] {priceMoney});\n}\nmessage += \" In addition to that many people will talk about you and <c.name> for a while.\";\nmessage = TextUtil.getInstance().applyTemplates(message, characters);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestDancerContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 8,
+  "chars": 364,
+  "code": "String message = null;\nif (priceMoney > 0) {\n  message = TextUtil.getInstance().insertObjects(\" <c.heShe> made {0}. place and won {1} gold.\", new Object[] {place, priceMoney});\n}\nelse {\n  message = TextUtil.getInstance().insertObjects(\" <c.name> only got {0}th place.\", new Object[] {place});\n}\nmessage = TextUtil.getInstance().applyTemplates(message, characters);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestDancerContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 18,
+  "code": "return place == 1;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestDancerContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 4,
+  "chars": 281,
+  "code": "//Make sure character can't be used during next competitions\ncooldown = new CoolDown(45, \"contest\", \"Contest participation\", \"Participated in a contest and won't be able to do so for a little while.\");\ncharacter.addCondition(cooldown);\n\ndata.earnMoney(priceMoney, \"Strip contest\");"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestDancerContestGeneration.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 18,
+  "chars": 747,
+  "code": "if (difficulty == 1) {\n    message = \"There is a striptease contest in a small local stripbar. \";\n}\nelse if (difficulty == 2) {\n    message = \"There is a striptease competition in a well known strip bar today. \";\n}\nelse {\n    message = \"Some of the more prominent local stripbars are working together to hold a grand striptease competition for their well paying customers today. \";\n}\nif (Util.getRnd().nextBoolean()) {\n  bonusPointsVersion = 1;\n  message  += \"Bonus points will be awarded for playing with oneself on stage.\";\n}\nelse {\n  bonusPointsVersion = 2;\n  message  += \"Bonus points will be awarded for seducing the customers.\";\n}\n\nmessage += \"\\n\\nAny of your characters can participate by visiting the streets during any time of  the day.\";"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestMaidContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 14,
+  "chars": 235,
+  "code": "//calculate max-prices\nint priceMoney = 0;\nint skillPoints = 0;\nif (difficulty == 1) {\n  priceMoney =  10000;\n}\nelse if (difficulty == 2) {\n  priceMoney = 100000;\n  skillPoints = 1;\n}\nelse {\n  priceMoney = 1000000;\n  skillPoints = 3;\n}"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestMaidContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 40,
+  "chars": 1118,
+  "code": "int score = 0;\nscore += character.getFinalValue(BaseAttributeTypes.CHARISMA) / 2;\nscore += character.getFinalValue(SpecializationAttribute.COOKING);\nscore += character.getFinalValue(SpecializationAttribute.CLEANING);\n\nint targetScore = difficulty * difficulty * 10;\n\nint place;\nif (score > targetScore) {\n  place = 1;\n}\nelse {\n  skillPoints = 0;\n  if (score > targetScore * 19 / 20) {\n    place = 2;\n    priceMoney = priceMoney / (place * place * difficulty);\n  }\n  else if (score > targetScore * 18 / 20) {\n    place = 3;\n    priceMoney = priceMoney  / (place * place * difficulty);\n  }\n  else if (score > targetScore * 16 / 20) {\n    place = 4;\n    priceMoney = priceMoney / (place * place * difficulty);\n  }\n  else if (score > targetScore * 13 / 20) {\n    place = 5;\n    priceMoney = priceMoney / (place * place * difficulty);\n  }\n  else {\n    place = 6;\n    priceMoney = 0;\n    if (difficulty >= 3) {\n      place += Util.getInt(0, 10);\n    }\n  }\n}\n\nfor (int i = 0; i < skillPoints; i++) {\n  character.addBonusPerk();\n}\ncharacter.fame.modifyFame(priceMoney / 20);\ndata.protagonist.fame.modifyFame(priceMoney / 100);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestMaidContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 23,
+  "code": "return difficulty == 2;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestMaidContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 23,
+  "code": "return difficulty <= 1;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestMaidContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 86,
+  "code": "return character.getFinalValue(SpecializationAttribute.COOKING) > targetScore * 2 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestMaidContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 86,
+  "code": "return character.getFinalValue(SpecializationAttribute.COOKING) > targetScore * 3 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestMaidContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 87,
+  "code": "return character.getFinalValue(SpecializationAttribute.CLEANING) > targetScore * 2 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestMaidContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 87,
+  "code": "return character.getFinalValue(SpecializationAttribute.CLEANING) > targetScore * 3 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestMaidContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 78,
+  "code": "return character.getFinalValue(BaseAttributeTypes.CHARISMA) > difficulty * 20;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestMaidContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 9,
+  "chars": 558,
+  "code": "String message = \"Under standing ovations <c.name> gets handed the trophy for first place.\";\nif (skillPoints > 0) {\n  message += TextUtil.getInstance().insertObjects(\" <c.heShe> won {0} gold and her overall skill improved (+{1} perks).\", new Object[] {priceMoney, skillPoints});\n}\nelse {\n  message += TextUtil.getInstance().insertObjects(\" <c.heShe> won {0} gold.\", new Object[] {priceMoney});\n}\nmessage += \" In addition to that many people will talk about you and <c.name> for a while.\";\nmessage = TextUtil.getInstance().applyTemplates(message, characters);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestMaidContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 8,
+  "chars": 364,
+  "code": "String message = null;\nif (priceMoney > 0) {\n  message = TextUtil.getInstance().insertObjects(\" <c.heShe> made {0}. place and won {1} gold.\", new Object[] {place, priceMoney});\n}\nelse {\n  message = TextUtil.getInstance().insertObjects(\" <c.name> only got {0}th place.\", new Object[] {place});\n}\nmessage = TextUtil.getInstance().applyTemplates(message, characters);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestMaidContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 18,
+  "code": "return place == 1;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestMaidContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 4,
+  "chars": 280,
+  "code": "//Make sure character can't be used during next competitions\ncooldown = new CoolDown(45, \"contest\", \"Contest participation\", \"Participated in a contest and won't be able to do so for a little while.\");\ncharacter.addCondition(cooldown);\n\ndata.earnMoney(priceMoney, \"Maid contest\");"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestMaidContestGeneration.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 10,
+  "chars": 378,
+  "code": "if (difficulty == 1) {\n    message = \"There is a beginner level maid contest going on.\";\n}\nelse if (difficulty == 2) {\n    message = \"There is a medium level maid contest going on.\";\n}\nelse {\n    message = \"There is a local championship for maids happening today.\";\n}\n\nmessage += \"\\n\\nAny of your characters can participate by visiting the streets during any time of  the day.\";"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 14,
+  "chars": 235,
+  "code": "//calculate max-prices\nint priceMoney = 0;\nint skillPoints = 0;\nif (difficulty == 1) {\n  priceMoney =  10000;\n}\nelse if (difficulty == 2) {\n  priceMoney = 100000;\n  skillPoints = 1;\n}\nelse {\n  priceMoney = 1000000;\n  skillPoints = 3;\n}"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 42,
+  "chars": 1142,
+  "code": "int score = 0;\nscore += character.getFinalValue(BaseAttributeTypes.CHARISMA);\nscore += character.getFinalValue(BaseAttributeTypes.OBEDIENCE);\n\nfor (Sextype sextype : events.toArray()) {\n  score += character.getFinalValue(sextype) * 3 / 4;\n}\n\nint targetScore = difficulty * difficulty * 10;\n\nint place;\nif (score > targetScore) {\n  place = 1;\n}\nelse {\n  skillPoints = 0;\n  if (score > targetScore * 19 / 20) {\n    place = 2;\n    priceMoney = priceMoney / (place * place * difficulty);\n  }\n  else if (score > targetScore * 18 / 20) {\n    place = 3;\n    priceMoney = priceMoney  / (place * place * difficulty);\n  }\n  else if (score > targetScore * 16 / 20) {\n    place = 4;\n    priceMoney = priceMoney / (place * place * difficulty);\n  }\n  else if (score > targetScore * 13 / 20) {\n    place = 5;\n    priceMoney = priceMoney / (place * place * difficulty);\n  }\n  else {\n    place = 6;\n    priceMoney = 0;\n    if (difficulty >= 3) {\n      place += Util.getInt(0, 10);\n    }\n  }\n}\n\nfor (int i = 0; i < skillPoints; i++) {\n  character.addBonusPerk();\n}\ncharacter.fame.modifyFame(priceMoney / 20);\ndata.protagonist.fame.modifyFame(priceMoney / 100);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 23,
+  "code": "return difficulty == 2;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 23,
+  "code": "return difficulty <= 1;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 71,
+  "code": "return character.getFinalValue(Sextype.FOREPLAY) > targetScore * 1 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 72,
+  "code": "return character.getFinalValue(Sextype.FOREPLAY)  > targetScore * 2 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 41,
+  "code": "return events.contains(Sextype.FOREPLAY);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 67,
+  "code": "return character.getFinalValue(Sextype.ORAL) > targetScore * 1 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 68,
+  "code": "return character.getFinalValue(Sextype.ORAL)  > targetScore * 2 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 37,
+  "code": "return events.contains(Sextype.ORAL);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 70,
+  "code": "return character.getFinalValue(Sextype.TITFUCK) > targetScore * 1 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 71,
+  "code": "return character.getFinalValue(Sextype.TITFUCK)  > targetScore * 2 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 40,
+  "code": "return events.contains(Sextype.TITFUCK);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 70,
+  "code": "return character.getFinalValue(Sextype.VAGINAL) > targetScore * 1 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 71,
+  "code": "return character.getFinalValue(Sextype.VAGINAL)  > targetScore * 2 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 40,
+  "code": "return events.contains(Sextype.VAGINAL);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 67,
+  "code": "return character.getFinalValue(Sextype.ANAL) > targetScore * 1 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 68,
+  "code": "return character.getFinalValue(Sextype.ANAL)  > targetScore * 2 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 37,
+  "code": "return events.contains(Sextype.ANAL);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 68,
+  "code": "return character.getFinalValue(Sextype.GROUP) > targetScore * 1 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 69,
+  "code": "return character.getFinalValue(Sextype.GROUP)  > targetScore * 2 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 38,
+  "code": "return events.contains(Sextype.GROUP);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 70,
+  "code": "return character.getFinalValue(Sextype.BONDAGE) > targetScore * 1 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 71,
+  "code": "return character.getFinalValue(Sextype.BONDAGE)  > targetScore * 2 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 40,
+  "code": "return events.contains(Sextype.BONDAGE);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 70,
+  "code": "return character.getFinalValue(Sextype.MONSTER) > targetScore * 1 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 71,
+  "code": "return character.getFinalValue(Sextype.MONSTER)  > targetScore * 2 / 5;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 40,
+  "code": "return events.contains(Sextype.MONSTER);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 9,
+  "chars": 558,
+  "code": "String message = \"Under standing ovations <c.name> gets handed the trophy for first place.\";\nif (skillPoints > 0) {\n  message += TextUtil.getInstance().insertObjects(\" <c.heShe> won {0} gold and her overall skill improved (+{1} perks).\", new Object[] {priceMoney, skillPoints});\n}\nelse {\n  message += TextUtil.getInstance().insertObjects(\" <c.heShe> won {0} gold.\", new Object[] {priceMoney});\n}\nmessage += \" In addition to that many people will talk about you and <c.name> for a while.\";\nmessage = TextUtil.getInstance().applyTemplates(message, characters);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 8,
+  "chars": 364,
+  "code": "String message = null;\nif (priceMoney > 0) {\n  message = TextUtil.getInstance().insertObjects(\" <c.heShe> made {0}. place and won {1} gold.\", new Object[] {place, priceMoney});\n}\nelse {\n  message = TextUtil.getInstance().insertObjects(\" <c.name> only got {0}th place.\", new Object[] {place});\n}\nmessage = TextUtil.getInstance().applyTemplates(message, characters);"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 18,
+  "code": "return place == 1;"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContest.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 4,
+  "chars": 279,
+  "code": "//Make sure character can't be used during next competitions\ncooldown = new CoolDown(45, \"contest\", \"Contest participation\", \"Participated in a contest and won't be able to do so for a little while.\");\ncharacter.addCondition(cooldown);\n\ndata.earnMoney(priceMoney, \"Sex contest\");"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestSexContestGeneration.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 23,
+  "chars": 965,
+  "code": "if (difficulty == 1) {\n    message = \"A small local brothel is having a sex contest for whores. \";\n}\nelse if (difficulty == 2) {\n    message = \"Some local brothels have organized a sex competition. \";\n}\nelse {\n    message = \"The Slave Trainer Guild has organized a grand sex competition for pleasure slaves especially, but anyone else is free to register as well. \";\n}\nList possibleEvents = new ArrayList();\nList events = new ArrayList();\nList eventStrings = new ArrayList();\nfor (Sextype sextype : Sextype.values()) {\n  possibleEvents.add(sextype);\n}\n\nfor (int i = 0; i < 3; i++) {\n  int rnd = Util.getInt(0, possibleEvents.size());\n  events.add(possibleEvents.get(rnd));\n  eventStrings.add(possibleEvents.get(rnd).getText());\n  possibleEvents.remove(rnd);\n}\n\nmessage += \"The disciplines are: \" + TextUtil.getInstance().listStrings(eventStrings) + \". \";\n\nmessage += \"\\n\\nAny of your characters can participate by visiting the streets during any time of  the day.\";"
+ },
+ {
+  "file": "events\\contestQuest\\contestQuestTriggerEvent.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 20,
+  "chars": 1006,
+  "code": "int day = data.day;\nint generatedNumber = (Util.getInt(0, 10) + day / 100) / 5;\nint amountContests = Math.min(3, Math.max(1, generatedNumber));\n\n//Add additional contests to this list (with day requirement if sensible)\nList possibleContests = new ArrayList();\npossibleContests.add(\"contestQuestMaidContestGeneration\");\npossibleContests.add(\"contestQuestSexContestGeneration\");\nif (data.day > 60) {\n  possibleContests.add(\"contestQuestBartenderContestGeneration\");\n  possibleContests.add(\"contestQuestDancerContestGeneration\");\n}\n\nint difficultyModifier = 0;\nfor (int i = 0; i < amountContests; i++) {\n    difficulty = Math.min(3, Math.max(1, Util.getInt(-2, 2) + day / 100 + difficultyModifier));\n    difficultyModifier -= difficulty;\n    \n    selectedContest = possibleContests.get(Util.getInt(0, possibleContests.size()));\n    WorldEvent worldEvent = Jasbro.getInstance().getWorldEvents().get(selectedContest);        \n\n    worldEvent.setInterpreter(this.interpreter);        \n    worldEvent.execute();\n}"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonCaptureMonster.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 6,
+  "chars": 196,
+  "code": "for (ComplexEnemy enemy : activity.defeatedEnemies.toArray()) {\n  enemyChar = CharacterSpawner.create(enemy.getCharacterBaseId(), CharacterType.SLAVE);\n\n  if (enemyChar != null) {\n    break;\n  }\n}"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonCaptureMonster.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 7,
+  "chars": 699,
+  "code": "options = new ArrayList();\noptions.add(new SelectionData(1, \"Leave it.\"));\noptions.add(new SelectionData(2, \"Capture it!\", \"Be careful, this is extremely dangerous for your character.\"));\nimage = ImageUtil.getInstance().getImageDataByTag(ImageTag.STANDARD, character);\nimage2 = ImageUtil.getInstance().getImageDataByTag(ImageTag.HURT, enemyChar);\nselectedOption = new SelectionScreen().select(options, image, null, character.getBackground(), \"The defeated \" + enemyChar.name + \" lies unconsciously on the dungeon floor. \" + character.name + \" could try to drag it back to town, to capture it. But other monsters are bound to show up if you do this.\");\nselected = selectedOption.getSelectionObject();"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonCaptureMonster.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 13,
+  "chars": 514,
+  "code": "Battle battle = new Battle();\nbattle.getSideA().add(character);\nmonsterA = CharacterSpawner.spawnEnemy(activity.getEnemySpawnLocation());\nmonsterB = CharacterSpawner.spawnEnemy(activity.getEnemySpawnLocation());\nmonsterC = CharacterSpawner.spawnEnemy(activity.getEnemySpawnLocation());\nbattle.getSideB().add(monsterA);\nbattle.getSideB().add(monsterB);\nbattle.getSideB().add(monsterC);\nmonsterString = TextUtil.getInstance().listCharacters(battle.getSideB());\ndo {\n    battle.doRound();\n} \nwhile (!battle.isOver());"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonCaptureMonster.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "simple",
+  "lines": 3,
+  "chars": 75,
+  "code": "data.characters.add(enemyChar);\npeople = characters;\npeople.add(enemyChar);"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonCaptureMonster.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 21,
+  "code": "return selected == 2;"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonCaptureMonster.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 25,
+  "code": "return enemyChar != null;"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonCharacterCaptured.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 13,
+  "code": "int time = 7;"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonCharacterCapturedRescue.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 33,
+  "code": "data.characters.add(rescuedChar);"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonCharacterCapturedTimePassed.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 7,
+  "code": "time--;"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonCharacterCapturedTimePassed.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 17,
+  "code": "return time == 1;"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonCharacterCapturedTimePassed.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 16,
+  "code": "return time > 0;"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonEncounterMonster.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 6,
+  "chars": 255,
+  "code": "ComplexEnemy enemy = CharacterSpawner.spawnEnemy(activity.getEnemySpawnLocation());\nBattle battle = new Battle(character, enemy);\ndo {\n    battle.doRound();\n} \nwhile (enemy.getHitpoints() > 10 && character.getHitpoints() > 10); // don't fight to the death"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonEncounterMonster.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 36,
+  "code": "activity.defeatedEnemies.add(enemy);"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonEncounterMonster.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 21,
+  "code": "//TODO Character lost"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonEncounterMonster.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 37,
+  "code": "return character.getHitpoints() > 10;"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonNothingHappens.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 27,
+  "code": "chance = Util.getInt(1, 4);"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonNothingHappens.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 19,
+  "code": "return chance == 3;"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonNothingHappens.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 19,
+  "code": "return chance == 2;"
+ },
+ {
+  "file": "events\\dungeonEvents\\dungeonNothingHappens.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 19,
+  "code": "return chance == 1;"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingArdTrainingAllow.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 8,
+  "chars": 700,
+  "code": "ImageSelection bla = new ImageSelection();\nbla.setImage(\"ard.png\");\noptions = new ArrayList();\noptions.add(new SelectionData(1, \"Sure! I need a strong training partner from time to time.\"));\noptions.add(new SelectionData(2, \"You caused enough problems already... Just go...\"));\nimage = bla.getImageData(worldEventInstance);\nselectedOption = new SelectionScreen().select(options, image, null, data.protagonist.getBackground(), \"Ard: Hey friend! How is it going? I just wanted to ask if I can come over from time to time to train with you.\\nI swear that I just come if you're already training! I need some practice too and bashing thugs gets boring...\");\nselected = selectedOption.getSelectionObject();"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingArdTrainingAllow.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 21,
+  "code": "return selected == 1;"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingArdWakeUp.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 26,
+  "code": "mainchar=data.protagonist;"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingArdWakeUp.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 3,
+  "chars": 138,
+  "code": "if (!mainchar.specializations.contains(SpecializationType.FIGHTER)){\nmainchar.addSpecializationDespiteLimit(SpecializationType.FIGHTER);\n}"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingArdWounded.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 26,
+  "code": "mainchar=data.protagonist;"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingArdWounded.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 16,
+  "chars": 522,
+  "code": "people = new ArrayList();\npeople.add(mainchar);\nthug = new SimpleEnemy(\"Gangboss\", \t//Name\n\tGender.MALE,              \t//Gender for texts\n\t150,\t\t//hitpoints\n\t5,\t\t//damage\n\t40,\t\t//armor\n\t100,\t\t//dodge\n\t0,\t\t//hit\n\t30,\t\t//crit chance \n\t50,\t\t//crit bonus\n\t5,\t\t//block chance \n\t10,\t\t//block amount\n\t10\t\t//speed\n\t); //you can write all of that in on line of course, just written like this for documentation e.g.: new SimpleEnemy(\"Naruto\",  Gender.MALE,  300, 5, 10, 20, 0, 30, 50, 5, 0, 10);\nbattle = new Battle(mainchar, thug);"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingArdWounded.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 4,
+  "chars": 133,
+  "code": "do {\n                battle.doRound();\n}\nwhile (thug.getHitpoints() > 10 && mainchar.getHitpoints() > 10); //don't fight to the death"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingBrawl.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 17,
+  "chars": 556,
+  "code": "protagonist = data.protagonist;\npeople = new ArrayList();\npeople.add(character);\nbum = new SimpleEnemy(\"drunken bum\", \t//Name\n\tGender.MALE,              \t//Gender for texts\n\t35,\t\t//hitpoints\n\t3,\t\t//damage\n\t10,\t\t//armor\n\t15,\t\t//dodge\n\t0,\t\t//hit\n\t20,\t\t//crit chance \n\t50,\t\t//crit bonus\n\t5,\t\t//block chance \n\t5,\t\t//block amount\n\t10\t\t//speed\n\t); //you can write all of that in on line of course, just written like this for documentation e.g.: new SimpleEnemy(\"Naruto\",  Gender.MALE,  300, 5, 10, 20, 0, 30, 50, 5, 0, 10);\nbattle = new Battle(protagonist, bum);"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingBrawl.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 4,
+  "chars": 135,
+  "code": "do {\n                battle.doRound();\n}\nwhile (bum.getHitpoints() > 10 && protagonist.getHitpoints() > 10); //don't fight to the death"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingBrawl.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 21,
+  "code": "fighterUnlockWins ++;"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingBrawl.xml",
+  "parent": "jasbro.game.world.customContent.requirements.CodeRequirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 30,
+  "code": "return fighterUnlockWins <= 1;"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingBrawl.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 30,
+  "code": "return fighterUnlockWins < 10;"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingBrawl.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 32,
+  "code": "return protagonist.health <= 10;"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingDuel.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 26,
+  "code": "mainchar=data.protagonist;"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingDuel.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 16,
+  "chars": 513,
+  "code": "people = new ArrayList();\npeople.add(mainchar);\nard = new SimpleEnemy(\"Ard\", \t//Name\n\tGender.MALE,              \t//Gender for texts\n\t60,\t\t//hitpoints\n\t5,\t\t//damage\n\t10,\t\t//armor\n\t20,\t\t//dodge\n\t0,\t\t//hit\n\t30,\t\t//crit chance \n\t50,\t\t//crit bonus\n\t5,\t\t//block chance \n\t10,\t\t//block amount\n\t10\t\t//speed\n\t); //you can write all of that in on line of course, just written like this for documentation e.g.: new SimpleEnemy(\"Naruto\",  Gender.MALE,  300, 5, 10, 20, 0, 30, 50, 5, 0, 10);\nbattle = new Battle(mainchar, ard);"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingDuel.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 4,
+  "chars": 132,
+  "code": "do {\n                battle.doRound();\n}\nwhile (ard.getHitpoints() > 10 && mainchar.getHitpoints() > 20); //don't fight to the death"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingDuel.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 3,
+  "chars": 128,
+  "code": "if (!mainchar.specializations.contains(SpecializationType.FIGHTER)){\nmainchar.specializations.add(SpecializationType.FIGHTER);\n}"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingFirstEncounterStrong.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 22,
+  "code": "fighterUnlockWins = 0;"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingRetrieveSword.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 16,
+  "chars": 515,
+  "code": "people = new ArrayList();\npeople.add(mainchar);\nthug = new SimpleEnemy(\"Thug\", \t//Name\n\tGender.MALE,              \t//Gender for texts\n\t35,\t\t//hitpoints\n\t3,\t\t//damage\n\t10,\t\t//armor\n\t15,\t\t//dodge\n\t0,\t\t//hit\n\t20,\t\t//crit chance \n\t50,\t\t//crit bonus\n\t5,\t\t//block chance \n\t5,\t\t//block amount\n\t10\t\t//speed\n\t); //you can write all of that in on line of course, just written like this for documentation e.g.: new SimpleEnemy(\"Naruto\",  Gender.MALE,  300, 5, 10, 20, 0, 30, 50, 5, 0, 10);\nbattle = new Battle(mainchar, thug);"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingRetrieveSword.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 4,
+  "chars": 133,
+  "code": "do {\n                battle.doRound();\n}\nwhile (thug.getHitpoints() > 10 && mainchar.getHitpoints() > 10); //don't fight to the death"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingRetrieveSword.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 3,
+  "chars": 128,
+  "code": "if (!mainchar.specializations.contains(SpecializationType.FIGHTER)){\nmainchar.specializations.add(SpecializationType.FIGHTER);\n}"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingRetrieveSword.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 29,
+  "code": "return mainchar.health <= 10;"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingSecondEncounter.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 28,
+  "code": "mainchar = data.protagonist;"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingSecondEncounter.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 22,
+  "code": "fighterUnlockWins = 0;"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingThirdEncounter.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 28,
+  "code": "mainchar = data.protagonist;"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingThirdEncounter.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 8,
+  "chars": 850,
+  "code": "ImageSelection bla = new ImageSelection();\nbla.setImage(\"ard.png\");\noptions = new ArrayList();\noptions.add(new SelectionData(1, \"Go and get his sword.\"));\noptions.add(new SelectionData(2, \"Let him go himself.\"));\nimage = bla.getImageData(worldEventInstance);\nselectedOption = new SelectionScreen().select(options, image, null, data.protagonist.getBackground(), \"Ard: Hey friend! You seem to be doing well.\\nI think it's time for the final phase of your training. We have a all-out duel to the death!\\nOf course no one really dies, but it sounds way cooler this way! Just grab one of my... my... my sword is gone! Did you see it somewhere?\\nIt's probably still at home...\\nCould you go and fetch my sword for me? Going there might not be entirely ... safe... for me. I'm sure you will be fine though!\");\nselected = selectedOption.getSelectionObject();"
+ },
+ {
+  "file": "events\\fighterUnlock\\fighterTrainingThirdEncounter.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 21,
+  "code": "return selected == 1;"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestFightNaruto.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 15,
+  "chars": 511,
+  "code": "protagonist = data.protagonist;\nnaruto = new SimpleEnemy(\"Naruto\", \t//Name\n\tGender.MALE,              \t//Gender for texts\n\t300,\t\t//hitpoints\n\t5,\t\t//damage\n\t10,\t\t//armor\n\t20,\t\t//dodge\n\t0,\t\t//hit\n\t30,\t\t//crit chance \n\t50,\t\t//crit bonus\n\t5,\t\t//block chance \n\t10,\t\t//block amount\n\t10\t\t//speed\n\t); //you can write all of that in one line of course, just written like this for documentation e.g.: new SimpleEnemy(\"Naruto\",  Gender.MALE,  300, 5, 10, 20, 0, 30, 50, 5, 0, 10);\nbattle = new Battle(protagonist, naruto);"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestFightNaruto.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 4,
+  "chars": 138,
+  "code": "do {\n                battle.doRound();\n}\nwhile (naruto.getHitpoints() > 10 && protagonist.getHitpoints() > 10); //don't fight to the death"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestFightNaruto.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 48,
+  "code": "Jasbro.getInstance().removeCharacter(character);"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestFightNaruto.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script+api",
+  "lines": 6,
+  "chars": 550,
+  "code": "options = new ArrayList();\noptions.add(new SelectionData(1, \"Sell back to Varrick\"));\noptions.add(new SelectionData(2, \"Keep him as your slave\"));\nimage = ImageUtil.getInstance().getImageDataByTag(ImageTag.STANDARD, protagonist);\nselectedOption = new SelectionScreen().select(options, image, null, protagonist.getBackground(), \"The blond demon slumps to the ground unconsciously. Now that you have defeated Naruto, you have two options: you can either return him to Varrick or keep him for yourself.\");\nselected = selectedOption.getSelectionObject();"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestFightNaruto.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 5,
+  "chars": 191,
+  "code": "naruto = CharacterSpawner.create(\"naruto_uzumaki\", CharacterType.SLAVE);\nif (naruto == null) {\n\tnaruto = CharacterSpawner.create(\"naruto\", CharacterType.SLAVE);\n}\ndata.characters.add(naruto);"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestFightNaruto.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 21,
+  "code": "return selected == 1;"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestFightNaruto.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 32,
+  "code": "return protagonist.health <= 10;"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestHiring.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "simple",
+  "lines": 3,
+  "chars": 132,
+  "code": "CharacterManipulationManager.changeType(hinata, CharacterType.TRAINER);\ndata.characters.add(hinata);\nhinata.name = \"Hinata Uzumaki\";"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestHiring.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 6,
+  "chars": 152,
+  "code": "child1 = null;\ndo {\n  child1 = CharacterSpawner.spawnChild(hinata, naruto);\n}\nwhile (child1.getGender() != Gender.MALE);\nchild1.setName(\"Bolt Uzumaki\");"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestHiring.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 6,
+  "chars": 158,
+  "code": "child2 = null;\ndo {\n  child2 = CharacterSpawner.spawnChild(hinata, naruto);\n}\nwhile (child2.getGender() != Gender.FEMALE);\nchild2.setName(\"Himawari Uzumaki\");"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestHiring.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "simple",
+  "lines": 6,
+  "chars": 197,
+  "code": "Pregnancy pregnancy = new Pregnancy();\npregnancy.setMother(hinata);\npregnancy.setFather(naruto.name);\npregnancy.children.add(child1);\npregnancy.children.add(child2);\nhinata.addCondition(pregnancy);"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestHiring.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 6,
+  "chars": 194,
+  "code": "//save whole family into one list for possible continuation of quest\ncharacters = new ArrayList();\ncharacters.add(naruto);\ncharacters.add(hinata);\ncharacters.add(child1);\ncharacters.add(child2);"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestMeetNaruto.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "simple",
+  "lines": 3,
+  "chars": 80,
+  "code": "protagonist = data.protagonist;\npeople = new ArrayList();\npeople.add(character);"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestMeetNaruto.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "api-call",
+  "lines": 6,
+  "chars": 628,
+  "code": "options = new ArrayList();\noptions.add(new SelectionData(1, \"Agree to his conditions\", \"You will lose \" + character.name + \", but gain 50.000 gold.\"));\noptions.add(new SelectionData(2, \"Fight!\"));\nimage = ImageUtil.getInstance().getImageDataByTag(ImageTag.STANDARD, protagonist);\nselectedOption = new SelectionScreen().select(options, image, null, protagonist.getBackground(), \"What do you choose to do? Letting them go is clearly the more humane choice, especially since \" + character.name + \" has shown signs of being equally taken with the demon as he is obviously with her.\");\nselected = selectedOption.getSelectionObject();"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestMeetNaruto.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 29,
+  "code": "int days = Util.getInt(5, 9);"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestMeetNaruto.xml",
+  "parent": "requirement",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 21,
+  "code": "return selected == 1;"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestReturn.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "script",
+  "lines": 5,
+  "chars": 206,
+  "code": "naruto = CharacterSpawner.create(\"naruto_uzumaki\", CharacterType.TRAINER);\nif (naruto == null) {\n\tnaruto = CharacterSpawner.create(\"naruto\", CharacterType.TRAINER);\n}\ndata.auctionHouse.trainers.add(naruto);"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestRumors.xml",
+  "parent": "jasbro.game.world.customContent.effects.WorldEventCode",
+  "kind": "expression",
+  "lines": 1,
+  "chars": 27,
+  "code": "days = Util.getInt(15, 30);"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestRumors.xml",
+  "parent": "requirement",
+  "kind": "script",
+  "lines": 3,
+  "chars": 56,
+  "code": "if (days == null) return true;\ndays--;\nreturn days <= 0;"
+ },
+ {
+  "file": "events\\nhQuest\\nhQuestSilence.xml",
+  "parent": "requirement",
+  "kind": "script",
+  "lines": 3,
+  "chars": 56,
+  "code": "if (days == null) return true;\ndays--;\nreturn days <= 0;"
+ },
+ {
+  "file": "quests\\nhQuest.xml",
+  "parent": "requirement",
+  "kind": "simple",
+  "lines": 2,
+  "chars": 79,
+  "code": "characterIds = new String[]{\"naruto_uzumaki\", \"naruto\", \"hinata\"};\nreturn true;"
+ },
+ {
+  "file": "quests\\nhQuest.xml",
+  "parent": "requirement",
+  "kind": "simple",
+  "lines": 2,
+  "chars": 79,
+  "code": "characterIds = new String[]{\"naruto_uzumaki\", \"naruto\", \"hinata\"};\nreturn true;"
+ },
+ {
+  "file": "quests\\nhQuest.xml",
+  "parent": "requirement",
+  "kind": "simple",
+  "lines": 2,
+  "chars": 79,
+  "code": "characterIds = new String[]{\"naruto_uzumaki\", \"naruto\", \"hinata\"};\nreturn true;"
+ },
+ {
+  "file": "quests\\nhQuest.xml",
+  "parent": "requirement",
+  "kind": "simple",
+  "lines": 2,
+  "chars": 79,
+  "code": "characterIds = new String[]{\"naruto_uzumaki\", \"naruto\", \"hinata\"};\nreturn true;"
+ },
+ {
+  "file": "quests\\nhQuest.xml",
+  "parent": "requirement",
+  "kind": "simple",
+  "lines": 2,
+  "chars": 79,
+  "code": "characterIds = new String[]{\"naruto_uzumaki\", \"naruto\", \"hinata\"};\nreturn true;"
+ },
+ {
+  "file": "quests\\nhQuest.xml",
+  "parent": "requirement",
+  "kind": "simple",
+  "lines": 2,
+  "chars": 79,
+  "code": "characterIds = new String[]{\"naruto_uzumaki\", \"naruto\", \"hinata\"};\nreturn true;"
+ },
+ {
+  "file": "quests\\contestQuest\\bartenderContestQuest.xml",
+  "parent": "jasbro.game.world.customContent.requirements.CodeRequirement",
+  "kind": "script",
+  "lines": 8,
+  "chars": 202,
+  "code": "for (Condition condition : character.getConditions().toArray()) {\nif (condition instanceof CoolDown) {\n  if (\"contest\".equals(((CoolDown)condition).getItemId())) {\n    return false;\n  }\n}\n}\nreturn true;"
+ },
+ {
+  "file": "quests\\contestQuest\\dancerContestQuest.xml",
+  "parent": "jasbro.game.world.customContent.requirements.CodeRequirement",
+  "kind": "script",
+  "lines": 8,
+  "chars": 202,
+  "code": "for (Condition condition : character.getConditions().toArray()) {\nif (condition instanceof CoolDown) {\n  if (\"contest\".equals(((CoolDown)condition).getItemId())) {\n    return false;\n  }\n}\n}\nreturn true;"
+ },
+ {
+  "file": "quests\\contestQuest\\maidContestQuest.xml",
+  "parent": "jasbro.game.world.customContent.requirements.CodeRequirement",
+  "kind": "script",
+  "lines": 8,
+  "chars": 202,
+  "code": "for (Condition condition : character.getConditions().toArray()) {\nif (condition instanceof CoolDown) {\n  if (\"contest\".equals(((CoolDown)condition).getItemId())) {\n    return false;\n  }\n}\n}\nreturn true;"
+ },
+ {
+  "file": "quests\\contestQuest\\sexContestQuest.xml",
+  "parent": "jasbro.game.world.customContent.requirements.CodeRequirement",
+  "kind": "script",
+  "lines": 8,
+  "chars": 202,
+  "code": "for (Condition condition : character.getConditions().toArray()) {\nif (condition instanceof CoolDown) {\n  if (\"contest\".equals(((CoolDown)condition).getItemId())) {\n    return false;\n  }\n}\n}\nreturn true;"
+ }
+]

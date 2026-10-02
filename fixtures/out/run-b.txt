@@ -1,0 +1,622 @@
+CWD=C:\Games\Jasbro_Final
+COUNT=10
+CHAR id=Loli
+  name=Loli
+  type=CHILD
+  gender=FEMALE
+  spec=WHORE
+  description=null
+  youngerBase=null
+  olderBase=null
+  attributes=CHARISMA=6 OBEDIENCE=6 STAMINA=6 INTELLIGENCE=6 STRENGTH=6
+  traits=LOLI FRAGILE LOYAL
+  images=5
+    IMG filename=0e051d3b8293900e35818e63e6b5e23b.jpg tags=SWIMSUIT, customText=null
+    IMG filename=45.png tags=ANAL,VAGINAL, customText=null
+    IMG filename=cba5893dba755172b847da8290b9232d.jpeg tags=GANGBANG, customText=null
+    IMG filename=fd60915449af646241f7925e9b9d1ae9.jpg tags=ICON, customText=null
+    IMG filename=sample_298565afd9e9070a162b5002e5794ce1.jpg tags=SWIMSUIT,SWIM,SUNBATHE, customText=null
+CHAR id=Mei
+  name=Mei
+  type=null
+  gender=FEMALE
+  spec=null
+  description=null
+  youngerBase=null
+  olderBase=null
+  attributes=CHARISMA=6 OBEDIENCE=6 STAMINA=6 INTELLIGENCE=6 STRENGTH=6
+  traits=LOVELY FIT NATURAL ALTRUISTIC OPENMINDED NICEBODY
+  images=37
+    IMG filename=04d0cd5ee9df81c08b6541ce704e5b9c.jpeg tags=BLOWJOB, customText=null
+    IMG filename=0616c67d43699f3bb0de34221b448a39.jpeg tags=GANGBANG, customText=null
+    IMG filename=0c9116a7c9d86ccd0dce9b6f8fa729e6.jpg tags=DANCE, customText=null
+    IMG filename=13a425f7e0ef0a41d0107ae917b7b32b.png tags=CLOTHED, customText=null
+    IMG filename=1d72052a1c1e2fceaf894ffc5f7092cd.jpeg tags=VAGINAL, customText=null
+    IMG filename=3605328a9b1945cbdd9ac83690fe13ec.jpg tags=BARTEND,LAPDANCE, customText=null
+    IMG filename=385069754a1dd28c6863c7d72b162229.jpeg tags=LAPDANCE, customText=null
+    IMG filename=3b0e7f20d064744a8f271d599e868716.jpeg tags=GANGBANG, customText=null
+    IMG filename=473529bf1332976bf470a6a86561daac.jpg tags=VAGINAL, customText=null
+    IMG filename=5698ee3f0ad5e7f59b40edbc6a7b18f9.jpeg tags=VAGINAL, customText=null
+    IMG filename=5b87bf5189f4a6d002979bebd0f96f4a.jpg tags=VAGINAL, customText=null
+    IMG filename=6a0b847ff9e9a6231f4e470549156088.jpg tags=BLOWJOB, customText=null
+    IMG filename=7d62bd78930039a6fe306f6b673e44db.jpeg tags=BLOWJOB, customText=null
+    IMG filename=8fcc74b529a1234d45ad3a4c4eb76716.jpg tags=CLOTHED,MAID, customText=null
+    IMG filename=92149a2d94f62ab1d7d02e1630156a44.jpg tags=CLOTHED,VICTORIOUS, customText=null
+    IMG filename=a58743106af7cd3512c8ef55220701a3.png tags=VAGINAL, customText=null
+    IMG filename=bf2058a3da6afd222e150ba818f8e790.png tags=BUKKAKE, customText=null
+    IMG filename=bf6452ae781e3c90472f54719d7f6177.jpeg tags=MONSTER, customText=null
+    IMG filename=c2e7dd97050efbd4d0990aaf9b81c1c0.jpg tags=CLOTHED,SLEEP, customText=null
+    IMG filename=cebd823c4119db1c0223dc9da9865bf0.png tags=CLOTHED, customText=null
+    IMG filename=d87ca72aaed33099c473b2c5774f3af6.png tags=CLOTHED,BARTEND, customText=null
+    IMG filename=e1e6a2d4b60af4d9f27f07889f94dda7.jpg tags=BARTEND, customText=null
+    IMG filename=e28a428feccf1f2b19354245ca785635.gif tags=LESBIAN, customText=null
+    IMG filename=f80bd1b96118f7abb97b159faec07044.jpg tags=SLEEP,FOREPLAY, customText=null
+    IMG filename=sample_108cac10131841a8e2060713ae9abfef.jpg tags=GANGBANG, customText=null
+    IMG filename=sample_1c3a496bef00a23db90ccc24564e3c96.jpg tags=DANCE, customText=null
+    IMG filename=sample_355c92346bda44b9eb6da7b7bc5a1383.jpg tags=MONSTER, customText=null
+    IMG filename=sample_543e3785b62024c486dfc42900586bde.jpg tags=VAGINAL, customText=null
+    IMG filename=sample_7ef48c8c15c3697f440fc4f17365e3ca.jpg tags=FOREPLAY, customText=null
+    IMG filename=sample_8fc893a163b6ddd00d910cdcca57fc59.jpg tags=GANGBANG, customText=null
+    IMG filename=sample_9bebaa439eff0e5a53124e3c483dc3be.jpg tags=VAGINAL, customText=null
+    IMG filename=sample_a8ca8a15656b5bd5f5bab90e4a7f84b9.jpg tags=VAGINAL, customText=null
+    IMG filename=sample_c6ec60e2623284540222d4e4a2c4dc3d.jpg tags=GANGBANG, customText=null
+    IMG filename=sample_d237696527337f0c5fce97a9400c8b5f.jpg tags=MONSTER, customText=null
+    IMG filename=sample_d9ec630b2017de965383ea838c0a6d68.jpg tags=VAGINAL, customText=null
+    IMG filename=sample_de0d19714d96e1c70e810596ae118e39.jpg tags=ANAL, customText=null
+    IMG filename=ss+(2015-07-04+at+07.40.41).jpg tags=ICON, customText=null
+CHAR id=Patchouli
+  name=Patchouli
+  type=null
+  gender=FEMALE
+  spec=null
+  description=null
+  youngerBase=null
+  olderBase=null
+  attributes=CHARISMA=8 OBEDIENCE=7 STAMINA=1 INTELLIGENCE=13 STRENGTH=1
+  traits=CLEVER UNFIT WEAK CLUMSY BIGBOOBS SICKLY FLABBY OPENMINDED SHY STIFF FRAGILE LOYAL EXTREMELYRARESLAVE
+  images=54
+    IMG filename=03e4a0d42670e0559d63d703fd2a06ee7a1149e6.jpg tags=BLOWJOB, customText=null
+    IMG filename=0747d4160259eac9bc58acf9e8182b3e.jpg tags=NAKED,LINGERIE,DANCE, customText=null
+    IMG filename=0ff7f25b964ac4b971bb7bffb365f606.jpg tags=CLOTHED, customText=null
+    IMG filename=26565366_p0.jpg tags=GANGBANG, customText=null
+    IMG filename=26565366_p3.jpg tags=GANGBANG, customText=null
+    IMG filename=26565366_p8.jpg tags=GANGBANG, customText=null
+    IMG filename=32232d121442880a48204db2dee8fe12.jpg tags=SLEEP, customText=null
+    IMG filename=35fd2a1ed7792c67cc88477f7bf30376.jpeg tags=NAKED, customText=null
+    IMG filename=3efb565db68cacc3398c5b5646d3d23c.jpg tags=MONSTER, customText=null
+    IMG filename=40248016_p0.jpg tags=NAKED,HURT,DANCE, customText=null
+    IMG filename=40248016_p1.jpg tags=TOUCHING, customText=null
+    IMG filename=40575140_p1.jpg tags=BUKKAKE, customText=null
+    IMG filename=406406904c2757efc52d544e535648ae.jpg tags=VAGINAL, customText=null
+    IMG filename=4807eda91abd3a039b9ce335ff29e459.png tags=CLOTHED,MAID, customText=null
+    IMG filename=49ab14fef527a0c4f9047152b63ea984.png tags=TITFUCK,BLOWJOB, customText=null
+    IMG filename=4fc5a7eeb42e965499ffa5da761104b8.jpg tags=DILDO, customText=null
+    IMG filename=5680053d9bb254afc0e615fe6682f0a3.jpg tags=STUDY, customText=null
+    IMG filename=5874063eaa837bdf25366a34a21c91da.jpeg tags=MONSTER, customText=null
+    IMG filename=5bb8d29486e7cffac8450c17f47ce2cd.jpg tags=VAGINAL, customText=null
+    IMG filename=71f5c54d9d5653362ec999e6a5806e23.jpg tags=ICON, customText=null
+    IMG filename=735c36b904da79d92c91719840f40f63.jpg tags=MONSTER, customText=null
+    IMG filename=7675298_m.jpg tags=MONSTER, customText=null
+    IMG filename=7bea5a548dbc958f7a3e7a96d840fd60.jpg tags=NAKED, customText=null
+    IMG filename=7cbc39e28da225ce1fd51097d2a69f9e.jpg tags=MONSTER, customText=null
+    IMG filename=8259698925bca69eeda36621fbfa676c.jpg tags=PLAY,CLOTHED,SLEEP, customText=null
+    IMG filename=8f1f86d80512e34b4e55cb06682c94f0.jpg tags=ANAL, customText=null
+    IMG filename=9a3edf85c294e4914da0aa4f54a570a6.jpg tags=MONSTER, customText=null
+    IMG filename=9a87ef62737d5252a2e055a6f70f6f1b.jpg tags=DANCE, customText=null
+    IMG filename=9c0988aa8e5ae5405c91fe1c2eb1911a.png tags=MONSTER, customText=null
+    IMG filename=a586056157c3bc2adf0d90135accf257cfae6cb4.jpg tags=GANGBANG, customText=null
+    IMG filename=a74c492015effe30c1d3e2e2ef40cdb0.jpg tags=DANCE, customText=null
+    IMG filename=acc181fad503d21b7d60551bdfb274b9.jpg tags=TITFUCK, customText=null
+    IMG filename=ad2afeec0883689ec75b812ca3f3998f.jpg tags=VAGINAL, customText=null
+    IMG filename=ae0a3896bf623775e6799846405b7ee702b55368.jpg tags=MONSTER, customText=null
+    IMG filename=ba698a780eca76d74e7da2493e74170b.jpg tags=SWIMSUIT, customText=null
+    IMG filename=bdad2407750d1a9ed6cedb25c6ecedd0.jpg tags=LINGERIE,DANCE, customText=null
+    IMG filename=c2f0cd86cbb6bc3ed2c477dc1e486009.jpg tags=ANAL, customText=null
+    IMG filename=c69cc1e2f508a18ff863adbe251b4b9aacd94547.jpg tags=GANGBANG, customText=null
+    IMG filename=ccb7d11a448846e5df19ef511401e3a0.png tags=BARTEND,SUNBATHE,DANCE, customText=null
+    IMG filename=e1603053f82d79bd984356786a7da2a88fd6617c.jpg tags=GANGBANG, customText=null
+    IMG filename=f49b778f527c299b8fc37da6dbe84b8c.jpeg tags=SWIMSUIT, customText=null
+    IMG filename=fc5064c3ade268777bc41ca66ee6d490.jpeg tags=BONDAGE, customText=null
+    IMG filename=sample_02e05f5a27a43858e09fad121c6b4c50.jpeg tags=BUKKAKE, customText=null
+    IMG filename=sample_0324106a756cdf0bb3ee46927187f2fd.png tags=BUKKAKE, customText=null
+    IMG filename=sample_345183437475efc4946c48ce280989c5.jpg tags=HURT,TEACH,STUDY,ICON, customText=null
+    IMG filename=sample_362cebf6645160a466b0cbd958914bd8.jpg tags=FIGHT,BARTEND,DANCE, customText=null
+    IMG filename=sample_3e766f138e0bb275da5a3c4454c40a8a.jpg tags=NAKED, customText=null
+    IMG filename=sample_3edd7d239ccf15a086f2baef638ceadb.jpeg tags=TRIBADISM,TOUCHING,LICKING,LESBIAN,DILDO,FINGERING,CUNNILINGUS, customText=null
+    IMG filename=sample_42388fe27e1732543d4d9651bd0377c9.png tags=BLOWJOB, customText=null
+    IMG filename=sample_42754d9d8c64c9fb3dd2f2d652948552.jpeg tags=MONSTER, customText=null
+    IMG filename=sample_5518180cb5ac5326d8e174f80c48d851.jpg tags=TITFUCK, customText=null
+    IMG filename=sample_64cf72601ffd0807be2914e7a53e8e53.png tags=MONSTER, customText=null
+    IMG filename=sample_a92c594beac51906eed622a7e49e9063.jpg tags= customText=null
+    IMG filename=sample_fa01a0ecc5f752296301835a14bba8d7.jpg tags= customText=null
+CHAR id=Shizuka
+  name=Shizuku
+  type=null
+  gender=FEMALE
+  spec=null
+  description=null
+  youngerBase=null
+  olderBase=null
+  attributes=CHARISMA=6 OBEDIENCE=7 STAMINA=6 INTELLIGENCE=4 STRENGTH=7
+  traits=FIT STRONG FOLLOWER HELPFUL ALTRUISTIC WILLINGSUBJECT BIGBOOBS OBEDIENT HEALTHY PERSEVERING OPENMINDED NICEBODY
+  images=44
+    IMG filename=shizuka (1).jpeg tags=DILDO, customText=null
+    IMG filename=shizuka (1).jpg tags=CLOTHED, customText=null
+    IMG filename=shizuka (1).png tags=ANAL, customText=null
+    IMG filename=shizuka (10).jpeg tags=MONSTER, customText=null
+    IMG filename=shizuka (10).jpg tags=FISTING, customText=null
+    IMG filename=shizuka (11).jpg tags=TITFUCK, customText=null
+    IMG filename=shizuka (12).jpg tags=TITFUCK, customText=null
+    IMG filename=shizuka (13).jpg tags=VAGINAL, customText=null
+    IMG filename=shizuka (14).jpg tags=CLOTHED,DANCE, customText=null
+    IMG filename=shizuka (15).jpg tags=FISTING, customText=null
+    IMG filename=shizuka (16).jpg tags=GANGBANG, customText=null
+    IMG filename=shizuka (17).jpg tags=GANGBANG, customText=null
+    IMG filename=shizuka (18).jpg tags=FISTING, customText=null
+    IMG filename=shizuka (19).jpg tags=NAKED,DANCE, customText=null
+    IMG filename=shizuka (2).jpeg tags=DANCE, customText=null
+    IMG filename=shizuka (2).jpg tags=BUKKAKE, customText=null
+    IMG filename=shizuka (2).png tags=GANGBANG, customText=null
+    IMG filename=shizuka (20).jpg tags=CLOTHED, customText=null
+    IMG filename=shizuka (21).jpg tags=TITFUCK, customText=null
+    IMG filename=shizuka (22).jpg tags=VAGINAL, customText=null
+    IMG filename=shizuka (23).jpg tags=BONDAGE, customText=null
+    IMG filename=shizuka (24).jpg tags=MONSTER, customText=null
+    IMG filename=shizuka (25).jpg tags=MONSTER, customText=null
+    IMG filename=shizuka (26).jpg tags=MONSTER, customText=null
+    IMG filename=shizuka (27).jpg tags=GANGBANG, customText=null
+    IMG filename=shizuka (3).jpeg tags=VAGINAL, customText=null
+    IMG filename=shizuka (3).jpg tags=TITFUCK, customText=null
+    IMG filename=shizuka (3).png tags=VAGINAL, customText=null
+    IMG filename=shizuka (4).jpeg tags=GANGBANG, customText=null
+    IMG filename=shizuka (4).jpg tags=VAGINAL, customText=null
+    IMG filename=shizuka (4).png tags=MONSTERBIRTH, customText=null
+    IMG filename=shizuka (5).jpeg tags=CLOTHED, customText=null
+    IMG filename=shizuka (5).jpg tags=ICON, customText=null
+    IMG filename=shizuka (5).png tags=GANGBANG, customText=null
+    IMG filename=shizuka (6).jpeg tags=BONDAGE, customText=null
+    IMG filename=shizuka (6).jpg tags=FIGHT, customText=null
+    IMG filename=shizuka (6).png tags=VAGINAL, customText=null
+    IMG filename=shizuka (7).jpeg tags=GANGBANG, customText=null
+    IMG filename=shizuka (7).jpg tags=GANGBANG, customText=null
+    IMG filename=shizuka (7).png tags=MONSTERBIRTH, customText=null
+    IMG filename=shizuka (8).jpeg tags=PREGNANT, customText=null
+    IMG filename=shizuka (8).jpg tags=CLOTHED,BARTEND,DANCE, customText=null
+    IMG filename=shizuka (9).jpeg tags=MONSTER, customText=null
+    IMG filename=shizuka (9).jpg tags=GANGBANG, customText=null
+CHAR id=Super Sonico
+  name=Sonico
+  type=SLAVE
+  gender=FEMALE
+  spec=null
+  description=Sonico
+Series: Super Sonico
+134 imgs.
+  youngerBase=null
+  olderBase=null
+  attributes=CHARISMA=8 OBEDIENCE=7 STAMINA=7 INTELLIGENCE=4 STRENGTH=4
+  traits=HELPFUL BIGBOOBS OBEDIENT HEALTHY SHY
+  images=134
+    IMG filename=anal1.png tags=ANAL, customText=null
+    IMG filename=anal2.jpg tags=ANAL, customText=null
+    IMG filename=anal3.jpg tags=ANAL, customText=null
+    IMG filename=anal4.jpg tags=ANAL, customText=null
+    IMG filename=bartend1.png tags=BARTEND, customText=null
+    IMG filename=bartend2.jpg tags=BARTEND, customText=null
+    IMG filename=bartend3.jpg tags=BARTEND, customText=null
+    IMG filename=bartend4.jpg tags=BARTEND, customText=null
+    IMG filename=bathe1.jpg tags=BATHE, customText=null
+    IMG filename=bathe2.jpg tags=BATHE, customText=null
+    IMG filename=bathe3.jpg tags=BATHE, customText=null
+    IMG filename=blowjob1.jpg tags=BLOWJOB, customText=null
+    IMG filename=blowjob2.jpg tags=BLOWJOB, customText=null
+    IMG filename=blowjob3.jpg tags=BLOWJOB, customText=null
+    IMG filename=bondage1.jpg tags=BONDAGE, customText=null
+    IMG filename=bondage10.png tags=BONDAGE, customText=null
+    IMG filename=bondage11.png tags=BONDAGE, customText=null
+    IMG filename=bondage12.jpg tags=BONDAGE, customText=null
+    IMG filename=bondage2.jpg tags=BONDAGE, customText=null
+    IMG filename=bondage3.jpeg tags=BONDAGE, customText=null
+    IMG filename=bondage4.jpg tags=BONDAGE, customText=null
+    IMG filename=bondage5.png tags=BONDAGE, customText=null
+    IMG filename=bondage6.jpeg tags=BONDAGE, customText=null
+    IMG filename=bondage7.jpg tags=BONDAGE, customText=null
+    IMG filename=bondage8.jpg tags=BONDAGE, customText=null
+    IMG filename=bondage9.jpg tags=BONDAGE, customText=null
+    IMG filename=clothed1.jpg tags=CLOTHED, customText=null
+    IMG filename=clothed10.jpg tags=CLOTHED, customText=null
+    IMG filename=clothed2.jpg tags=CLOTHED, customText=null
+    IMG filename=clothed3.jpg tags=CLOTHED, customText=null
+    IMG filename=clothed4.png tags=CLOTHED, customText=null
+    IMG filename=clothed5.jpg tags=CLOTHED,ICON, customText=null
+    IMG filename=clothed6.png tags=CLOTHED, customText=null
+    IMG filename=clothed7.jpg tags=CLOTHED,ICON, customText=null
+    IMG filename=clothed8.png tags=CLOTHED,ICON, customText=null
+    IMG filename=clothed9.png tags=CLOTHED,ICON, customText=null
+    IMG filename=dance1.jpg tags=DANCE, customText=null
+    IMG filename=dance10.png tags=DANCE, customText=null
+    IMG filename=dance11.jpg tags=DANCE, customText=null
+    IMG filename=dance12.jpg tags=DANCE, customText=null
+    IMG filename=dance2.jpg tags=DANCE, customText=null
+    IMG filename=dance3.png tags=DANCE, customText=null
+    IMG filename=dance4.jpg tags=DANCE, customText=null
+    IMG filename=dance5.jpg tags=DANCE, customText=null
+    IMG filename=dance6.jpg tags=DANCE, customText=null
+    IMG filename=dance7.jpg tags=DANCE, customText=null
+    IMG filename=dance8.jpg tags=DANCE, customText=null
+    IMG filename=dance9.png tags=DANCE, customText=null
+    IMG filename=fight1.png tags=FIGHT,DANCE, customText=null
+    IMG filename=fight2.jpg tags=FIGHT, customText=null
+    IMG filename=fight3.jpg tags=FIGHT, customText=null
+    IMG filename=fight4.jpg tags=FIGHT, customText=null
+    IMG filename=fight5.jpeg tags=FIGHT, customText=null
+    IMG filename=fight6.jpg tags=FIGHT, customText=null
+    IMG filename=fight7.jpg tags=FIGHT, customText=null
+    IMG filename=fight8.jpg tags=FIGHT, customText=null
+    IMG filename=group1.jpg tags=GROUP,BUKKAKE, customText=null
+    IMG filename=group2.jpeg tags=GROUP,BUKKAKE, customText=null
+    IMG filename=group3.jpg tags=GROUP,GANGBANG, customText=null
+    IMG filename=group4.jpg tags=GROUP,BUKKAKE, customText=null
+    IMG filename=group5.jpeg tags=GROUP,GANGBANG, customText=null
+    IMG filename=maid1.jpg tags=MAID, customText=null
+    IMG filename=maid10.jpg tags=MAID, customText=null
+    IMG filename=maid11.jpg tags=MAID, customText=null
+    IMG filename=maid12.jpg tags=MAID, customText=null
+    IMG filename=maid13.png tags=MAID, customText=null
+    IMG filename=maid14.jpg tags=MAID, customText=null
+    IMG filename=maid2.jpg tags=MAID, customText=null
+    IMG filename=maid3.jpg tags=MAID, customText=null
+    IMG filename=maid4.jpg tags=MAID, customText=null
+    IMG filename=maid5.jpg tags=MAID, customText=null
+    IMG filename=maid6.jpg tags=MAID, customText=null
+    IMG filename=maid7.jpg tags=MAID, customText=null
+    IMG filename=maid8.jpg tags=MAID, customText=null
+    IMG filename=maid9.jpg tags=MAID, customText=null
+    IMG filename=masturbation1.png tags=MASTURBATION, customText=null
+    IMG filename=masturbation2.jpg tags=MASTURBATION, customText=null
+    IMG filename=masturbation3.jpeg tags=MASTURBATION, customText=null
+    IMG filename=masturbation4.jpg tags=MASTURBATION, customText=null
+    IMG filename=masturbation5.jpg tags=MASTURBATION, customText=null
+    IMG filename=masturbation6.jpg tags=MASTURBATION, customText=null
+    IMG filename=naked1.png tags=NAKED, customText=null
+    IMG filename=naked2.jpg tags=NAKED, customText=null
+    IMG filename=naked3.png tags=NAKED, customText=null
+    IMG filename=naked4.jpg tags=NAKED, customText=null
+    IMG filename=naked5.jpg tags=NAKED, customText=null
+    IMG filename=naked6.jpg tags=NAKED, customText=null
+    IMG filename=naked7.jpg tags=NAKED, customText=null
+    IMG filename=naked8.jpg tags=NAKED, customText=null
+    IMG filename=sleep1.jpg tags=SLEEP, customText=null
+    IMG filename=sleep2.jpg tags=SLEEP, customText=null
+    IMG filename=sleep3.jpg tags=SLEEP, customText=null
+    IMG filename=sleep4.jpg tags=SLEEP, customText=null
+    IMG filename=sleep5.jpg tags=SLEEP, customText=null
+    IMG filename=sleep6.jpg tags=SLEEP, customText=null
+    IMG filename=swimsuit1.jpg tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit10.png tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit2.jpg tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit3.jpg tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit4.png tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit5.jpg tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit6.png tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit7.jpg tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit8.jpg tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit9.jpg tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=titfuck1.jpg tags=TITFUCK, customText=null
+    IMG filename=titfuck10.jpg tags=TITFUCK, customText=null
+    IMG filename=titfuck11.jpg tags=TITFUCK, customText=null
+    IMG filename=titfuck12.jpg tags=TITFUCK, customText=null
+    IMG filename=titfuck2.jpg tags=TITFUCK, customText=null
+    IMG filename=titfuck3.jpeg tags=TITFUCK, customText=null
+    IMG filename=titfuck4.jpeg tags=TITFUCK, customText=null
+    IMG filename=titfuck5.jpeg tags=TITFUCK, customText=null
+    IMG filename=titfuck6.jpg tags=TITFUCK, customText=null
+    IMG filename=titfuck7.jpg tags=TITFUCK, customText=null
+    IMG filename=titfuck8.jpeg tags=TITFUCK, customText=null
+    IMG filename=titfuck9.jpg tags=TITFUCK, customText=null
+    IMG filename=vaginal1.jpg tags=VAGINAL, customText=null
+    IMG filename=vaginal10.jpg tags=VAGINAL, customText=null
+    IMG filename=vaginal2.jpg tags=VAGINAL, customText=null
+    IMG filename=vaginal3.jpg tags=VAGINAL, customText=null
+    IMG filename=vaginal4.jpg tags=VAGINAL, customText=null
+    IMG filename=vaginal5.jpeg tags=VAGINAL, customText=null
+    IMG filename=vaginal6.jpg tags=VAGINAL, customText=null
+    IMG filename=vaginal7.png tags=VAGINAL, customText=null
+    IMG filename=vaginal8.jpeg tags=VAGINAL, customText=null
+    IMG filename=vaginal9.jpg tags=VAGINAL, customText=null
+    IMG filename=yuri1.jpg tags=TOUCHING,LESBIAN, customText=null
+    IMG filename=yuri2.jpg tags=TOUCHING,LESBIAN, customText=null
+    IMG filename=yuri3.jpg tags=TOUCHING,LESBIAN, customText=null
+    IMG filename=yuri4.jpg tags=LICKING,LESBIAN, customText=null
+    IMG filename=yuri5.jpg tags=TOUCHING,LESBIAN, customText=null
+    IMG filename=yuri6.jpg tags=TOUCHING,LESBIAN, customText=null
+    IMG filename=yuri7.jpg tags=FROTTING,TOUCHING,LESBIAN, customText=null
+CHAR id=Teen
+  name=Teen
+  type=TEENAGER
+  gender=FEMALE
+  spec=UNDERAGE
+  description=null
+  youngerBase=null
+  olderBase=null
+  attributes=CHARISMA=6 OBEDIENCE=6 STAMINA=6 INTELLIGENCE=6 STRENGTH=6
+  traits=
+  images=2
+    IMG filename=0e051d3b8293900e35818e63e6b5e23b.jpg tags=NAKED,CLOTHED,ICON, customText=null
+    IMG filename=3b.jpg tags=ANAL,GANGBANG,VAGINAL, customText=null
+CHAR id=Toddler
+  name=Toddler
+  type=INFANT
+  gender=FEMALE
+  spec=null
+  description=null
+  youngerBase=null
+  olderBase=null
+  attributes=CHARISMA=6 OBEDIENCE=6 STAMINA=6 INTELLIGENCE=6 STRENGTH=6
+  traits=
+  images=7
+    IMG filename=08.jpg tags=GANGBANG, customText=null
+    IMG filename=1415288266326-2.jpg tags=ANAL,VAGINAL, customText=null
+    IMG filename=1415288266327-4.jpg tags=VAGINAL, customText=null
+    IMG filename=1415522189645-1.png tags=MASTURBATION, customText=null
+    IMG filename=15.jpg tags= customText=null
+    IMG filename=Chibicomic_01_001.jpg tags=GANGBANG, customText=null
+    IMG filename=Chibicomic_01_002.jpg tags=GANGBANG, customText=null
+CHAR id=Touko
+  name=Touko
+  type=null
+  gender=FEMALE
+  spec=null
+  description=null
+  youngerBase=null
+  olderBase=null
+  attributes=CHARISMA=7 OBEDIENCE=5 STAMINA=7 INTELLIGENCE=4 STRENGTH=7
+  traits=FIT STRONG LEADER NATURAL BIGBOOBS HEALTHY PERSEVERING UNINHIBITED WILD
+  images=47
+    IMG filename=touko (1).gif tags=VAGINAL, customText=null
+    IMG filename=touko (1).jpeg tags=NORMALDICK, customText=null
+    IMG filename=touko (1).jpg tags=VAGINAL, customText=null
+    IMG filename=touko (1).png tags=NORMALDICK, customText=null
+    IMG filename=touko (10).jpeg tags=BONDAGE, customText=null
+    IMG filename=touko (10).jpg tags=GANGBANG, customText=null
+    IMG filename=touko (10).png tags=TITFUCK, customText=null
+    IMG filename=touko (11).jpeg tags=CLOTHED,BARTEND, customText=null
+    IMG filename=touko (11).jpg tags=PLAY,DANCE, customText=null
+    IMG filename=touko (12).jpeg tags=ANAL, customText=null
+    IMG filename=touko (12).jpg tags=VAGINAL, customText=null
+    IMG filename=touko (13).jpg tags=BUKKAKE, customText=null
+    IMG filename=touko (14).jpeg tags=SWIMSUIT,SWIM,SUNBATHE, customText=null
+    IMG filename=touko (14).jpg tags=TITFUCK, customText=null
+    IMG filename=touko (15).jpg tags=GANGBANG, customText=null
+    IMG filename=touko (16).jpg tags=HANDJOB, customText=null
+    IMG filename=touko (17).jpg tags=VAGINAL, customText=null
+    IMG filename=touko (18).jpg tags=VAGINAL, customText=null
+    IMG filename=touko (19).jpg tags=ICON,DANCE, customText=null
+    IMG filename=touko (2).gif tags=BLOWJOB, customText=null
+    IMG filename=touko (2).jpeg tags=GANGBANG, customText=null
+    IMG filename=touko (2).jpg tags=CLOTHED,BARTEND, customText=null
+    IMG filename=touko (2).png tags=CLOTHED, customText=null
+    IMG filename=touko (20).jpg tags=TOUCHING,LAPDANCE, customText=null
+    IMG filename=touko (21).jpg tags=VAGINAL, customText=null
+    IMG filename=touko (3).gif tags=LESBIAN, customText=null
+    IMG filename=touko (3).jpeg tags=NAKED, customText=null
+    IMG filename=touko (3).jpg tags=DANCE, customText=null
+    IMG filename=touko (3).png tags=PLAY,NURSE,VICTORIOUS, customText=null
+    IMG filename=touko (4).jpeg tags=GANGBANG, customText=null
+    IMG filename=touko (4).jpg tags=CLOTHED,TEACH,STUDY, customText=null
+    IMG filename=touko (4).png tags=DANCE, customText=null
+    IMG filename=touko (5).jpeg tags=BARTEND,DANCE, customText=null
+    IMG filename=touko (5).jpg tags=VAGINAL, customText=null
+    IMG filename=touko (5).png tags=DANCE, customText=null
+    IMG filename=touko (6).jpeg tags=FIGHT, customText=null
+    IMG filename=touko (6).jpg tags=CLOTHED,MAID,TEACH,STUDY, customText=null
+    IMG filename=touko (6).png tags=DANCE, customText=null
+    IMG filename=touko (7).jpeg tags=MAID,DANCE, customText=null
+    IMG filename=touko (7).jpg tags=DANCE, customText=null
+    IMG filename=touko (7).png tags=VAGINAL, customText=null
+    IMG filename=touko (8).jpeg tags=NURSE,BARTEND, customText=null
+    IMG filename=touko (8).jpg tags=NORMALDICK, customText=null
+    IMG filename=touko (8).png tags=NAKED,TOUCHING, customText=null
+    IMG filename=touko (9).jpeg tags=ANAL, customText=null
+    IMG filename=touko (9).jpg tags=BLOWJOB, customText=null
+    IMG filename=touko (9).png tags=VAGINAL, customText=null
+CHAR id=Tsumugi Kotobuki
+  name=Mugi
+  type=SLAVE
+  gender=FEMALE
+  spec=null
+  description=Tsumugi "Mugi" Kotobuki
+Series: K-On!
+122 imgs.
+  youngerBase=null
+  olderBase=null
+  attributes=CHARISMA=6 OBEDIENCE=6 STAMINA=6 INTELLIGENCE=6 STRENGTH=6
+  traits=LOVELY CLEVER LEADER UNFIT NATURAL SENSITIVE ALTRUISTIC BIGBOOBS HEALTHY
+  images=122
+    IMG filename=anal1.jpg tags=ANAL, customText=null
+    IMG filename=anal2.jpg tags=ANAL, customText=null
+    IMG filename=anal3.jpg tags=ANAL, customText=null
+    IMG filename=anal4.jpg tags=ANAL, customText=null
+    IMG filename=bartend1.png tags=BARTEND, customText=null
+    IMG filename=bartend2.jpeg tags=BARTEND, customText=null
+    IMG filename=bartend3.jpg tags=BARTEND, customText=null
+    IMG filename=bartend4.jpg tags=BARTEND, customText=null
+    IMG filename=bartend5.jpg tags=BARTEND, customText=null
+    IMG filename=blowjob1.jpg tags=BLOWJOB, customText=null
+    IMG filename=blowjob2.jpeg tags=BLOWJOB, customText=null
+    IMG filename=blowjob3.jpg tags=BLOWJOB, customText=null
+    IMG filename=blowjob4.jpeg tags=BLOWJOB, customText=null
+    IMG filename=blowjob5.jpeg tags=BLOWJOB, customText=null
+    IMG filename=blowjob6.jpg tags=BLOWJOB, customText=null
+    IMG filename=bondage1.jpg tags=BONDAGE, customText=null
+    IMG filename=bondage2.png tags=BONDAGE, customText=null
+    IMG filename=bondage3.jpg tags=BONDAGE, customText=null
+    IMG filename=bondage4.jpg tags=BONDAGE, customText=null
+    IMG filename=bondage5.jpeg tags=BONDAGE, customText=null
+    IMG filename=bondage6.png tags=BONDAGE, customText=null
+    IMG filename=bondage7.png tags=BONDAGE, customText=null
+    IMG filename=bondage8.png tags=BONDAGE, customText=null
+    IMG filename=clothed1.jpg tags=CLOTHED, customText=null
+    IMG filename=clothed10.jpg tags=CLOTHED,ICON, customText=null
+    IMG filename=clothed2.jpg tags=CLOTHED, customText=null
+    IMG filename=clothed3.jpg tags=CLOTHED,ICON, customText=null
+    IMG filename=clothed4.png tags=CLOTHED, customText=null
+    IMG filename=clothed5.jpg tags=CLOTHED, customText=null
+    IMG filename=clothed6.jpg tags=CLOTHED, customText=null
+    IMG filename=clothed7.jpg tags=CLOTHED,ICON, customText=null
+    IMG filename=clothed8.jpg tags=CLOTHED,ICON, customText=null
+    IMG filename=clothed9.jpg tags=CLOTHED,ICON, customText=null
+    IMG filename=dance1.jpg tags=DANCE, customText=null
+    IMG filename=dance10.jpg tags=DANCE, customText=null
+    IMG filename=dance2.jpg tags=DANCE, customText=null
+    IMG filename=dance3.png tags=DANCE, customText=null
+    IMG filename=dance4.jpg tags=DANCE, customText=null
+    IMG filename=dance5.jpg tags=DANCE, customText=null
+    IMG filename=dance6.jpg tags=DANCE, customText=null
+    IMG filename=dance7.jpg tags=DANCE, customText=null
+    IMG filename=dance8.jpg tags=DANCE, customText=null
+    IMG filename=dance9.jpg tags=DANCE, customText=null
+    IMG filename=group1.png tags=GROUP, customText=null
+    IMG filename=group10.jpg tags=GROUP, customText=null
+    IMG filename=group2.png tags=GROUP, customText=null
+    IMG filename=group3.png tags=GROUP, customText=null
+    IMG filename=group4.jpg tags=GROUP, customText=null
+    IMG filename=group5.jpeg tags=GROUP, customText=null
+    IMG filename=group6.jpg tags=GROUP, customText=null
+    IMG filename=group7.jpg tags=GROUP, customText=null
+    IMG filename=group8.jpg tags=GROUP, customText=null
+    IMG filename=group9.jpg tags=GROUP, customText=null
+    IMG filename=maid1.jpg tags=MAID, customText=null
+    IMG filename=maid10.jpg tags=MAID, customText=null
+    IMG filename=maid11.jpg tags=MAID, customText=null
+    IMG filename=maid12.jpg tags=MAID, customText=null
+    IMG filename=maid2.jpg tags=MAID, customText=null
+    IMG filename=maid3.jpg tags=MAID, customText=null
+    IMG filename=maid4.jpg tags=MAID, customText=null
+    IMG filename=maid5.jpg tags=MAID, customText=null
+    IMG filename=maid6.jpg tags=MAID, customText=null
+    IMG filename=maid7.jpg tags=MAID, customText=null
+    IMG filename=maid8.jpg tags=MAID, customText=null
+    IMG filename=maid9.jpg tags=MAID, customText=null
+    IMG filename=masturbation1.jpeg tags=MASTURBATION, customText=null
+    IMG filename=masturbation2.jpg tags=MASTURBATION, customText=null
+    IMG filename=masturbation3.jpeg tags=MASTURBATION, customText=null
+    IMG filename=masturbation4.jpeg tags=MASTURBATION, customText=null
+    IMG filename=masturbation5.jpg tags=MASTURBATION, customText=null
+    IMG filename=masturbation6.jpg tags=MASTURBATION, customText=null
+    IMG filename=masturbation7.jpg tags=MASTURBATION, customText=null
+    IMG filename=masturbation8.jpeg tags=MASTURBATION, customText=null
+    IMG filename=naked1.jpeg tags=NAKED, customText=null
+    IMG filename=naked10.jpeg tags=NAKED, customText=null
+    IMG filename=naked2.jpg tags=NAKED, customText=null
+    IMG filename=naked3.jpg tags=NAKED, customText=null
+    IMG filename=naked4.png tags=NAKED, customText=null
+    IMG filename=naked5.jpeg tags=NAKED, customText=null
+    IMG filename=naked6.jpg tags=NAKED, customText=null
+    IMG filename=naked7.jpg tags=NAKED, customText=null
+    IMG filename=naked8.jpg tags=NAKED, customText=null
+    IMG filename=naked9.jpg tags=NAKED, customText=null
+    IMG filename=oral-cun1.jpeg tags=CUNNILINGUS, customText=null
+    IMG filename=sleep1.jpeg tags=SLEEP, customText=null
+    IMG filename=sleep2.gif tags=SLEEP, customText=null
+    IMG filename=sleep3.jpg tags=SLEEP, customText=null
+    IMG filename=sleep4.png tags=SLEEP, customText=null
+    IMG filename=swimsuit1.png tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit10.jpg tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit2.jpg tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit3.jpg tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit4.jpg tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit5.jpg tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit6.jpg tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit7.jpg tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit8.jpg tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=swimsuit9.jpeg tags=SWIMSUIT,SWIM, customText=null
+    IMG filename=titfuck1.jpg tags=TITFUCK, customText=null
+    IMG filename=titfuck2.jpg tags=TITFUCK, customText=null
+    IMG filename=titfuck3.jpg tags=TITFUCK, customText=null
+    IMG filename=titfuck4.jpg tags=TITFUCK, customText=null
+    IMG filename=titfuck5.jpg tags=TITFUCK, customText=null
+    IMG filename=titfuck6.jpg tags=TITFUCK, customText=null
+    IMG filename=titfuck7.jpg tags=TITFUCK, customText=null
+    IMG filename=vaginal1.jpg tags=VAGINAL, customText=null
+    IMG filename=vaginal10.jpg tags=VAGINAL, customText=null
+    IMG filename=vaginal11.jpg tags=VAGINAL, customText=null
+    IMG filename=vaginal2.jpeg tags=VAGINAL, customText=null
+    IMG filename=vaginal3.jpg tags=VAGINAL, customText=null
+    IMG filename=vaginal4.jpg tags=VAGINAL, customText=null
+    IMG filename=vaginal5.png tags=VAGINAL, customText=null
+    IMG filename=vaginal6.jpg tags=VAGINAL, customText=null
+    IMG filename=vaginal7.jpg tags=VAGINAL, customText=null
+    IMG filename=vaginal8.jpeg tags=VAGINAL, customText=null
+    IMG filename=vaginal9.jpg tags=VAGINAL, customText=null
+    IMG filename=yuri1.jpeg tags=LICKING,LESBIAN, customText=null
+    IMG filename=yuri2.jpg tags=LICKING,LESBIAN, customText=null
+    IMG filename=yuri3.jpg tags=TOUCHING,LESBIAN, customText=null
+    IMG filename=yuri4.jpg tags=TOUCHING,LESBIAN, customText=null
+    IMG filename=yuri5.jpg tags=FROTTING,KISS,LESBIAN, customText=null
+    IMG filename=yuri6.jpg tags=LICKING,LESBIAN, customText=null
+CHAR id=Zoe
+  name=Zoe
+  type=null
+  gender=FEMALE
+  spec=null
+  description=null
+  youngerBase=null
+  olderBase=null
+  attributes=CHARISMA=8 OBEDIENCE=7 STAMINA=6 INTELLIGENCE=7 STRENGTH=1
+  traits=FIT BIGBOOBS OBEDIENT HEALTHY PERSEVERING SHY NICEBODY
+  images=54
+    IMG filename=388835e5256354fad17ccca0451b247a.jpg tags=DILDO, customText=null
+    IMG filename=zoe (1).jpeg tags=SWIMSUIT, customText=null
+    IMG filename=zoe (1).png tags=ANAL, customText=null
+    IMG filename=zoe (10).jpg tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (10).png tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (11).jpg tags=ANAL, customText=null
+    IMG filename=zoe (11).png tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (12).png tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (13).jpg tags=CLOTHED, customText=null
+    IMG filename=zoe (13).png tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (14).jpg tags=TITFUCK, customText=null
+    IMG filename=zoe (14).png tags=SWIMSUIT, customText=null
+    IMG filename=zoe (15).jpg tags=BLOWJOB, customText=null
+    IMG filename=zoe (15).png tags=KISS, customText=null
+    IMG filename=zoe (16).png tags=DANCE, customText=null
+    IMG filename=zoe (17).jpg tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (18).jpg tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (19).jpg tags=ANAL,VAGINAL, customText=null
+    IMG filename=zoe (2).jpg tags=MONSTER, customText=null
+    IMG filename=zoe (2).png tags=TOUCHING, customText=null
+    IMG filename=zoe (20).jpg tags=FINGERING, customText=null
+    IMG filename=zoe (21).jpg tags=BLOWJOB, customText=null
+    IMG filename=zoe (22).jpg tags=VAGINAL, customText=null
+    IMG filename=zoe (23).jpg tags=MONSTER, customText=null
+    IMG filename=zoe (24).jpg tags=VAGINAL, customText=null
+    IMG filename=zoe (25).jpg tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (27).jpg tags=CLOTHED,TEACH,BARTEND,STUDY, customText=null
+    IMG filename=zoe (28).jpg tags=DANCE, customText=null
+    IMG filename=zoe (29).jpg tags=MASTURBATION,DANCE, customText=null
+    IMG filename=zoe (3).jpg tags=MONSTER, customText=null
+    IMG filename=zoe (3).png tags=CLOTHED, customText=null
+    IMG filename=zoe (30).jpg tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (32).jpg tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (33).jpg tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (34).jpg tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (35).jpg tags=HURT,GROUP,GANGBANG, customText=null
+    IMG filename=zoe (36).jpg tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (37).jpg tags=FINGERING, customText=null
+    IMG filename=zoe (38).jpg tags=VAGINAL, customText=null
+    IMG filename=zoe (39).jpg tags=HURT, customText=null
+    IMG filename=zoe (4).jpg tags=BONDAGE, customText=null
+    IMG filename=zoe (4).png tags=ANAL, customText=null
+    IMG filename=zoe (40).jpg tags=BONDAGE, customText=null
+    IMG filename=zoe (41).jpg tags=BONDAGE, customText=null
+    IMG filename=zoe (42).jpg tags=VAGINAL, customText=null
+    IMG filename=zoe (5).jpg tags=ICON, customText=null
+    IMG filename=zoe (5).png tags=VAGINAL, customText=null
+    IMG filename=zoe (6).jpg tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (6).png tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (7).jpg tags=MAID, customText=null
+    IMG filename=zoe (7).png tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (8).jpg tags=GROUP,BUKKAKE, customText=null
+    IMG filename=zoe (8).png tags=GROUP,GANGBANG, customText=null
+    IMG filename=zoe (9).png tags=ANAL, customText=null

@@ -1,0 +1,25 @@
+# Build output
+bin/
+obj/
+*.user
+
+# Godot
+.godot/
+*.translation
+
+# Toolchains and downloads (see BUILDING.md)
+tools/jdk8/
+tools/jdk21/
+tools/godot/
+tools/godot-download/
+tools/*.zip
+
+# The game's artwork (see BUILDING.md)
+characters/
+images/
+
+# Runs and scratch
+build-out/run/
+build-out/run-dec/
+build-out/stage/
+*.log
