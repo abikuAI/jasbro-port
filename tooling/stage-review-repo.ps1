@@ -38,8 +38,11 @@ param(
 $ErrorActionPreference = 'Stop'
 
 if (Test-Path $Destination) {
-    Write-Host "clearing $Destination" -ForegroundColor Yellow
-    Get-ChildItem $Destination -Force | Remove-Item -Recurse -Force
+    # PRESERVE .git. Clearing it destroys the repository on every re-stage, which is exactly what
+    # happened the first time this was run. Only the tracked working tree is rebuilt.
+    Write-Host "clearing $Destination (keeping .git)" -ForegroundColor Yellow
+    Get-ChildItem $Destination -Force | Where-Object { $_.Name -ne '.git' } |
+        Remove-Item -Recurse -Force
 } else {
     New-Item -ItemType Directory -Force -Path $Destination | Out-Null
 }

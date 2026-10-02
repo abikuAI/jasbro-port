@@ -1,3 +1,6 @@
+// Godot's SDK does not enable implicit usings, so System and System.Linq are explicit.
+using System;
+using System.Linq;
 using Godot;
 using Simbro.Core.Content;
 using Simbro.Core.Save;
