@@ -136,14 +136,16 @@ cd port
 dotnet run --project Simbro.Verify
 ```
 
-**113 parity checks, 0 failures.** Covers the `Time` enum cycle, `EventType` (32 values with the
+**128 parity checks, 0 failures.** Covers the `Time` enum cycle, `EventType` (32 values with the
 custom-content flag), the money semantics (event-before-mutation ordering, negative balances,
 `BROKE`), the attribute type system (53 attribute keys across three families), a `properties.xml`
 parser verified **field-by-field against the shipped game's own loader** over all 10 real characters
-(506 images, 636 tags), and a save reader/writer verified against golden fixtures produced by the
-real Java build — including `Charakter.base` being `transient`, and XStream reference resolution
-with 1-based indexing. See [`SAVE-FORMAT.md`](SAVE-FORMAT.md) and
-[`CONTENT-PARITY.md`](CONTENT-PARITY.md).
+(506 images, 636 tags), **all 29 rooms in `rooms.xml` verified field-for-field against the shipped
+`RoomLoader`** (cost, occupancy, image, slot set, activity list, and the full requirement tree), and
+a save reader/writer verified against golden fixtures produced by the real Java build — including
+`Charakter.base` being `transient`, and XStream reference resolution with 1-based indexing. See
+[`SAVE-FORMAT.md`](SAVE-FORMAT.md), [`CONTENT-PARITY.md`](CONTENT-PARITY.md) and
+[`CONTENT-MODEL.md`](CONTENT-MODEL.md).
 
 **Compatibility is proven in both directions — and for both content and saves.**
 
@@ -155,13 +157,23 @@ This regenerates every fixture using the **real Java classes** (including runnin
 content loader over `C:\Games\Jasbro_Final\characters`), runs the C# verifier against them, then
 feeds a **C#-written save back to the shipped Java game** and confirms it reconstructs the values.
 
-Two real bugs were caught this way, neither of which would have shown up in a hand-written test:
+Four real bugs were caught this way, none of which would have shown up in a hand-written test:
 
 - **Image tags are a `HashSet`** — they deduplicate, and their order is a JVM hash artifact rather
   than a content contract. Verified stable across runs, which is exactly what makes comparing order
   a trap.
 - **Images are sorted by filename**, and the comparison must be **ordinal** — C#'s default is
   culture-sensitive and would mis-order non-ASCII filenames.
+- **`rooms.xml:645` mislabels a character requirement as `<requirement>`** instead of
+  `<char-requirement>`, and the shipped loader accepts it because the character-requirement parser
+  never inspects the tag name. **A port that validated element names would reject shipped content.**
+- **`min-occupant`/`max-occupant`/`exact-occupant` counts are validated with the regex `[0-9]`**,
+  which matches exactly one digit — so `count="10"` throws. Latent rather than active (every shipped
+  value is 1–5), and fixed in the port as a documented Class A deviation.
+
+The third and fourth were found only because the rooms check compares against a dump taken from the
+**real** `RoomLoader` rather than against an expectation written by hand; a hand-written expectation
+would have encoded the same wrong assumption the port started with.
 
 C# enums are **generated** from the decompiled Java by `tools/gen_enums.py`, so the port cannot
 drift from the shipped game's constant set (96 `ImageTag`, 372 `Trait`, 18 `SpecializationType`,

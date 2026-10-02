@@ -50,7 +50,7 @@ Godot's only knowledge of the domain is `Simbro.Godot.csproj` referencing `Simbr
 This is deliberate, and it buys three things:
 
 1. **The simulation is testable without an engine.** `dotnet run --project Simbro.Verify` checks
-   125 assertions with no window, no boot, no flakiness.
+   128 assertions with no window, no boot, no flakiness.
 2. **The engine choice is reversible.** Swapping Godot for another toolkit costs the presentation
    layer only, never the simulation. This is what makes the [engine decision](ENGINE-CHOICE.md)
    low-risk despite genuine reservations about Godot's data-UI story.
@@ -123,9 +123,16 @@ The presentation layer is a **scaffold with a proof-of-integration scene**, not 
 - No character list, no activity screens, no map, no save/load UI.
 - Settings and theming are untouched.
 
-The next real step is the content/event model in `Simbro.Core` (world events, custom quests,
-requirements, effects), because the presentation layer has nothing to display until the domain can
-represent what the content files describe. See [`BSH-MIGRATION.md`](BSH-MIGRATION.md).
+On the domain side, the two halves of the content model are in very different states:
+
+| Content system | State |
+|---|---|
+| **`rooms.xml`** (rooms, slots, activity requirements) | **Ported and verified** — all 29 rooms match the shipped loader field-for-field |
+| **`events/` + `quests/`** (XStream, 166 BeanShell blocks) | **Not started** — the largest remaining domain item |
+
+The next real step is therefore System 1: world events, custom quests, requirements, effects, and the
+BeanShell question. See [`CONTENT-MODEL.md`](CONTENT-MODEL.md) for the two-system split and
+[`BSH-MIGRATION.md`](BSH-MIGRATION.md) for the script decision.
 
 > **Worth restating before investing in UI:** Godot's Control nodes have no real data grid, and this
 > game is fundamentally dense tables with pictures. The plan is to build `Simbro.Core` first and

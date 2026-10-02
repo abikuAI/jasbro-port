@@ -1,4 +1,5 @@
 using Simbro.Core.Content;
+using Simbro.Core.Content.Rooms;
 using Simbro.Core.Events;
 using Simbro.Core.Save;
 using Simbro.Core.State;
@@ -656,6 +657,118 @@ else
         ageData?.ChildText("nameFather") == "Father-Name");
 }
 
+// ---------------------------------------------------------------------------------------------
+// rooms.xml - the OTHER content system.
+//
+// rooms.xml is not XStream. It is a DOM walk dispatching on the `type` ATTRIBUTE, and every
+// requirement element is spelled either <requirement> or <char-requirement> with the real type in
+// the attribute. See CONTENT-MODEL.md.
+//
+// rooms-golden.txt is produced by fixtures/java/RoomsFixture.java, which runs the shipped game's
+// own RoomLoader and reflects into RoomInfo's private requirement maps. So this compares against
+// what the game actually built, not a hand-written expectation.
+// ---------------------------------------------------------------------------------------------
+var goldenRooms = LocateFixture("rooms-golden.txt");
+var roomsXml = LocateOriginalFile("rooms.xml");
+
+if (goldenRooms is null)
+{
+    Console.WriteLine("  SKIP  rooms-golden.txt not found");
+}
+else if (roomsXml is null)
+{
+    Console.WriteLine("  SKIP  rooms.xml not found");
+}
+else
+{
+    var expected = RoomsGolden.Parse(File.ReadAllLines(goldenRooms));
+    Console.WriteLine($"        fixture lists {expected.Count} rooms (loader reported ROOMS={expected.Count})");
+
+    Dictionary<string, RoomDefinition> actual;
+    try
+    {
+        actual = RoomLoader.LoadRooms(roomsXml);
+    }
+    catch (Exception e)
+    {
+        actual = new Dictionary<string, RoomDefinition>();
+        Check("C# RoomLoader loads rooms.xml without throwing", false, $"{e.GetType().Name}: {e.Message}");
+    }
+
+    Check("C# loader finds the same room count as the Java loader",
+        actual.Count == expected.Count, $"C#={actual.Count} Java={expected.Count}");
+
+    var roomProblems = new List<string>();
+
+    foreach (var exp in expected)
+    {
+        if (!actual.TryGetValue(exp.Id, out var room))
+        {
+            roomProblems.Add($"{exp.Id}: missing from C# load");
+            continue;
+        }
+
+        if (room.Cost != exp.Cost) roomProblems.Add($"{exp.Id}: cost {room.Cost} != {exp.Cost}");
+        if (room.MaxOccupancy != exp.MaxOccupancy)
+            roomProblems.Add($"{exp.Id}: maxOccupancy {room.MaxOccupancy} != {exp.MaxOccupancy}");
+        if (room.Image != exp.Image) roomProblems.Add($"{exp.Id}: image '{room.Image}' != '{exp.Image}'");
+
+        // Slot types: Java uses an EnumSet, so declaration order. RoomDefinition matches that.
+        var gotSlots = string.Join(",", room.SlotTypes.Select(s => s.ToString()));
+        if (gotSlots != exp.Slots) roomProblems.Add($"{exp.Id}: slots [{gotSlots}] != [{exp.Slots}]");
+
+        var gotActs = string.Join(",", room.Activities.Select(a => a.ToString()));
+        if (gotActs != exp.Activities) roomProblems.Add($"{exp.Id}: activities [{gotActs}] != [{exp.Activities}]");
+
+        var gotReqs = room.ActivityRequirements
+            .OrderBy(kv => kv.Key.ToString(), StringComparer.Ordinal)
+            .ToDictionary(kv => kv.Key.ToString(), kv => kv.Value.Describe());
+        if (!gotReqs.OrderBy(kv => kv.Key, StringComparer.Ordinal)
+                    .SequenceEqual(exp.Requirements.OrderBy(kv => kv.Key, StringComparer.Ordinal)))
+        {
+            foreach (var kv in exp.Requirements)
+            {
+                gotReqs.TryGetValue(kv.Key, out var got);
+                if (got != kv.Value)
+                    roomProblems.Add($"{exp.Id}/{kv.Key}: req '{got ?? "<missing>"}' != '{kv.Value}'");
+            }
+        }
+
+        var gotChild = room.ChildCareActivityRequirements
+            .OrderBy(kv => kv.Key.ToString(), StringComparer.Ordinal)
+            .ToDictionary(kv => kv.Key.ToString(), kv => kv.Value.Describe());
+        foreach (var kv in exp.ChildRequirements)
+        {
+            gotChild.TryGetValue(kv.Key, out var got);
+            if (got != kv.Value)
+                roomProblems.Add($"{exp.Id}/{kv.Key}: childreq '{got ?? "<missing>"}' != '{kv.Value}'");
+        }
+    }
+
+    // This is what makes the rooms check more than a shape test: it proves the port reproduced the
+    // loader's incident of ignoring element names, where rooms.xml:645 writes a <requirement> that
+    // is dispatched as a CHARACTER requirement.
+    var sellFood = actual.TryGetValue("KITCHEN", out var kitchen)
+        && kitchen.ActivityRequirements.TryGetValue(ActivityType.SELLFOOD, out var sf)
+        ? sf.Describe()
+        : "<not found>";
+    Check("mislabelled <requirement> under min-character parses as a CHARACTER requirement",
+        sellFood == "min-character(1, specialization(MAID))", sellFood);
+
+    if (roomProblems.Count == 0)
+    {
+        Check($"all {expected.Count} rooms match the Java loader field-for-field", true);
+    }
+    else
+    {
+        Check($"all {expected.Count} rooms match the Java loader field-for-field", false);
+        foreach (var p in roomProblems.Take(15))
+        {
+            Console.WriteLine($"        DIFF  {p}");
+        }
+    }
+}
+
 Console.WriteLine();
 Console.WriteLine($"=== {passed} passed, {failed} failed ===");
 
@@ -683,6 +796,37 @@ static string? LocateFixture(string fileName)
         if (File.Exists(candidate))
         {
             return candidate;
+        }
+    }
+    return null;
+}
+
+/// <summary>
+/// Finds an original shipped content file (rooms.xml and friends).
+/// </summary>
+/// <remarks>
+/// Two layouts must both work, because the same verifier runs in two places:
+/// <list type="bullet">
+/// <item><c>original/</c> — the working folder, where the file sits beside the reference jar and
+/// <c>lib/</c>;</item>
+/// <item><c>content/</c> — the published review repo, where toolchains and the jar are stripped and
+/// only the text content is kept.</item>
+/// </list>
+/// Returns null when neither exists, so the caller skips rather than fails: the shipped content is
+/// not redistributable, and a missing copy must not be reported as a port defect.
+/// </remarks>
+static string? LocateOriginalFile(string fileName)
+{
+    var dir = new DirectoryInfo(AppContext.BaseDirectory);
+    for (var d = dir; d is not null; d = d.Parent)
+    {
+        foreach (var folder in new[] { "original", "content" })
+        {
+            var candidate = Path.Combine(d.FullName, folder, fileName);
+            if (File.Exists(candidate))
+            {
+                return candidate;
+            }
         }
     }
     return null;

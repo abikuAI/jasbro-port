@@ -1,0 +1,408 @@
+ROOMS=29
+
+ROOM ALTAR
+  cost=0
+  maxOccupancy=4
+  image=images/backgrounds/altar.jpg
+  slots=OUTDOOR
+  activities=SLEEP,PRAY,OFFERINGS,WHORE
+  req OFFERINGS = none
+  req PRAY = none
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req WHORE = and[all-character(trait(ANYPLACE)), min-occupant(1), max-occupant(2)]
+
+ROOM ARENA
+  cost=6000
+  maxOccupancy=2
+  image=images/backgrounds/arena.jpg
+  slots=UNDERGROUND
+  activities=SLEEP,TRAINTOFIGHT,FIGHT,MONSTERFIGHT
+  req FIGHT = all-character(specialization(FIGHTER))
+  req MONSTERFIGHT = all-character(or[specialization(FIGHTER), char-type(TRAINER)])
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req TRAINTOFIGHT = all-character(or[specialization(FIGHTER), char-type(TRAINER)])
+
+ROOM BAR
+  cost=1800
+  maxOccupancy=2
+  image=images/backgrounds/bar.jpg
+  slots=LARGEROOM,UNDERGROUND
+  activities=SLEEP,CLEAN,BARTEND,WHORE
+  req BARTEND = none
+  req CLEAN = none
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req WHORE = and[all-character(trait(ANYPLACE)), min-occupant(1), max-occupant(1)]
+
+ROOM BEDROOM
+  cost=1000
+  maxOccupancy=4
+  image=images/backgrounds/bedroom.jpg
+  slots=SMALLROOM,LARGEROOM
+  activities=SLEEP,CLEAN,WHORE,SEX,THREESOME,ORGY,TRAIN,TALK,NURSE,PAMPER,BODYWRAP,DOMINATE
+  req BODYWRAP = and[min-occupant(2), min-character(1, trait(COSMETICS))]
+  req CLEAN = none
+  req DOMINATE = and[exact-occupant(1), min-character(1, trait(MYWHIPISALLINEED))]
+  req NURSE = and[min-occupant(2), min-character(1, specialization(NURSE))]
+  req ORGY = min-occupant(4)
+  req PAMPER = and[min-occupant(2), min-character(1, specialization(NURSE))]
+  req SEX = exact-occupant(2)
+  req SLEEP = none
+  req TALK = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req THREESOME = exact-occupant(3)
+  req TRAIN = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req WHORE = max-occupant(2)
+  childreq NURSE = min-character(1, specialization(NURSE))
+  childreq PLAY = child-care
+  childreq SLEEP = child-care
+
+ROOM BIGGARDEN
+  cost=0
+  maxOccupancy=8
+  image=images/backgrounds/biggarden.jpg
+  slots=OUTDOOR
+  activities=SLEEP,RELAX,GARDENING,WHORE
+  req GARDENING = none
+  req RELAX = none
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req WHORE = and[all-character(trait(ANYPLACE)), min-occupant(1), max-occupant(4)]
+
+ROOM CABARET
+  cost=6000
+  maxOccupancy=6
+  image=images/backgrounds/cabaret.jpg
+  slots=LARGEROOM
+  activities=SLEEP,CLEAN,STRIP,ATTEND,WHORE
+  req ATTEND = and[min-occupant(2), min-character(1, specialization(DANCER))]
+  req CLEAN = none
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req STRIP = max-occupant(1)
+  req WHORE = and[all-character(trait(ANYPLACE)), min-occupant(1), max-occupant(3)]
+
+ROOM CLASSROOM
+  cost=2500
+  maxOccupancy=6
+  image=images/backgrounds/classroom.jpg
+  slots=LARGEROOM
+  activities=SLEEP,CLEAN,TEACH,TRAIN,TALK,SEX,THREESOME,ORGY,WHORE
+  req CLEAN = none
+  req ORGY = min-occupant(4)
+  req SEX = exact-occupant(2)
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req TALK = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req TEACH = and[min-occupant(2), min-character(1, char-type(TRAINER))]
+  req THREESOME = exact-occupant(3)
+  req TRAIN = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req WHORE = and[all-character(trait(ANYPLACE)), min-occupant(1), max-occupant(3)]
+
+ROOM CRYPT
+  cost=0
+  maxOccupancy=1
+  image=images/backgrounds/crypt.jpg
+  slots=UNDERGROUND
+  activities=SLEEP,CLEAN,READ,RITUAL,WHORE
+  req CLEAN = none
+  req READ = none
+  req RITUAL = exact-occupant(1)
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req WHORE = and[all-character(trait(ANYPLACE)), min-occupant(1), max-occupant(3)]
+
+ROOM DUNGEON
+  cost=4500
+  maxOccupancy=2
+  image=images/backgrounds/dungeon.jpg
+  slots=UNDERGROUND
+  activities=SLEEP,CLEAN,BREAK,DOMINATE,SUBMIT,STRUGGLE,WHORE
+  req BREAK = and[min-character(1, char-type(TRAINER)), min-character(1, char-type(SLAVE))]
+  req CLEAN = none
+  req DOMINATE = and[exact-occupant(1), min-character(1, specialization(DOMINATRIX))]
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req STRUGGLE = all-character(trait(MASTERANDSLAVE))
+  req SUBMIT = exact-occupant(1)
+  req WHORE = and[all-character(trait(ANYPLACE)), min-occupant(1), max-occupant(1)]
+
+ROOM EMPTYROOM
+  cost=10
+  maxOccupancy=6
+  image=images/backgrounds/emptyroom.jpg
+  slots=SMALLROOM,LARGEROOM,UNDERGROUND
+  activities=SLEEP,CLEAN,WHORE,SEX,THREESOME,ORGY,TRAIN,TALK,NURSE,PAMPER,BODYWRAP,DOMINATE
+  req BODYWRAP = and[min-occupant(2), min-character(1, trait(COSMETICS))]
+  req CLEAN = none
+  req DOMINATE = and[exact-occupant(1), min-character(1, trait(MYWHIPISALLINEED))]
+  req NURSE = and[min-occupant(2), min-character(1, specialization(NURSE))]
+  req ORGY = min-occupant(4)
+  req PAMPER = and[min-occupant(2), min-character(1, specialization(NURSE))]
+  req SEX = exact-occupant(2)
+  req SLEEP = none
+  req TALK = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req THREESOME = exact-occupant(3)
+  req TRAIN = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req WHORE = max-occupant(3)
+  childreq NURSE = min-character(1, specialization(NURSE))
+  childreq PLAY = child-care
+  childreq SLEEP = child-care
+
+ROOM GARDEN
+  cost=0
+  maxOccupancy=6
+  image=images/backgrounds/garden.jpg
+  slots=OUTDOOR
+  activities=SLEEP,RELAX,GARDENING,WHORE
+  req GARDENING = none
+  req RELAX = none
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req WHORE = and[all-character(trait(ANYPLACE)), min-occupant(1), max-occupant(3)]
+
+ROOM GLASSROOM
+  cost=4000
+  maxOccupancy=6
+  image=images/backgrounds/glassroom.jpg
+  slots=LARGEROOM
+  activities=SLEEP,CLEAN,TEASE
+  req CLEAN = none
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req TEASE = none
+
+ROOM GLORYHOLE
+  cost=4500
+  maxOccupancy=2
+  image=images/backgrounds/dungeon.jpg
+  slots=SMALLROOM,LARGEROOM
+  activities=SLEEP,CLEAN,SUCK
+  req CLEAN = none
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req SUCK = none
+
+ROOM GYM
+  cost=0
+  maxOccupancy=5
+  image=images/backgrounds/gym.jpg
+  slots=LARGEROOM
+  activities=SLEEP,PRACTICE,WHORE
+  req PRACTICE = none
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req WHORE = and[all-character(trait(ANYPLACE)), min-occupant(1), max-occupant(2)]
+
+ROOM KITCHEN
+  cost=650
+  maxOccupancy=1
+  image=images/backgrounds/kitchen.jpg
+  slots=SMALLROOM,LARGEROOM
+  activities=SLEEP,COOK,CLEAN,SELLFOOD
+  req CLEAN = none
+  req COOK = none
+  req SELLFOOD = min-character(1, specialization(MAID))
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+
+ROOM LARGEBEDROOM
+  cost=2000
+  maxOccupancy=6
+  image=images/backgrounds/bigbedroom.jpg
+  slots=LARGEROOM
+  activities=SLEEP,CLEAN,WHORE,SEX,THREESOME,ORGY,TRAIN,TALK,NURSE,PAMPER,BODYWRAP,DOMINATE
+  req BODYWRAP = and[min-occupant(2), min-character(1, trait(COSMETICS))]
+  req CLEAN = none
+  req DOMINATE = and[exact-occupant(1), min-character(1, trait(MYWHIPISALLINEED))]
+  req NURSE = and[min-occupant(2), min-character(1, specialization(NURSE))]
+  req ORGY = min-occupant(4)
+  req PAMPER = and[min-occupant(2), min-character(1, specialization(NURSE))]
+  req SEX = exact-occupant(2)
+  req SLEEP = none
+  req TALK = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req THREESOME = exact-occupant(3)
+  req TRAIN = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req WHORE = max-occupant(3)
+  childreq NURSE = min-character(1, specialization(NURSE))
+  childreq PLAY = child-care
+  childreq SLEEP = child-care
+
+ROOM LOBBY
+  cost=8400
+  maxOccupancy=4
+  image=images/backgrounds/lobby.jpg
+  slots=LARGEROOM
+  activities=SLEEP,ADVERTISE,PUBLICIZE,WHORE
+  req ADVERTISE = none
+  req PUBLICIZE = none
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req WHORE = and[all-character(trait(ANYPLACE)), min-occupant(1), max-occupant(2)]
+
+ROOM MASTERBEDROOM
+  cost=5000
+  maxOccupancy=2
+  image=images/backgrounds/MasterBedroom.jpg
+  slots=SMALLROOM,LARGEROOM
+  activities=SLEEP,CLEAN,WHORE,SEX,THREESOME,ORGY,TRAIN,TALK,NURSE,PAMPER,BODYWRAP,DOMINATE
+  req BODYWRAP = and[min-occupant(2), min-character(1, trait(COSMETICS))]
+  req CLEAN = none
+  req DOMINATE = and[exact-occupant(1), min-character(1, trait(MYWHIPISALLINEED))]
+  req NURSE = and[min-occupant(2), min-character(1, specialization(NURSE))]
+  req ORGY = min-occupant(4)
+  req PAMPER = and[min-occupant(2), min-character(1, specialization(NURSE))]
+  req SEX = exact-occupant(2)
+  req SLEEP = none
+  req TALK = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req THREESOME = exact-occupant(3)
+  req TRAIN = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req WHORE = max-occupant(1)
+  childreq NURSE = min-character(1, specialization(NURSE))
+  childreq PLAY = child-care
+  childreq SLEEP = child-care
+
+ROOM ORGYROOM
+  cost=12000
+  maxOccupancy=10
+  image=images/backgrounds/orgyroom.jpg
+  slots=LARGEROOM
+  activities=SLEEP,CLEAN,WHORE,SEX,THREESOME,ORGY,PUBLICUSE,TRAIN,TALK,NURSE,PAMPER,BODYWRAP,DOMINATE
+  req BODYWRAP = and[min-occupant(2), min-character(1, trait(COSMETICS))]
+  req CLEAN = none
+  req DOMINATE = and[exact-occupant(1), min-character(1, trait(MYWHIPISALLINEED))]
+  req NURSE = and[min-occupant(2), min-character(1, specialization(NURSE))]
+  req ORGY = min-occupant(4)
+  req PAMPER = and[min-occupant(2), min-character(1, specialization(NURSE))]
+  req PUBLICUSE = none
+  req SEX = exact-occupant(2)
+  req SLEEP = none
+  req TALK = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req THREESOME = exact-occupant(3)
+  req TRAIN = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req WHORE = max-occupant(5)
+  childreq NURSE = min-character(1, specialization(NURSE))
+  childreq PLAY = child-care
+  childreq SLEEP = child-care
+
+ROOM POND
+  cost=0
+  maxOccupancy=8
+  image=images/backgrounds/pond.jpg
+  slots=OUTDOOR
+  activities=SLEEP,RELAX,SOAK,FISH
+  req FISH = none
+  req RELAX = none
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req SOAK = none
+
+ROOM SICKROOM
+  cost=4000
+  maxOccupancy=4
+  image=images/backgrounds/sickroom.jpg
+  slots=SMALLROOM,LARGEROOM
+  activities=SLEEP,CLEAN,WHORE,SEX,THREESOME,ORGY,TRAIN,TALK,NURSE,PAMPER,BODYWRAP,DOMINATE
+  req BODYWRAP = and[min-occupant(2), min-character(1, trait(COSMETICS))]
+  req CLEAN = none
+  req DOMINATE = and[exact-occupant(1), min-character(1, trait(MYWHIPISALLINEED))]
+  req NURSE = and[min-occupant(2), min-character(1, specialization(NURSE))]
+  req ORGY = min-occupant(4)
+  req PAMPER = and[min-occupant(2), min-character(1, specialization(NURSE))]
+  req SEX = exact-occupant(2)
+  req SLEEP = none
+  req TALK = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req THREESOME = exact-occupant(3)
+  req TRAIN = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req WHORE = max-occupant(1)
+  childreq NURSE = min-character(1, specialization(NURSE))
+  childreq PLAY = child-care
+  childreq SLEEP = child-care
+
+ROOM SMALLBEDROOM
+  cost=500
+  maxOccupancy=2
+  image=images/backgrounds/smallbedroom.jpg
+  slots=SMALLROOM,LARGEROOM
+  activities=SLEEP,CLEAN,WHORE,SEX,THREESOME,ORGY,TRAIN,TALK,NURSE,PAMPER,BODYWRAP,DOMINATE
+  req BODYWRAP = and[min-occupant(2), min-character(1, trait(COSMETICS))]
+  req CLEAN = none
+  req DOMINATE = and[exact-occupant(1), min-character(1, trait(MYWHIPISALLINEED))]
+  req NURSE = and[min-occupant(2), min-character(1, specialization(NURSE))]
+  req ORGY = min-occupant(4)
+  req PAMPER = and[min-occupant(2), min-character(1, specialization(NURSE))]
+  req SEX = exact-occupant(2)
+  req SLEEP = none
+  req TALK = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req THREESOME = exact-occupant(3)
+  req TRAIN = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req WHORE = max-occupant(1)
+  childreq NURSE = min-character(1, specialization(NURSE))
+  childreq PLAY = child-care
+  childreq SLEEP = child-care
+
+ROOM SMALLLIBRARY
+  cost=3500
+  maxOccupancy=6
+  image=images/backgrounds/smalllibrary.jpg
+  slots=SMALLROOM,LARGEROOM
+  activities=SLEEP,TEACH,TRAIN,TALK,READ,SEX,THREESOME,ORGY,WHORE
+  req ORGY = min-occupant(4)
+  req READ = none
+  req SEX = exact-occupant(2)
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req TALK = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req TEACH = and[min-occupant(2), min-character(1, char-type(TRAINER))]
+  req THREESOME = exact-occupant(3)
+  req TRAIN = and[exact-occupant(2), min-character(1, char-type(TRAINER))]
+  req WHORE = and[all-character(trait(ANYPLACE)), min-occupant(1), max-occupant(3)]
+
+ROOM SPAAREA
+  cost=4600
+  maxOccupancy=6
+  image=images/backgrounds/spaarea.jpg
+  slots=OUTDOOR,UNDERGROUND
+  activities=SLEEP,CLEAN,BATHATTENDANT,NURSE,WHORE
+  req BATHATTENDANT = none
+  req CLEAN = none
+  req NURSE = and[min-character(1, trait(AQUATICNURSE)), min-occupant(2)]
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req WHORE = and[all-character(trait(ANYPLACE)), min-occupant(1), max-occupant(3)]
+
+ROOM STABLE
+  cost=6000
+  maxOccupancy=4
+  image=images/backgrounds/stable.jpg
+  slots=LARGEROOM
+  activities=SLEEP,SUBMITTOMONSTER
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req SUBMITTOMONSTER = max-occupant(1)
+
+ROOM STAGE
+  cost=2500
+  maxOccupancy=1
+  image=images/backgrounds/stripclub.jpg
+  slots=LARGEROOM,UNDERGROUND
+  activities=SLEEP,CLEAN,STRIP
+  req CLEAN = none
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req STRIP = none
+
+ROOM TAVERN
+  cost=6800
+  maxOccupancy=4
+  image=images/backgrounds/bar.jpg
+  slots=LARGEROOM,UNDERGROUND
+  activities=SLEEP,CLEAN,BARTEND,WHORE
+  req BARTEND = none
+  req CLEAN = none
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req WHORE = and[all-character(trait(ANYPLACE)), min-occupant(1), max-occupant(1)]
+
+ROOM THRONEROOM
+  cost=0
+  maxOccupancy=1
+  image=images/backgrounds/office.jpg
+  slots=SMALLROOM,LARGEROOM
+  activities=CLEAN,SLEEP,GOVERN,WHORE
+  req CLEAN = none
+  req GOVERN = all-character(specialization(TRAINER))
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req WHORE = and[all-character(trait(ANYPLACE)), exact-occupant(1)]
+
+ROOM TRAININGGROUNDS
+  cost=0
+  maxOccupancy=8
+  image=images/backgrounds/garrison_morning.jpg
+  slots=OUTDOOR
+  activities=SLEEP,TRAINTOFIGHT,PRACTICE,WHORE
+  req PRACTICE = all-character(specialization(FIGHTER))
+  req SLEEP = and[exact-occupant(1), min-character(1, trait(CATNAP))]
+  req TRAINTOFIGHT = none
+  req WHORE = and[all-character(trait(ANYPLACE)), exact-occupant(1)]
