@@ -93,4 +93,42 @@ public sealed class RoomDefinition
     public void AddSlotType(RoomSlotType slotType) => _slotTypes.Add(slotType);
 
     public bool FitsInSlot(RoomSlotType slot) => _slotTypes.Contains(slot);
+
+    /// <summary>
+    /// Whether the group may perform <paramref name="activity"/> here. Mirrors
+    /// <c>RoomInfo.isActivityValid</c>.
+    /// </summary>
+    /// <remarks>
+    /// <b>Throws when the activity has no requirement recorded</b>, matching the original, which
+    /// does a bare <c>map.get(activity).isValid(...)</c> and therefore throws
+    /// <c>NullPointerException</c> rather than returning false. Callers are expected to check
+    /// <see cref="Activities"/> first. Returning false here instead would silently hide a
+    /// mismatch between the activity list and the requirement map.
+    /// </remarks>
+    public bool IsActivityValid(ActivityType activity, IReadOnlyList<ICharacterRequirementSubject> characters, TypeAmounts typeAmounts)
+    {
+        if (!_activityRequirements.TryGetValue(activity, out var requirement))
+        {
+            throw new InvalidOperationException(
+                $"No requirement recorded for activity {activity} in room '{Id}'. " +
+                "Check Activities before asking whether an activity is valid.");
+        }
+
+        return requirement.IsValid(activity, characters, typeAmounts);
+    }
+
+    /// <summary>
+    /// Whether the group may perform a child-care activity here. Mirrors
+    /// <c>RoomInfo.isChildCareActivityValid</c>, including the same throw-on-missing behaviour.
+    /// </summary>
+    public bool IsChildCareActivityValid(ActivityType activity, IReadOnlyList<ICharacterRequirementSubject> characters, TypeAmounts typeAmounts)
+    {
+        if (!_childCareRequirements.TryGetValue(activity, out var requirement))
+        {
+            throw new InvalidOperationException(
+                $"No child-care requirement recorded for activity {activity} in room '{Id}'.");
+        }
+
+        return requirement.IsValid(activity, characters, typeAmounts);
+    }
 }

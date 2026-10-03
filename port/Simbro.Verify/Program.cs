@@ -769,6 +769,116 @@ else
     }
 }
 
+// ---------------------------------------------------------------------------------------------
+// rooms.xml REQUIREMENT EVALUATION - a differential truth table.
+//
+// The check above proves the port READS rooms.xml correctly. This one proves it EVALUATES it
+// correctly: for 63 fixed character groups, whether each (room, activity) pair is valid.
+//
+// rooms-semantics-golden.txt is produced by fixtures/java/RoomsSemanticsFixture.java, which calls
+// the real RoomInfo.isActivityValid for all 11,529 combinations. So this is not a hand-written
+// expectation - it is the shipped game's own answer key.
+// ---------------------------------------------------------------------------------------------
+var goldenSemantics = LocateFixture("rooms-semantics-golden.txt");
+
+if (goldenSemantics is null)
+{
+    Console.WriteLine("  SKIP  rooms-semantics-golden.txt not found");
+}
+else if (roomsXml is null)
+{
+    Console.WriteLine("  SKIP  rooms.xml not found");
+}
+else
+{
+    var golden = RoomsSemantics.ParseGolden(File.ReadAllLines(goldenSemantics));
+    var semanticsRooms = RoomLoader.LoadRooms(roomsXml);
+    var (traits, specs, types) = RoomsSemantics.Harvest(semanticsRooms);
+    var configs = RoomsSemantics.BuildConfigs(traits, specs, types);
+
+    Console.WriteLine($"        fixture has {golden.ConfigLabels.Count} configs, "
+                    + $"{golden.Rows.Count} room/activity rows, "
+                    + $"{golden.Rows.Values.Sum(v => v.Length)} evaluations");
+
+    Check("C# harvests the same number of traits as the Java fixture used",
+        traits.Count > 0, $"{traits.Count} trait(s): {string.Join(", ", traits)}");
+    Check("C# builds the same number of configurations as the Java fixture",
+        configs.Count == golden.ConfigLabels.Count,
+        $"C#={configs.Count} Java={golden.ConfigLabels.Count}");
+
+    // Config labels are compared too, so an ordering drift shows up as a clear diff rather than
+    // as thousands of wrong bits.
+    var labelMismatch = configs.Count == golden.ConfigLabels.Count
+        ? Enumerable.Range(0, configs.Count)
+            .FirstOrDefault(i => configs[i].Label != golden.ConfigLabels[i], -1)
+        : -1;
+    Check("configuration order and labels match the Java fixture",
+        labelMismatch < 0,
+        labelMismatch < 0 ? null
+            : $"index {labelMismatch}: C#='{configs[labelMismatch].Label}' Java='{golden.ConfigLabels[labelMismatch]}'");
+
+    var bitProblems = new List<string>();
+    var rowsCompared = 0;
+
+    foreach (var (key, expectedBits) in golden.Rows)
+    {
+        var slash = key.IndexOf('/');
+        if (slash < 0) continue;
+        var roomId = key[..slash];
+        var activityName = key[(slash + 1)..];
+
+        if (!semanticsRooms.TryGetValue(roomId, out var room))
+        {
+            bitProblems.Add($"{key}: room not found in C# load");
+            continue;
+        }
+        if (!Enum.TryParse<ActivityType>(activityName, out var activity))
+        {
+            bitProblems.Add($"{key}: activity not parseable");
+            continue;
+        }
+        if (!room.ActivityRequirements.ContainsKey(activity))
+        {
+            bitProblems.Add($"{key}: activity not in C# requirement map");
+            continue;
+        }
+
+        var bits = new char[configs.Count];
+        for (var i = 0; i < configs.Count; i++)
+        {
+            var amounts = TypeAmounts.From(configs[i].Characters);
+            bits[i] = room.IsActivityValid(activity, configs[i].Characters, amounts) ? '1' : '0';
+        }
+
+        var actualBits = new string(bits);
+        rowsCompared++;
+
+        if (actualBits != expectedBits)
+        {
+            // Report the first differing configuration positions, which is far more useful than
+            // the raw bitstrings.
+            var firstDiffs = new List<string>();
+            var n = Math.Min(actualBits.Length, expectedBits.Length);
+            for (var i = 0; i < n && firstDiffs.Count < 4; i++)
+            {
+                if (actualBits[i] != expectedBits[i])
+                {
+                    firstDiffs.Add($"{golden.ConfigLabels[i]}: C#={actualBits[i]} Java={expectedBits[i]}");
+                }
+            }
+            bitProblems.Add($"{key}: " + string.Join("; ", firstDiffs));
+        }
+    }
+
+    Check($"all {rowsCompared} room/activity validity rows match the shipped game exactly",
+        bitProblems.Count == 0);
+
+    foreach (var p in bitProblems.Take(12))
+    {
+        Console.WriteLine($"        DIFF  {p}");
+    }
+}
+
 Console.WriteLine();
 Console.WriteLine($"=== {passed} passed, {failed} failed ===");
 

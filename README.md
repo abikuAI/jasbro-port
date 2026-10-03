@@ -166,6 +166,32 @@ Two traps this caught, which a hand-written test would have missed:
   default is culture-sensitive and would mis-order non-ASCII filenames.
 </details>
 
+<details>
+<summary><b>Room requirements are verified field-by-field <i>and</i> decision-by-decision</b></summary>
+
+`rooms.xml` is not merely parsed — the port's **requirement evaluator** was diffed against the
+shipped game's own `RoomInfo.isActivityValid`:
+
+- **29 rooms, every field identical** to the Java loader, including the private requirement maps.
+- **63 character groups × all 183 room/activity pairs = 11,529 validity decisions, all matching.**
+
+The answer key comes from `RoomsSemanticsFixture.java`, which constructs synthetic character groups
+and calls the real predicates, so it cannot encode an assumption the port shares. Configurations are
+derived from the content itself — every trait and specialisation that appears anywhere in
+`rooms.xml` gets its own group — so the table cannot silently miss a requirement the game exercises.
+
+Three things this established, each of which is easy to get wrong:
+
+- **`TypeAmounts` pre-populates every `CharacterType` with 0.** An empty group therefore has
+  *neither* the child-present nor the adult-present flag set, which is not the same as "adult
+  present".
+- **`AndActivityRequirement` and `AllCharacterRequirement` are vacuously TRUE for an empty group;
+  `OrCharacterRequirement` is vacuously FALSE.** Opposite defaults from sibling classes.
+- **The tag name does not select the parser — the parent does.** `rooms.xml:645` mislabels a
+  *character* requirement as `<requirement>` inside `min-character`, and it works, because
+  `parseCharacterRequirement` ignores the tag name entirely.
+</details>
+
 ---
 
 ## Known defects — 151 confirmed
@@ -217,7 +243,15 @@ These are where an independent look has the most value.
    grid** while this game is fundamentally *spreadsheets with pictures*. Avalonia UI was considered a
    better technical fit and rejected for wanting game-engine feel.
 
-5. **Never deep-audited:** the GUI, and inventory/economy's interaction with housing. Six audits
+5. **One latent defect is being silently repaired, and the choice is arguable.** The occupant
+   requirements validate their `count` against the regex `"[0-9]"` — and `Validate.matchesPattern`
+   anchors the whole string, so they accept **exactly one digit**. `count="10"` throws. Every shipped
+   value is 1–5, so it never fires; the port accepts any non-negative integer as a Class A fix. If
+   you consider the one-digit limit a *design constraint* rather than a bug, this is the one place
+   the port deliberately diverges from observable behaviour. (All three classes also carry a
+   copy-pasted `'min-occupant'` error message.)
+
+6. **Never deep-audited:** the GUI, and inventory/economy's interaction with housing. Six audits
    covered business activities, events/housing, content scripting, traits/perks, inventory/economy
    and character lifecycle; the GUI was skipped on the grounds that it is being rewritten.
 
@@ -229,7 +263,7 @@ These are where an independent look has the most value.
 **exits non-zero on any failure**: generate golden fixtures with the real Java classes, check the C#
 port against them, then feed C#-written saves back to the real Java game.
 
-**Current state: 125 C# checks + 12 cross-language checks, all passing.**
+**Current state: 132 C# checks + 12 cross-language checks, all passing.**
 
 > Requires the original `lib/` jars and `characters/` folder, which are **not** in this repository.
 

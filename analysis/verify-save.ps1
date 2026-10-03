@@ -91,6 +91,40 @@ if (-not $SkipFixtureRegeneration) {
         $count = (Select-String -Path $cf -Pattern '^COUNT=' | Select-Object -First 1).Line
         Write-Host "  wrote content-golden.txt ($count characters, $((Get-Item $cf).Length) bytes)"
     }
+    # --- rooms fixtures ----------------------------------------------------
+    # These must run with the working directory set to the folder holding rooms.xml, because
+    # RoomLoader opens it with a CWD-relative `new FileInputStream("rooms.xml")`.
+    #
+    # Two fixtures, two different claims:
+    #   RoomsFixture          - the port READS rooms.xml the same way (structure, field for field).
+    #   RoomsSemanticsFixture - the port EVALUATES rooms.xml the same way (63 character groups x
+    #                           every room/activity pair = 11,529 validity decisions).
+    $roomDir = Join-Path $wf 'original'
+    if (-not (Test-Path (Join-Path $roomDir 'rooms.xml'))) {
+        Write-Host "  SKIP  rooms fixtures: no rooms.xml at $roomDir" -ForegroundColor Yellow
+    } else {
+        foreach ($fx in @(
+            @{ Src = 'RoomsFixture.java';          Class = 'RoomsFixture'
+               Out = 'rooms-golden.txt';           What = 'rooms' }
+            @{ Src = 'RoomsSemanticsFixture.java'; Class = 'RoomsSemanticsFixture'
+               Out = 'rooms-semantics-golden.txt'; What = 'room validity decisions' }
+        )) {
+            & (Join-Path $jdk 'javac.exe') @javacArgs -cp $cp -d $out (Join-Path $javaSrc $fx.Src)
+            if ($LASTEXITCODE -ne 0) { throw "$($fx.Class) failed to compile" }
+
+            Push-Location $roomDir
+            try {
+                & (Join-Path $jdk 'java.exe') -cp "$out;$cp" $fx.Class `
+                    (Join-Path $wf "fixtures\$($fx.Out)") 2>$null | Out-Null
+            } finally {
+                Pop-Location
+            }
+            if ($LASTEXITCODE -ne 0) { throw "$($fx.Class) failed to run" }
+
+            $f = Join-Path $wf "fixtures\$($fx.Out)"
+            Write-Host "  wrote $($fx.Out) ($($fx.What), $((Get-Item $f).Length) bytes)"
+        }
+    }
 } else {
     Step 1 'Skipping fixture regeneration (-SkipFixtureRegeneration)'
 }
